@@ -195,6 +195,56 @@ export default function TopicFilterPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
           {/* Left: Topic Selector */}
           <div className="space-y-4">
+            {/* Mobile: Dropdown Select */}
+            <div className="lg:hidden space-y-3">
+              <div className="flex gap-1 p-1 rounded-lg bg-muted/50">
+                {[
+                  { value: "all", label: lang === "zh" ? "全部" : "All" },
+                  { value: "paper1", label: lang === "zh" ? "卷一" : "P1" },
+                  { value: "paper2", label: lang === "zh" ? "卷二" : "P2" },
+                ].map((opt) => (
+                  <button
+                    key={opt.value}
+                    onClick={() => setSelectedPaper(opt.value as "all" | "paper1" | "paper2")}
+                    className={`flex-1 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-180 ${
+                      selectedPaper === opt.value
+                        ? "bg-white text-primary shadow-sm"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+              <div className="relative">
+                <select
+                  value={selectedTopic || ""}
+                  onChange={(e) => setSelectedTopic(e.target.value || null)}
+                  className="w-full appearance-none px-4 py-3 pr-10 rounded-xl border border-border/60 bg-card text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all"
+                >
+                  <option value="">{lang === "zh" ? "— 選擇課題 —" : "— Select Topic —"}</option>
+                  <optgroup label={lang === "zh" ? "初中課題 (Junior)" : "Junior Topics"}>
+                    {allTopics.filter(t => t.startsWith("J")).map((topic) => (
+                      <option key={topic} value={topic}>{topic}</option>
+                    ))}
+                  </optgroup>
+                  <optgroup label={lang === "zh" ? "高中課題 (Senior)" : "Senior Topics"}>
+                    {allTopics.filter(t => t.startsWith("S")).map((topic) => (
+                      <option key={topic} value={topic}>{topic}</option>
+                    ))}
+                  </optgroup>
+                  <optgroup label={lang === "zh" ? "其他" : "Other"}>
+                    {allTopics.filter(t => !t.startsWith("J") && !t.startsWith("S")).map((topic) => (
+                      <option key={topic} value={topic}>{topic}</option>
+                    ))}
+                  </optgroup>
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              </div>
+            </div>
+
+            {/* Desktop: Search + List */}
+            <div className="hidden lg:block space-y-4">
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -301,6 +351,7 @@ export default function TopicFilterPage() {
                   {lang === "zh" ? "找不到相關課題" : "No matching topics"}
                 </div>
               )}
+            </div>
             </div>
           </div>
 

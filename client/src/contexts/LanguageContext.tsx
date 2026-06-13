@@ -16,6 +16,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.paper2": "必修卷二",
     "nav.m2": "數學延伸 M2",
     "nav.topics": "課題篩選",
+    "nav.ranking": "難度排名",
     "nav.about": "關於",
     
     // Hero
@@ -75,6 +76,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.paper2": "Paper 2",
     "nav.m2": "M2",
     "nav.topics": "Topics",
+    "nav.ranking": "Ranking",
     "nav.about": "About",
     
     // Hero
