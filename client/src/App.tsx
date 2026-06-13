@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Router as WouterRouter } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -13,7 +13,10 @@ import TopicFilterPage from "./pages/TopicFilterPage";
 import TopicRankingPage from "./pages/TopicRankingPage";
 import Layout from "./components/Layout";
 
-function Router() {
+// Detect base path from Vite's import.meta.env.BASE_URL
+const base = import.meta.env.BASE_URL?.replace(/\/$/, "") || "";
+
+function AppRouter() {
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -37,10 +40,12 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <LanguageProvider>
           <TooltipProvider>
-            <Toaster />
-            <Layout>
-              <Router />
-            </Layout>
+            <WouterRouter base={base}>
+              <Toaster />
+              <Layout>
+                <AppRouter />
+              </Layout>
+            </WouterRouter>
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
