@@ -10974,15 +10974,15 @@
         "questions": "1"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "7"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "5"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -11006,27 +11006,27 @@
         "questions": "19(c-i,ii)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "3(a)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "10(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "10(b-ii), 15"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "14(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "2026-11-19 00:00:00"
       },
       {
@@ -11034,23 +11034,23 @@
         "questions": "11(a)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "2026-12-16 00:00:00"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a)"
       },
       {
@@ -11060,15 +11060,15 @@
     ],
     "2014": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "3(a-c)"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "6(a,b)"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11088,27 +11088,27 @@
         "questions": "9(a,b)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "8(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "11(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "4"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "19(a,b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "7(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "13(a,b)"
       },
       {
@@ -11116,23 +11116,23 @@
         "questions": "13(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "16"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "12"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "19(a)"
       },
       {
@@ -11142,19 +11142,19 @@
     ],
     "2018": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "3(a-c)"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "7"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "9"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -11178,47 +11178,47 @@
         "questions": "18(b-iii)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "4"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "10(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11(a)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15(a,b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "12(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "19"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a,b)"
       },
       {
@@ -11228,19 +11228,19 @@
     ],
     "2020": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "3(a-c)"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "5"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "4"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11260,27 +11260,27 @@
         "questions": "14(b-iii)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "14(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "11(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15(b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "2026-07-13 00:00:00"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "17(a,b)"
       },
       {
@@ -11288,23 +11288,23 @@
         "questions": "10(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "19(a-c)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a)"
       },
       {
@@ -11314,19 +11314,19 @@
     ],
     "2023": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "3"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "5"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "6(a,b)"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -11350,47 +11350,47 @@
         "questions": "19(a,b-iii)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "10(a)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11(a)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15(b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "13(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "12(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "4(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "2026-10-16 00:00:00"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a)"
       },
       {
@@ -11400,15 +11400,15 @@
     ],
     "2012": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "4(a,b)"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "5"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11428,23 +11428,23 @@
         "questions": "8(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "7(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "10(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "13(a)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "13(b)"
       },
       {
@@ -11452,23 +11452,23 @@
         "questions": "11(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "19(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14, 17"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "16(a)"
       },
       {
@@ -11478,15 +11478,15 @@
     ],
     "2013": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "4"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "4"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11506,23 +11506,23 @@
         "questions": "7(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "10(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "12(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "17(a,b)"
       },
       {
@@ -11530,23 +11530,23 @@
         "questions": "11(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "19(a-c)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "5(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "16(a)"
       },
       {
@@ -11554,21 +11554,21 @@
         "questions": "15(a,b)"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "6(a,b)"
       }
     ],
     "2015": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "6(a,b)"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "7"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11588,27 +11588,27 @@
         "questions": "13(a,b)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "14(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "12(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "12(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "11(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "18(a-c)"
       },
       {
@@ -11616,23 +11616,23 @@
         "questions": "10(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "19(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "16(a)"
       },
       {
@@ -11642,11 +11642,11 @@
     ],
     "2016": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "5"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11666,27 +11666,27 @@
         "questions": "13(a,b)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "10(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "12(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "12(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "14(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "18(a-c)"
       },
       {
@@ -11694,23 +11694,23 @@
         "questions": "8(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "20"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "19(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15"
       },
       {
@@ -11720,11 +11720,11 @@
     ],
     "2017": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "4"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -11744,27 +11744,27 @@
         "questions": "10(a)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "6(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "7(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11(a)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "17(c)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "14(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "18(a,b)"
       },
       {
@@ -11772,23 +11772,23 @@
         "questions": "8(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "5(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "13"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "19(a-c)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "17(a,b)"
       },
       {
@@ -11798,15 +11798,15 @@
     ],
     "2019": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "5(a,b)"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "7"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -11830,27 +11830,27 @@
         "questions": "17(a)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "7"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "8(a-c)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "12(a)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "11(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "19(a,b)"
       },
       {
@@ -11858,23 +11858,23 @@
         "questions": "10(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "16(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "17"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15"
       },
       {
@@ -11884,15 +11884,15 @@
     ],
     "2021": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "6"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "5"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11916,43 +11916,43 @@
         "questions": "19(c-iii)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15(b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "12(a-c)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "10(a,b)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "2026-04-16 00:00:00"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "13, 16"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a)"
       },
       {
@@ -11960,21 +11960,21 @@
         "questions": "11(c)"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "7(a-c)"
       }
     ],
     "2022": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "5"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "2"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -11994,47 +11994,47 @@
         "questions": "8(a,b)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "7(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "9(a-c)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11(a)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15(b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "14(a-c)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "10(a-c)"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "2026-12-19 00:00:00"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a)"
       },
       {
@@ -12044,15 +12044,15 @@
     ],
     "2024": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "6"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "5"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -12072,47 +12072,47 @@
         "questions": "8(a,b)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "12(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11(a)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "16(b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "14(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "2026-10-19 00:00:00"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "15, 19(c)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "4(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "17"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "18(a,b)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "16(a)"
       },
       {
@@ -12120,21 +12120,21 @@
         "questions": "11(b,c)"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "7(a-c)"
       }
     ],
     "2025": [
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "7(a-c)"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "3"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -12158,47 +12158,47 @@
         "questions": "18(b-i)"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "4(a,b)"
       },
       {
-        "topic": "J29. Presentation of data",
+        "topic": "J29. Presentation of Data",
         "questions": "12(a,b)"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "9(a,b)"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "15(b)"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "10(a,b)"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "2026-11-18 00:00:00"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "17(a,b)"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6(a,b)"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "13, 19"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "14(a-c)"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "15(a)"
       },
       {
@@ -12214,15 +12214,15 @@
         "questions": "1"
       },
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "11"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "10"
       },
       {
@@ -12230,7 +12230,7 @@
         "questions": "13"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2,31"
       },
       {
@@ -12242,11 +12242,11 @@
         "questions": "1"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "9"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "16"
       },
       {
@@ -12254,7 +12254,7 @@
         "questions": "17"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "22"
       },
       {
@@ -12270,35 +12270,35 @@
         "questions": "21"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "19"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "6,34"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "7,15"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "35,36"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "8,32"
       },
       {
@@ -12306,19 +12306,19 @@
         "questions": "12"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "33"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "37"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "25,38"
       },
       {
@@ -12326,19 +12326,19 @@
         "questions": "26"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "39,40,41"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "43"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "42"
       },
       {
@@ -12348,15 +12348,15 @@
     ],
     "2012": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "13"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "8"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "9"
       },
       {
@@ -12364,7 +12364,7 @@
         "questions": "12"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,33"
       },
       {
@@ -12372,11 +12372,11 @@
         "questions": "2,3"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "7"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "16"
       },
       {
@@ -12384,7 +12384,7 @@
         "questions": "17"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "22"
       },
       {
@@ -12404,35 +12404,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "23"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "18,19"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "11,30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "27,28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "6,34"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "4,31"
       },
       {
@@ -12440,19 +12440,19 @@
         "questions": "10"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "37"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "36"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "25"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "20,21"
       },
       {
@@ -12460,19 +12460,19 @@
         "questions": "24"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "26,42"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "39,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "43"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "44"
       },
       {
@@ -12480,21 +12480,21 @@
         "questions": "29,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "23"
       }
     ],
     "2013": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "10,11"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "12"
       },
       {
@@ -12502,7 +12502,7 @@
         "questions": "38"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,33"
       },
       {
@@ -12514,11 +12514,11 @@
         "questions": "2"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "5"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "16"
       },
       {
@@ -12542,35 +12542,35 @@
         "questions": "43"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "20,22,23"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "27"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "26"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "35,36"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "7"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32,34"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "9,31"
       },
       {
@@ -12578,19 +12578,19 @@
         "questions": "13"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "38"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "37"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "19"
       },
       {
@@ -12598,15 +12598,15 @@
         "questions": "24"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "25,42"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "39,40,41"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "44"
       },
       {
@@ -12614,21 +12614,21 @@
         "questions": "45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "28,30"
       }
     ],
     "2014": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "9"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "12"
       },
       {
@@ -12636,7 +12636,7 @@
         "questions": "14"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,34"
       },
       {
@@ -12644,11 +12644,11 @@
         "questions": "2,3"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "7"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "10"
       },
       {
@@ -12672,35 +12672,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "23"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "18,19"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "28"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "27"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "36"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "5"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32,33"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "31"
       },
       {
@@ -12708,19 +12708,19 @@
         "questions": "13"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "37"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "6"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "25"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "20,21"
       },
       {
@@ -12728,15 +12728,15 @@
         "questions": "24"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "26,42"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "39,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "43"
       },
       {
@@ -12744,21 +12744,21 @@
         "questions": "44,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "23,29"
       }
     ],
     "2015": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "9,10"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "11"
       },
       {
@@ -12766,7 +12766,7 @@
         "questions": "13"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2,33"
       },
       {
@@ -12774,11 +12774,11 @@
         "questions": "1,5"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "6"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "17"
       },
       {
@@ -12798,35 +12798,35 @@
         "questions": "42"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "23"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "18"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "7,34,35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "8"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "31"
       },
       {
@@ -12834,19 +12834,19 @@
         "questions": "12"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "37"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "36"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "25"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "20"
       },
       {
@@ -12854,19 +12854,19 @@
         "questions": "24"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "26,41"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38,39,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "43"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "44"
       },
       {
@@ -12876,15 +12876,15 @@
     ],
     "2016": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "10"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "11,13"
       },
       {
@@ -12892,7 +12892,7 @@
         "questions": "14"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,33"
       },
       {
@@ -12904,11 +12904,11 @@
         "questions": "2"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "7"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "19"
       },
       {
@@ -12916,7 +12916,7 @@
         "questions": "18"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "15"
       },
       {
@@ -12936,35 +12936,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "26"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "21"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "8,34"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "9"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "6,31"
       },
       {
@@ -12972,35 +12972,35 @@
         "questions": "12"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "36"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "35"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "25"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,40"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27,41"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "37,38,39"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "43"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "42"
       },
       {
@@ -13010,15 +13010,15 @@
     ],
     "2017": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "10"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "11"
       },
       {
@@ -13026,7 +13026,7 @@
         "questions": "13"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2,32"
       },
       {
@@ -13038,7 +13038,7 @@
         "questions": "3"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "5"
       },
       {
@@ -13046,7 +13046,7 @@
         "questions": "15"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "18,19"
       },
       {
@@ -13062,35 +13062,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "25"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "14,21"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "6,35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "9"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "33,34"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "7"
       },
       {
@@ -13098,19 +13098,19 @@
         "questions": "12"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "36"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "37"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "23,24"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "21,40"
       },
       {
@@ -13118,19 +13118,19 @@
         "questions": "27"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "26"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "31,38,39"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13138,21 +13138,21 @@
         "questions": "29,44,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "11,25"
       }
     ],
     "2018": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "13"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "9"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "10"
       },
       {
@@ -13160,7 +13160,7 @@
         "questions": "12"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1"
       },
       {
@@ -13172,7 +13172,7 @@
         "questions": "2,4"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "17"
       },
       {
@@ -13196,35 +13196,35 @@
         "questions": "40"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "21"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "29"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "5"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "7,31"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32,33"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "8"
       },
       {
@@ -13232,19 +13232,19 @@
         "questions": "11"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "35"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "34"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "6,26"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,39"
       },
       {
@@ -13252,19 +13252,19 @@
         "questions": "25"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13274,15 +13274,15 @@
     ],
     "2019": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "6"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "11"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "12"
       },
       {
@@ -13290,7 +13290,7 @@
         "questions": "14"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2,33"
       },
       {
@@ -13302,11 +13302,11 @@
         "questions": "5"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "7"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "21"
       },
       {
@@ -13314,7 +13314,7 @@
         "questions": "15"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "17,19"
       },
       {
@@ -13330,35 +13330,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "25"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "22"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "34"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "10"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "31,32"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "8,9"
       },
       {
@@ -13366,19 +13366,19 @@
         "questions": "13"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "36"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "35"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "23,24"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "21,39"
       },
       {
@@ -13386,19 +13386,19 @@
         "questions": "26"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27,37"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13408,15 +13408,15 @@
     ],
     "2020": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "14"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "9"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "10"
       },
       {
@@ -13424,7 +13424,7 @@
         "questions": "12"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,31"
       },
       {
@@ -13436,11 +13436,11 @@
         "questions": "2,3"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "13"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "15"
       },
       {
@@ -13448,7 +13448,7 @@
         "questions": "16,17"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "19"
       },
       {
@@ -13464,35 +13464,35 @@
         "questions": "40"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "23"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "5,37"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "20"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "32,33,34"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "6"
       },
       {
@@ -13500,19 +13500,19 @@
         "questions": "11"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "35"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "36"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "8,26"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,39"
       },
       {
@@ -13520,19 +13520,19 @@
         "questions": "25"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27,41"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13540,21 +13540,21 @@
         "questions": "29,44,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "24"
       }
     ],
     "2021": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "5"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "9"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "11"
       },
       {
@@ -13562,7 +13562,7 @@
         "questions": "13"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,32"
       },
       {
@@ -13574,11 +13574,11 @@
         "questions": "2,4"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "10"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "17"
       },
       {
@@ -13586,7 +13586,7 @@
         "questions": "15,16"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "18"
       },
       {
@@ -13606,35 +13606,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "23,25"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "24"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "7,35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "14"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "33,34"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "8,31"
       },
       {
@@ -13642,19 +13642,19 @@
         "questions": "12"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "36"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "37"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "26"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,39"
       },
       {
@@ -13662,19 +13662,19 @@
         "questions": "25"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27,40"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13684,15 +13684,15 @@
     ],
     "2022": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "6"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "11"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "12"
       },
       {
@@ -13700,7 +13700,7 @@
         "questions": "14"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2"
       },
       {
@@ -13712,11 +13712,11 @@
         "questions": "5"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "7"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "16"
       },
       {
@@ -13724,7 +13724,7 @@
         "questions": "15"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "20"
       },
       {
@@ -13740,35 +13740,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "25"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "21"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "29,30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "4,35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "8,10"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "31,32,33"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "9"
       },
       {
@@ -13776,19 +13776,19 @@
         "questions": "13"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "37"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "36"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "24"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "21"
       },
       {
@@ -13796,19 +13796,19 @@
         "questions": "26"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38,39,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13816,21 +13816,21 @@
         "questions": "29,44,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "25"
       }
     ],
     "2023": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "7"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "11"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "12"
       },
       {
@@ -13838,7 +13838,7 @@
         "questions": "14"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "3,31"
       },
       {
@@ -13850,11 +13850,11 @@
         "questions": "1,2"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "6"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "16"
       },
       {
@@ -13862,7 +13862,7 @@
         "questions": "15"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "18"
       },
       {
@@ -13882,35 +13882,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "23"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "34"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "8,10,35"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "33"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "9,32"
       },
       {
@@ -13918,19 +13918,19 @@
         "questions": "13"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "36"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "37"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "25"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,38"
       },
       {
@@ -13938,19 +13938,19 @@
         "questions": "26"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27,39"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "38,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -13958,25 +13958,25 @@
         "questions": "29,44,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "24"
       }
     ],
     "2024": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "4"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "11"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "10"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "2,32"
       },
       {
@@ -13988,11 +13988,11 @@
         "questions": "3"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "10"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "15"
       },
       {
@@ -14000,7 +14000,7 @@
         "questions": "16"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "19"
       },
       {
@@ -14020,31 +14020,31 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "23"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "7,35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "8,14"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "33,34"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "9,31"
       },
       {
@@ -14052,35 +14052,35 @@
         "questions": "13"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "36"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "37"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "25,26"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,38"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "39,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -14090,15 +14090,15 @@
     ],
     "2025": [
       {
-        "topic": "J3. Approx / Estimation",
+        "topic": "J3. Approximate Values & Numerical Estimation",
         "questions": "6"
       },
       {
-        "topic": "J5. Percentages",
+        "topic": "J5. Using Percentages",
         "questions": "10"
       },
       {
-        "topic": "J6. Ratios / Proportion",
+        "topic": "J6. Rates, Ratios & Proportions",
         "questions": "11"
       },
       {
@@ -14106,7 +14106,7 @@
         "questions": "13"
       },
       {
-        "topic": "J10. Indices / Numerals",
+        "topic": "J10. Laws of Integral Indices",
         "questions": "1,31"
       },
       {
@@ -14118,11 +14118,11 @@
         "questions": "4"
       },
       {
-        "topic": "J14. Inequalities (1 unknown)",
+        "topic": "J14. Linear Inequalities in One Unknown",
         "questions": "7"
       },
       {
-        "topic": "J16. Arc Lengths / Sectors",
+        "topic": "J16. Arc Lengths & Areas of Sectors",
         "questions": "15"
       },
       {
@@ -14130,7 +14130,7 @@
         "questions": "16"
       },
       {
-        "topic": "J19. Angles / Parallel Lines",
+        "topic": "J19. Angles & Parallel Lines",
         "questions": "20"
       },
       {
@@ -14146,35 +14146,35 @@
         "questions": "41"
       },
       {
-        "topic": "J26. Coordinates / Trans.",
+        "topic": "J26. Rectangular Coordinate System",
         "questions": "24,26"
       },
       {
-        "topic": "J27. Trigonometry (Basic)",
+        "topic": "J27. Trigonometry",
         "questions": "23"
       },
       {
-        "topic": "J30. Central Tendency",
+        "topic": "J30. Measures of Central Tendency",
         "questions": "30"
       },
       {
-        "topic": "J31. Probability (Basic)",
+        "topic": "J31. Probability",
         "questions": "28"
       },
       {
-        "topic": "S1. Quadratic Eq. / Complex",
+        "topic": "S1. Quadratic Equations in One Unknown",
         "questions": "5,35"
       },
       {
-        "topic": "S2. Functions / Graphs",
+        "topic": "S2. Functions & Graphs",
         "questions": "8"
       },
       {
-        "topic": "S3. Exp and Log Functions",
+        "topic": "S3. Exponential & Logarithmic Functions",
         "questions": "33,34"
       },
       {
-        "topic": "S4. Adv. Polynomials (Rem.)",
+        "topic": "S4. More about Polynomials",
         "questions": "9,32"
       },
       {
@@ -14182,19 +14182,19 @@
         "questions": "12"
       },
       {
-        "topic": "S7. Sequences (AS/GS)",
+        "topic": "S7. Arithmetic & Geometric Sequences",
         "questions": "37"
       },
       {
-        "topic": "S8. LP / Inequalities",
+        "topic": "S8. Inequalities & Linear Programming",
         "questions": "36"
       },
       {
-        "topic": "S10. Eq. of Straight Lines",
+        "topic": "S10. Equations of Straight Lines",
         "questions": "14,26"
       },
       {
-        "topic": "S11. Properties of Circles",
+        "topic": "S11. Basic Properties of Circles",
         "questions": "22,38"
       },
       {
@@ -14202,19 +14202,19 @@
         "questions": "25"
       },
       {
-        "topic": "S13. Eq. of Circles",
+        "topic": "S13. Equations of Circles",
         "questions": "27"
       },
       {
-        "topic": "S14. Adv. Trigonometry",
+        "topic": "S14. More about Trigonometry",
         "questions": "39,40"
       },
       {
-        "topic": "S15. Perm. & Comb.",
+        "topic": "S15. Permutations & Combinations",
         "questions": "42"
       },
       {
-        "topic": "S16. Adv. Probability",
+        "topic": "S16. More about Probability",
         "questions": "43"
       },
       {
@@ -14222,7 +14222,7 @@
         "questions": "29,44,45"
       },
       {
-        "topic": "Out of Syllabus (OOS)",
+        "topic": "Out of Syllabus",
         "questions": "24"
       }
     ]
