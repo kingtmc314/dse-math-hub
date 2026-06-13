@@ -2865,5 +2865,589 @@
       "solution_text": "在每個數據乘上相同的常數 \nk\n。\n\n  Range 分佈域為\n原來的 \nk\n倍\n。\n\n  Variance 方差為\n原來的 \nk\n2\n倍\n。\n在每個數據加上相同的常數\n  分佈域和方差並無改變。\n\n  range and variance do not change.\nI) new mean 新的平均值 ##=6m+5## \n因此選項 I 正確。\nII) new range 新的分佈域 ##=6r## \n因此選項 II 錯誤。\nIII) new variance 新的方差 ##=6^2v=36v## \n因此選項 III 錯誤。\n相關文章: \n標準差 Standard Deviation 公式的意義\n \n\n \n \n標籤: \n \nHKDSE Answers\n, \nHKDSE Solutions\n, \npaper2_solution\n, \nPast Paper\n, \n文憑試答案\n, \n文憑試題解\n分類\n: \n計數機應用及歷屆試題\n相關文章:\nHKDSE 2012 Practice Paper Maths Paper II 題解 \nHKDSE 2016 Maths Paper II 題解 \nHKDSE 2015 Maths Paper II 題解 \nHKDSE 2018 Maths Paper II 題解 \nHKDSE 2012 Maths Paper II 題解 \nIf you enjoyed this article, subscribe to receive more just like it.\nSubscribe via RSS Feed\n回應 (9)\nTrackback URL\n | \nComments RSS Feed\n\n \nfai\n \n說：\n\n26/04/2019 at 7:39 下午\n十分仔細\n回覆\n\n \nkelvin\n \n說：\n\n16/11/2019 at 12:21 上午\nthx\n回覆\n\n \namy\n \n說：\n\n11/06/2020 at 6:49 下午\nthx\n回覆\n\n \nRio Lam\n \n說：\n\n10/02/2021 at 10:30 上午\nGood\n回覆\n\n \nChris Wong\n \n說：\n\n13/07/2021 at 11:28 上午\nthx\n回覆\n\n \nowen\n \n說：\n\n14/12/2021 at 8:28 上午\nthx\n回覆\n\n \n惠王\n \n說：\n\n04/12/2023 at 11:09 上午\nThx\n回覆\n\n \n天水圍阿凡\n \n說：",
       "latex": []
     }
+  },
+  "2012": {
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q17.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q20.png"
+      ]
+    },
+    "21": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q21.png"
+      ]
+    },
+    "23": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q23.png"
+      ]
+    },
+    "24": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q24.gif"
+      ]
+    },
+    "26": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q26.png"
+      ]
+    },
+    "29": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q29.png"
+      ]
+    },
+    "32": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q32.png"
+      ]
+    },
+    "33": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q33.png"
+      ]
+    },
+    "34": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q34a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q34b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q34c.png"
+      ]
+    },
+    "36": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q36.png"
+      ]
+    },
+    "39": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q39.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q40a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q40b.png"
+      ]
+    },
+    "41": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q41a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q41b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2012-p2-q41c.png"
+      ]
+    }
+  },
+  "2013": {
+    "15": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q15.png"
+      ]
+    },
+    "16": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q16.png"
+      ]
+    },
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q17.png"
+      ]
+    },
+    "18": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q18.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q18b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q18c.png"
+      ]
+    },
+    "19": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q19.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q20b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q20c.png"
+      ]
+    },
+    "21": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q21.png"
+      ]
+    },
+    "22": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q22.png"
+      ]
+    },
+    "23": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q23.png"
+      ]
+    },
+    "24": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/hkdse2013-p2-q24.png"
+      ]
+    },
+    "25": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q25.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q25b.png"
+      ]
+    },
+    "29": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q29.png"
+      ]
+    },
+    "33": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q33.png"
+      ]
+    },
+    "37": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q37.png"
+      ]
+    },
+    "39": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q39.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q40a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q40b.png"
+      ]
+    },
+    "41": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q41a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q41b.png"
+      ]
+    },
+    "43": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2013-p2-q43.png"
+      ]
+    }
+  },
+  "2014": {
+    "15": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q15.png"
+      ]
+    },
+    "16": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q16a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q16b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q16c.png"
+      ]
+    },
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q17b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q17c.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q17d.png"
+      ]
+    },
+    "18": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q18.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q20.png"
+      ]
+    },
+    "21": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q21a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2014-p2-q21b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2014-p2-q21c.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2014-p2-q21d.png"
+      ]
+    },
+    "22": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q22.png"
+      ]
+    },
+    "23": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q23.png"
+      ]
+    },
+    "24": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q24.png"
+      ]
+    },
+    "26": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q26.png"
+      ]
+    },
+    "32": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q32a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q32b.png"
+      ]
+    },
+    "38": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q38.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q40.png"
+      ]
+    },
+    "41": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2014-p2-q41.png"
+      ]
+    },
+    "42": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/05/dse2014-p2-q42.png"
+      ]
+    },
+    "45": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/04/dse2014-p2-q45.png"
+      ]
+    }
+  },
+  "2015": {
+    "16": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse2015-p2q16.png"
+      ]
+    },
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2q17b.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q20b.png",
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q20c.png"
+      ]
+    },
+    "21": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse2015-p2-q21.png"
+      ]
+    },
+    "22": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q22.png"
+      ]
+    },
+    "23": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q23.png"
+      ]
+    },
+    "24": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q24.gif"
+      ]
+    },
+    "25": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q25.png"
+      ]
+    },
+    "30": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q30.png"
+      ]
+    },
+    "36": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q36.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q40a.png"
+      ]
+    },
+    "42": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2015/12/dse-2015-p2-q42.png"
+      ]
+    }
+  },
+  "2016": {
+    "15": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q15.png"
+      ]
+    },
+    "16": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q16.png"
+      ]
+    },
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q17.png"
+      ]
+    },
+    "18": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q18.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q20.png"
+      ]
+    },
+    "21": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q21.png"
+      ]
+    },
+    "22": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q22.png"
+      ]
+    },
+    "23": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q23.png"
+      ]
+    },
+    "25": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q25.png"
+      ]
+    },
+    "39": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q39a.png",
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q39b.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q40a.png",
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q40b.png"
+      ]
+    },
+    "41": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2016/08/dse-2016-p2-q41.png"
+      ]
+    }
+  },
+  "2017": {
+    "13": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q13.png"
+      ]
+    },
+    "15": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q15.png"
+      ]
+    },
+    "16": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q16f.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q16h.png"
+      ]
+    },
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q17.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q17.png"
+      ]
+    },
+    "18": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q18.png"
+      ]
+    },
+    "19": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q19.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q20b.png"
+      ]
+    },
+    "21": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q21a.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q21b.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q21c.png"
+      ]
+    },
+    "25": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q25.png"
+      ]
+    },
+    "27": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q27.png"
+      ]
+    },
+    "29": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q29.png"
+      ]
+    },
+    "37": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q37.png"
+      ]
+    },
+    "38": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q38.png"
+      ]
+    },
+    "39": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q39.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q40.png"
+      ]
+    },
+    "41": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q41a_2.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q41b_2.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q41c.png",
+        "https://mathseasy.hk/wp-content/uploads/2017/04/dse-2017-p2-q41d.png"
+      ]
+    }
+  },
+  "2018": {
+    "5": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q5.png"
+      ]
+    },
+    "15": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q15.png"
+      ]
+    },
+    "16": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q16a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q16b.png"
+      ]
+    },
+    "17": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q17b.png"
+      ]
+    },
+    "18": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q18a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q18b.png"
+      ]
+    },
+    "19": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q19a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q19b.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q19c.png"
+      ]
+    },
+    "20": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q20.png"
+      ]
+    },
+    "22": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q22.png"
+      ]
+    },
+    "24": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q24.png"
+      ]
+    },
+    "25": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q25.png"
+      ]
+    },
+    "26": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q26.png"
+      ]
+    },
+    "27": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q27.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q27.png"
+      ]
+    },
+    "32": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q32a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q32b.png"
+      ]
+    },
+    "34": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q34.png"
+      ]
+    },
+    "39": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q39a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q39b.png"
+      ]
+    },
+    "40": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q40a_r.gif",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q40b.png"
+      ]
+    },
+    "41": {
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q41a.png",
+        "https://mathseasy.hk/wp-content/uploads/2018/05/dse-2018-p2-q41b.png"
+      ]
+    }
   }
 }

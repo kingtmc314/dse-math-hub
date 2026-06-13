@@ -1,7 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Filter, BookOpen, ChevronDown } from "lucide-react";
+import { Search, Filter, BookOpen, ChevronDown, TrendingUp } from "lucide-react";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import dseData from "@/data/dseData.json";
 import PerformanceBar from "@/components/PerformanceBar";
 import TopicBadge from "@/components/TopicBadge";
@@ -151,6 +152,18 @@ export default function TopicFilterPage() {
     }
     return groups;
   }, [questionResults]);
+
+  // Build trend chart data: average performance per year
+  const trendChartData = useMemo(() => {
+    const yearAvgs: { year: string; avg: number; count: number }[] = [];
+    for (const [year, questions] of Object.entries(groupedResults)) {
+      const avg = questions.reduce((s, q) => s + q.performance, 0) / questions.length;
+      yearAvgs.push({ year, avg: Math.round(avg * 10) / 10, count: questions.length });
+    }
+    // Sort by year ascending for the chart
+    yearAvgs.sort((a, b) => Number(a.year) - Number(b.year));
+    return yearAvgs;
+  }, [groupedResults]);
 
   const toggleGroup = (year: string) => {
     setExpandedGroups(prev => {
@@ -325,6 +338,67 @@ export default function TopicFilterPage() {
                     )}
                   </div>
                 </div>
+
+                {/* Historical Scoring Trend Line Chart */}
+                {trendChartData.length >= 2 && (
+                  <div className="mb-6 p-4 rounded-xl border border-border/60 bg-card">
+                    <div className="flex items-center gap-2 mb-3">
+                      <TrendingUp className="w-4 h-4 text-primary" />
+                      <h3 className="text-sm font-semibold text-foreground">
+                        {lang === "zh" ? "歷年平均得分率趨勢" : "Historical Avg. Score Rate Trend"}
+                      </h3>
+                    </div>
+                    <div className="h-52 w-full">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={trendChartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.5} />
+                          <XAxis
+                            dataKey="year"
+                            tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }}
+                            axisLine={{ stroke: "hsl(var(--border))" }}
+                            tickLine={false}
+                          />
+                          <YAxis
+                            domain={[0, 100]}
+                            tick={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }}
+                            axisLine={{ stroke: "hsl(var(--border))" }}
+                            tickLine={false}
+                            tickFormatter={(v) => `${v}%`}
+                            width={45}
+                          />
+                          <Tooltip
+                            contentStyle={{
+                              backgroundColor: "hsl(var(--card))",
+                              border: "1px solid hsl(var(--border))",
+                              borderRadius: "8px",
+                              fontSize: "12px",
+                              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                            }}
+                            formatter={(value: number, name: string) => [
+                              `${value}%`,
+                              lang === "zh" ? "平均得分率" : "Avg Score Rate",
+                            ]}
+                            labelFormatter={(label) => `${label} DSE`}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="avg"
+                            stroke="#0ea5e9"
+                            strokeWidth={2.5}
+                            dot={{ r: 4, fill: "#0ea5e9", strokeWidth: 2, stroke: "#fff" }}
+                            activeDot={{ r: 6, fill: "#0ea5e9", strokeWidth: 2, stroke: "#fff" }}
+                            name={lang === "zh" ? "平均得分率" : "Avg Score Rate"}
+                          />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground/60 mt-2 text-center">
+                      {lang === "zh"
+                        ? "數據來源：HKEAA 考試報告（答對百分率）"
+                        : "Source: HKEAA Examination Reports (Correct Rate)"}
+                    </p>
+                  </div>
+                )}
 
                 {/* Results grouped by year */}
                 <div className="space-y-3">
