@@ -27,6 +27,7 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
+          GITHUB_PAGES: "true"
           VITE_ANALYTICS_ENDPOINT: ""
           VITE_ANALYTICS_WEBSITE_ID: ""
       - name: Setup Pages
