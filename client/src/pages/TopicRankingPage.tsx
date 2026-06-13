@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { BarChart3, TrendingDown, TrendingUp, AlertTriangle, CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
 import dseData from "@/data/dseData.json";
+import { getTopicDisplayName } from "@/data/topicTranslations";
 import { Link } from "wouter";
 
 interface TopicStats {
@@ -175,7 +176,7 @@ export default function TopicRankingPage() {
                   {lang === "zh" ? "最難課題" : "Hardest Topic"}
                 </span>
               </div>
-              <p className="text-sm font-semibold text-red-800 truncate">{summary.hardest.topic}</p>
+              <p className="text-sm font-semibold text-red-800 truncate">{getTopicDisplayName(summary.hardest.topic, lang)}</p>
               <p className="text-lg font-bold text-red-600">{summary.hardest.avgScore}%</p>
             </div>
             <div className="p-4 rounded-xl border border-green-200 bg-green-50/50">
@@ -185,7 +186,7 @@ export default function TopicRankingPage() {
                   {lang === "zh" ? "最易課題" : "Easiest Topic"}
                 </span>
               </div>
-              <p className="text-sm font-semibold text-green-800 truncate">{summary.easiest.topic}</p>
+              <p className="text-sm font-semibold text-green-800 truncate">{getTopicDisplayName(summary.easiest.topic, lang)}</p>
               <p className="text-lg font-bold text-green-600">{summary.easiest.avgScore}%</p>
             </div>
             <div className="p-4 rounded-xl border border-border/60 bg-card">
@@ -277,7 +278,7 @@ export default function TopicRankingPage() {
 
                   {/* Topic Name */}
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground truncate">{topic.topic}</p>
+                    <p className="text-sm font-medium text-foreground truncate">{getTopicDisplayName(topic.topic, lang)}</p>
                     <p className="text-[11px] text-muted-foreground">
                       {topic.totalQuestions} {lang === "zh" ? "題" : "Q"} · {topic.yearsAppeared} {lang === "zh" ? "年" : "yrs"}
                       {topic.trend === "down" && (

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, BookOpen, ChevronDown, TrendingUp } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import dseData from "@/data/dseData.json";
+import { getTopicDisplayName, getTopicSortKey } from "@/data/topicTranslations";
 import PerformanceBar from "@/components/PerformanceBar";
 import TopicBadge from "@/components/TopicBadge";
 
@@ -37,7 +38,14 @@ export default function TopicFilterPage() {
         topics.add(t.topic);
       }
     }
-    return Array.from(topics).sort();
+    return Array.from(topics).sort((a, b) => {
+      // Sort by category first (J before S before Other)
+      const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
+      const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
+      if (catA !== catB) return catA - catB;
+      // Then by numeric prefix
+      return getTopicSortKey(a) - getTopicSortKey(b);
+    });
   }, []);
 
   // Group topics by category (J = Junior, S = Senior)
@@ -57,7 +65,10 @@ export default function TopicFilterPage() {
   const filteredTopics = useMemo(() => {
     if (!searchQuery) return allTopics;
     const q = searchQuery.toLowerCase();
-    return allTopics.filter(t => t.toLowerCase().includes(q));
+    return allTopics.filter(t => 
+      t.toLowerCase().includes(q) || 
+      getTopicDisplayName(t, "zh").toLowerCase().includes(q)
+    );
   }, [allTopics, searchQuery]);
 
   // Build question results for selected topic
@@ -223,19 +234,19 @@ export default function TopicFilterPage() {
                   className="w-full appearance-none px-4 py-3 pr-10 rounded-xl border border-border/60 bg-card text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/50 transition-all"
                 >
                   <option value="">{lang === "zh" ? "— 選擇課題 —" : "— Select Topic —"}</option>
-                  <optgroup label={lang === "zh" ? "初中課題 (Junior)" : "Junior Topics"}>
+                  <optgroup label={lang === "zh" ? "初中課題" : "Junior Topics"}>
                     {allTopics.filter(t => t.startsWith("J")).map((topic) => (
-                      <option key={topic} value={topic}>{topic}</option>
+                      <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
                     ))}
                   </optgroup>
-                  <optgroup label={lang === "zh" ? "高中課題 (Senior)" : "Senior Topics"}>
+                  <optgroup label={lang === "zh" ? "高中課題" : "Senior Topics"}>
                     {allTopics.filter(t => t.startsWith("S")).map((topic) => (
-                      <option key={topic} value={topic}>{topic}</option>
+                      <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
                     ))}
                   </optgroup>
                   <optgroup label={lang === "zh" ? "其他" : "Other"}>
                     {allTopics.filter(t => !t.startsWith("J") && !t.startsWith("S")).map((topic) => (
-                      <option key={topic} value={topic}>{topic}</option>
+                      <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
                     ))}
                   </optgroup>
                 </select>
@@ -296,7 +307,7 @@ export default function TopicFilterPage() {
                           : "hover:bg-muted/30 text-foreground"
                       }`}
                     >
-                      {topic}
+                      {getTopicDisplayName(topic, lang)}
                     </button>
                   ))}
                 </div>
@@ -306,7 +317,7 @@ export default function TopicFilterPage() {
               {filteredTopics.filter(t => t.startsWith("S")).length > 0 && (
                 <div>
                   <div className="px-4 py-2 bg-muted/30 text-xs font-medium text-muted-foreground uppercase tracking-wider border-b border-border/30">
-                    {lang === "zh" ? "高中課題 (Senior)" : "Senior Topics"}
+                    {lang === "zh" ? "高中課題" : "Senior Topics"}
                   </div>
                   {filteredTopics.filter(t => t.startsWith("S")).map((topic) => (
                     <button
@@ -318,7 +329,7 @@ export default function TopicFilterPage() {
                           : "hover:bg-muted/30 text-foreground"
                       }`}
                     >
-                      {topic}
+                      {getTopicDisplayName(topic, lang)}
                     </button>
                   ))}
                 </div>
@@ -340,7 +351,7 @@ export default function TopicFilterPage() {
                           : "hover:bg-muted/30 text-foreground"
                       }`}
                     >
-                      {topic}
+                      {getTopicDisplayName(topic, lang)}
                     </button>
                   ))}
                 </div>
@@ -377,7 +388,7 @@ export default function TopicFilterPage() {
                 <div className="mb-6 p-4 rounded-xl border border-primary/20 bg-primary/5">
                   <div className="flex items-center gap-2 mb-2">
                     <BookOpen className="w-5 h-5 text-primary" />
-                    <h2 className="font-display font-semibold text-lg text-foreground">{selectedTopic}</h2>
+                    <h2 className="font-display font-semibold text-lg text-foreground">{getTopicDisplayName(selectedTopic, lang)}</h2>
                   </div>
                   <div className="flex gap-4 text-sm text-muted-foreground">
                     <span>{questionResults.length} {lang === "zh" ? "題" : "questions"}</span>
