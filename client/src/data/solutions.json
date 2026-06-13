@@ -134,6 +134,10 @@
         "\\begin{align*} \n\\sin\\frac{\\theta}{2} &= \\frac{\\frac{MN}{2}}{ON}\\\\[2pt]\n\\sin\\Big(\\frac{\\frac{360\\deg}{\\pi}}{2}\\Big) &= \\frac{MN}{2(3\\pi)}\\\\[2pt]\nMN &= 6\\pi \\times \\sin\\Big(\\frac{180\\deg}{\\pi}\\Big)\\\\[2pt]\nMN &= 15.861\\text{cm} \n\\end{align*}",
         "\\begin{align*} \n&amp;\\ \\text{周界 Perimeter}\\\\ \n=&amp;\\ 15.861 + 3\\pi +3\\pi\\\\ \n\\approx&amp;\\ 34.7\\text{cm} \n\\end{align*}",
         "\\begin{align*} \n&\\ \\text{周界 Perimeter}\\\\ \n=&\\ 15.861 + 3\\pi +3\\pi\\\\ \n\\approx&\\ 34.7\\text{cm} \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q15a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q15b.png"
       ]
     },
     "16": {
@@ -162,6 +166,13 @@
         "\\begin{align*} \nA_2 &= \\frac{(3k)(h)}{2}\\\\[2pt]\n&= \\frac{3(hk)}{2}\\\\[2pt]\n&= \\frac{(3)(10)}{2}\\\\[2pt]\n&= 15\\text{ cm}^2\\\\\\\\ \nA_3 &= \\frac{(8k)(h)}{2}\\\\[2pt]\n&= \\frac{8(hk)}{2}\\\\[2pt]\n&= \\frac{(8)(10)}{2}\\\\[2pt]\n&= 40\\text{ cm}^2 \n\\end{align*}",
         "\\begin{align*} \n\\triangle DEF\\text{ 面積} &amp;= 15 \\times \\frac{3}{3+2}\\\\ \n&amp;=9\\text{ cm}^2 \n\\end{align*}",
         "\\begin{align*} \n\\triangle DEF\\text{ 面積} &= 15 \\times \\frac{3}{3+2}\\\\ \n&=9\\text{ cm}^2 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q17b.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q17c.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q17d.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q17e.png"
       ]
     },
     "18": {
@@ -175,6 +186,11 @@
         "\\begin{align*} \n\\therefore \\frac{WX}{WZ} &= \\frac{XY}{XZ}\\\\[2pt]\n\\frac{65}{25} &= \\frac{XY}{60}\\\\[2pt]\nXY &= \\frac{65 \\times 60}{25}\\\\[2pt]\nXY &= 156\\text{ cm} \n\\end{align*}",
         "\\begin{align*} \n\\frac{WY}{XY} &amp;= \\frac{XY}{YZ}\\\\[2pt]\n\\frac{\\sqrt{a^2 -60^2}+25}{a} &amp;= \\frac{a}{\\sqrt{a^2 -60^2}}\\\\[2pt]\na^2 &amp;= \\sqrt{a^2 -60^2}\\big(\\sqrt{a^2 -60^2}+25\\big)\\\\ \na^2 &amp;= a^2 -60^2 +25\\sqrt{a^2 -60^2}\\\\ \n60^2 &amp;= 25\\sqrt{a^2 -60^2}\\\\ \n\\sqrt{a^2 -60^2} &amp;= 144\\\\ \na^2 -60^2 &amp;= 144^2\\\\ \na^2 &amp;= 24336\\\\ \na &amp;= 156 \n\\end{align*}",
         "\\begin{align*} \n\\frac{WY}{XY} &= \\frac{XY}{YZ}\\\\[2pt]\n\\frac{\\sqrt{a^2 -60^2}+25}{a} &= \\frac{a}{\\sqrt{a^2 -60^2}}\\\\[2pt]\na^2 &= \\sqrt{a^2 -60^2}\\big(\\sqrt{a^2 -60^2}+25\\big)\\\\ \na^2 &= a^2 -60^2 +25\\sqrt{a^2 -60^2}\\\\ \n60^2 &= 25\\sqrt{a^2 -60^2}\\\\ \n\\sqrt{a^2 -60^2} &= 144\\\\ \na^2 -60^2 &= 144^2\\\\ \na^2 &= 24336\\\\ \na &= 156 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q18a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q18b.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q18c.png"
       ]
     },
     "19": {
@@ -184,6 +200,12 @@
       "latex": [
         "\\begin{align*} \n\\color{blue}{\\angle BGF} + \\color{green}{\\angle FBG} &amp;= \\angle BFD \\text{ (Ext. }\\angle\\text{ of }\\triangle 外角)\\\\ \n\\color{blue}{\\angle BGF} + \\color{green}{\\angle FBG} &amp;= 2 \\times \\color{red}{\\angle CFB}\\\\ \n\\color{blue}{\\angle BGF} + \\color{red}{\\angle CFB} &amp;= 2 \\times \\color{red}{\\angle CFB}\\\\ \n\\color{blue}{\\angle BGF} &amp;= \\color{red}{\\angle CFB}\\\\[6pt]\n\\therefore \\color{blue}{\\angle BGF} = \\color{green}{\\angle FBG} &amp;= \\color{red}{\\angle CFB} \n\\end{align*}",
         "\\begin{align*} \n\\color{blue}{\\angle BGF} + \\color{green}{\\angle FBG} &= \\angle BFD \\text{ (Ext. }\\angle\\text{ of }\\triangle 外角)\\\\ \n\\color{blue}{\\angle BGF} + \\color{green}{\\angle FBG} &= 2 \\times \\color{red}{\\angle CFB}\\\\ \n\\color{blue}{\\angle BGF} + \\color{red}{\\angle CFB} &= 2 \\times \\color{red}{\\angle CFB}\\\\ \n\\color{blue}{\\angle BGF} &= \\color{red}{\\angle CFB}\\\\[6pt]\n\\therefore \\color{blue}{\\angle BGF} = \\color{green}{\\angle FBG} &= \\color{red}{\\angle CFB} \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q19a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q19b.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q19c.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q19d.png"
       ]
     },
     "20": {
@@ -195,6 +217,10 @@
         "\\begin{align*} \n\\cos 60\\deg &= \\frac{x}{41}\\\\[2pt]\n\\frac{1}{2} &= \\frac{x}{41}\\\\[2pt]\nx &= \\frac{41}{2}\\\\[8pt]\n\\sin 60\\deg &= \\frac{h}{41}\\\\[2pt]\n\\frac{\\sqrt{3}}{2} &= \\frac{h}{41}\\\\[2pt]\nh &= \\frac{41\\sqrt{3}}{2}\\\\[8pt]\n\\tan 30\\deg &= \\frac{h}{y}\\\\[2pt]\ny &= h \\times \\frac{1}{\\tan 30\\deg}\\\\[2pt]\ny & = \\frac{41\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{1}\\\\[2pt]\ny &= \\frac{123}{2} \n\\end{align*}",
         "\\begin{align*} \nPQ &amp;= \\frac{41}{2} + 53 + \\frac{123}{2}\\\\[2pt]\n&amp;= 135\\text{ cm}^2 \n\\end{align*}",
         "\\begin{align*} \nPQ &= \\frac{41}{2} + 53 + \\frac{123}{2}\\\\[2pt]\n&= 135\\text{ cm}^2 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q20b.png"
       ]
     },
     "21": {
@@ -204,6 +230,10 @@
       "latex": [
         "\\begin{align*} \n\\frac{(20)(DE)}{2} &amp;= 150\\\\[2pt]\nDE &amp;= 15\\text{ cm}\\\\[8pt]\nAD^2 &amp;= AE^2 + DE^2\\\\ \nAD^2 &amp;= 20^2 + 15^2\\\\ \nAD &amp;= 25\\text{ cm}\\\\[8pt]\n\\frac{(AD)(h)}{2} &amp;= 150\\\\[2pt]\n\\frac{(25)(h)}{2} &amp;= 150\\\\[2pt]\nh &amp; = 12\\\\[8pt]\nh^2 + x^2 &amp;= DE^2\\\\ \n12^2 + x^2 &amp;= 15^2\\\\ \nx^2 &amp;= 15^2 – 12^2\\\\ \nx &amp;= 9\\text{ cm} \n\\end{align*}",
         "\\begin{align*} \n\\frac{(20)(DE)}{2} &= 150\\\\[2pt]\nDE &= 15\\text{ cm}\\\\[8pt]\nAD^2 &= AE^2 + DE^2\\\\ \nAD^2 &= 20^2 + 15^2\\\\ \nAD &= 25\\text{ cm}\\\\[8pt]\n\\frac{(AD)(h)}{2} &= 150\\\\[2pt]\n\\frac{(25)(h)}{2} &= 150\\\\[2pt]\nh & = 12\\\\[8pt]\nh^2 + x^2 &= DE^2\\\\ \n12^2 + x^2 &= 15^2\\\\ \nx^2 &= 15^2 – 12^2\\\\ \nx &= 9\\text{ cm} \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q21a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q21b.png"
       ]
     },
     "22": {
@@ -217,6 +247,9 @@
         "\\begin{align*} \n\\angle TUR + \\angle TSR &= 180\\deg\\ (opp. \\angle s, cyclic\\ quad.\\ \\text{圓內接四邊形對角})\\\\ \nx + \\angle TSR &= 180\\deg\\\\ \n\\angle TSR &= \\color{blue}{180\\deg – x} \n\\end{align*}",
         "\\begin{align*} \n\\angle TSR +\\angle SRT +\\angle STR &amp;= 180\\deg\\\\ \n(180\\deg – x) +y +33\\deg &amp;= 180\\deg\\\\ \n-x +y +33\\deg &amp;= 0\\deg\\\\ \nx -y &amp;= 33\\deg\\ …(2) \n\\end{align*}",
         "\\begin{align*} \n\\angle TSR +\\angle SRT +\\angle STR &= 180\\deg\\\\ \n(180\\deg – x) +y +33\\deg &= 180\\deg\\\\ \n-x +y +33\\deg &= 0\\deg\\\\ \nx -y &= 33\\deg\\ …(2) \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q22a.png"
       ]
     },
     "23": {
@@ -230,6 +263,9 @@
         "\\begin{align*} \n\\sin \\theta &= \\frac{AC}{AD}\\\\[2pt]\nAC &= AD\\sin \\theta\\\\[6pt]\n\\cos \\theta &= \\frac{AC}{BC}\\\\[2pt]\nAC &= BC\\cos \\theta\\\\ \n\\end{align*}",
         "\\begin{align*} \n\\therefore AD\\sin \\theta &amp;= BC\\cos \\theta\\\\ \n\\frac{\\sin \\theta}{\\cos \\theta} &amp;= \\frac{BC}{AD}\\\\[2pt]\n\\tan \\theta &amp;= \\frac{BC}{AD} \n\\end{align*}",
         "\\begin{align*} \n\\therefore AD\\sin \\theta &= BC\\cos \\theta\\\\ \n\\frac{\\sin \\theta}{\\cos \\theta} &= \\frac{BC}{AD}\\\\[2pt]\n\\tan \\theta &= \\frac{BC}{AD} \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q23.png"
       ]
     },
     "24": {
@@ -243,13 +279,21 @@
         "\\begin{align*} \n\\frac{\\sin \\angle XOY}{XY} &= \\frac{\\sin \\angle OXY}{OY}\\\\[2pt]\n\\frac{\\sin 60\\deg}{\\sqrt{3}} &= \\frac{\\sin \\angle OXY}{2}\\\\[2pt]\n\\sin \\angle OXY &= \\frac{2 \\sin 60\\deg}{\\sqrt{3}}\\\\ \n\\sin \\angle OXY &= 1\\\\ \n\\angle OXY &= 90\\deg \n\\end{align*}",
         "\\begin{align*} \n\\cos (90\\deg +60\\deg) &amp;= \\frac{1^2 +(\\sqrt{3})^2 -r^2}{2(1)(\\sqrt{3})}\\\\[2pt]\n\\cos 150\\deg &amp;= \\frac{1 +3 -r^2}{2\\sqrt{3}}\\\\[2pt]\n-3 &amp;= 4 -r^2\\\\ \nr^2 &amp;= 7\\\\ \nr &amp;= \\sqrt{7} \n\\end{align*}",
         "\\begin{align*} \n\\cos (90\\deg +60\\deg) &= \\frac{1^2 +(\\sqrt{3})^2 -r^2}{2(1)(\\sqrt{3})}\\\\[2pt]\n\\cos 150\\deg &= \\frac{1 +3 -r^2}{2\\sqrt{3}}\\\\[2pt]\n-3 &= 4 -r^2\\\\ \nr^2 &= 7\\\\ \nr &= \\sqrt{7} \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q24a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q24b.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q24c.png"
       ]
     },
     "25": {
       "answer": "B",
       "pct": 59,
       "solution_text": "O\n 點和 \nA\n 點都是一固定點，所以 \nOA\n 的距離是常數。\n\nPoint \nO\n and Point \nA\n are fixed points. Thus, \nOA\n is a constant.\n\nAP\n = \nOA\n = \n常數 Constant\n由於 \nP\n 點與 \nA\n 點保持固定距離，所以 \nP\n 點的軌跡是圓形。\n\nThe distance between Point \nP\n and Point \nA\n is a constant. Thus, the locus of \nP\n is a circle.\n相關文章：\n常見軌跡 Common Loci",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q25.gif"
+      ]
     },
     "26": {
       "answer": "B",
@@ -268,6 +312,9 @@
         "\\begin{align*} \n\\frac{20}{m} &= \\frac{5}{3}\\\\[2pt]\n5m &= 60\\\\ \nm &=12 \n\\end{align*}",
         "\\begin{align*} \n\\because -3m &amp;= 4n\\\\ \n-3 \\times 12 &amp;= 4n\\\\ \n4n &amp;= -36\\\\ \nn &amp;= -9 \n\\end{align*}",
         "\\begin{align*} \n\\because -3m &= 4n\\\\ \n-3 \\times 12 &= 4n\\\\ \n4n &= -36\\\\ \nn &= -9 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q26.png"
       ]
     },
     "27": {
@@ -281,6 +328,9 @@
         "\\begin{align*} \n\\Big(\\frac{-D}{2},\\frac{-E}{2} \\Big) &= (7, -5)\\\\[2pt]\n\\therefore D = -14, E &= 10 \n\\end{align*}",
         "\\begin{align*} \nr = \\sqrt{7^2 +5^2 -F} &amp;= 13\\\\ \n74 -F&amp;= 169\\\\ \nF &amp;= -95 \n\\end{align*}",
         "\\begin{align*} \nr = \\sqrt{7^2 +5^2 -F} &= 13\\\\ \n74 -F&= 169\\\\ \nF &= -95 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q27.png"
       ]
     },
     "28": {
@@ -299,6 +349,9 @@
       "latex": [
         "\\begin{align*} \n\\text{IQR 四分位數間距} =&amp;\\ Q_3 -Q_1\\\\ \n=&amp;\\ 5 -4\\\\ \n=&amp;\\ 1 \n\\end{align*}",
         "\\begin{align*} \n\\text{IQR 四分位數間距} =&\\ Q_3 -Q_1\\\\ \n=&\\ 5 -4\\\\ \n=&\\ 1 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q29.png"
       ]
     },
     "30": {
@@ -343,13 +396,20 @@
         "\\begin{align*} \ny &= mx^n\\\\ \n5^{12} &= m(1)^n\\\\ \nm &=5^{12} \n\\end{align*}",
         "\\begin{align*} \ny &amp;= mx^n\\\\ \n1 &amp;= 5^{12} \\times 625^n\\\\ \n5^{-12} &amp;= 625^n\\\\ \n\\log 5^{-12} &amp;= \\log 625^n\\\\ \n\\log 5^{-12} &amp;= n\\log 625\\\\ \nn &amp;= \\frac{\\log 5^{-12}}{\\log 625}\\\\ \nn &amp;= -3 \n\\end{align*}",
         "\\begin{align*} \ny &= mx^n\\\\ \n1 &= 5^{12} \\times 625^n\\\\ \n5^{-12} &= 625^n\\\\ \n\\log 5^{-12} &= \\log 625^n\\\\ \n\\log 5^{-12} &= n\\log 625\\\\ \nn &= \\frac{\\log 5^{-12}}{\\log 625}\\\\ \nn &= -3 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q33.png"
       ]
     },
     "34": {
       "answer": "D",
       "pct": 25,
       "solution_text": "此題具爭議性，以下題解只以考生的角度去選擇最佳答案。\n\nThis question is controversial. The solution below is from the point of view of candidates taking the examination to choose the best answer.\n由於 \n\\log_a 1 = 0\n，所以 \n(1,0)\n 必定在 \ny=\\log_a x\n 之上，亦即是 \nQ=(1,0)\n。從而得到 \nOQ=1\n。\n\nSince \n\\log_a 1 = 0\n, \n(1,0)\n must lie on the graph of \ny=\\log_a x\n. i.e. \nQ=(1,0)\n and \nOQ=1\n.\n選項 II 是 \nOQ \\gt a\n，由於 \nOQ=1\n，亦即是 \n1 \\gt a\n。與選項 I 完全相同。推論是選項 I 和 II 只可以同時正確，或是同時錯誤。因此可排除答案 B 及 C。\n\nStatement II is \nOQ \\gt a\n. Since \nOQ=1\n, it means \n1 \\gt a\n. It is exactly same as statement I. It implies statement I and II can only be both correct or both incorrect. So, answer B and C can be ruled out.\n我們知道 \ny=\\log_a x\n 與 \ny = a^x\n 的圖像是沿 \ny=x\n 反射對稱。因此 \nP\n 點在直線 \ny=x\n 之上，亦即是選項 III 正確。\n\nIt is known that \ny=\\log_a x\n and \ny = a^x\n are symmetrical about the line \ny=x\n. Thus, Point \nP\n must lie on the line \ny=x\n. Thus, statement III is correct.\n因此答案是 D。",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q34.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q34b.png"
+      ]
     },
     "35": {
       "answer": "A",
@@ -370,7 +430,10 @@
       "answer": "B",
       "pct": 46,
       "solution_text": "透過直線的截距來作圖。\n運用代數技巧，求 \nP\n點及\nQ\n點坐標。\n\nFind the coordinates of point \nP\n and point \nQ\n.\n\nP=(1,3)\\\\ \nQ=\\Big(11,\\frac{44}{3}\\Big)\n然後把各點代入 \n8x -6y +11\nP: 8(1) -6(3) +11 = 1\\\\ \nQ: 8(11) -6\\Big(\\frac{44}{3}\\Big) + 11 = \\color{red}{11}\n因此答案是 B",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q36.png"
+      ]
     },
     "37": {
       "answer": "A",
@@ -396,6 +459,9 @@
         "\\begin{align*} \n41\\deg +90\\deg + \\color{blue}{\\angle ACD} &= 180\\deg\\\\ \n\\color{blue}{\\angle ACD} &= \\color{blue}{49\\deg} \n\\end{align*}",
         "\\begin{align*} \n\\color{green}{\\angle BEC} &amp;= \\angle CDE +\\color{blue}{\\angle ECD}\\\\ \n\\color{green}{96 \\deg} &amp;= \\angle CDE + \\color{blue}{49\\deg}\\\\ \n\\angle CDE &amp;= \\color{green}{96\\deg} -\\color{blue}{49\\deg}\\\\ \n\\angle CDE &amp;= 47\\deg \n\\end{align*}",
         "\\begin{align*} \n\\color{green}{\\angle BEC} &= \\angle CDE +\\color{blue}{\\angle ECD}\\\\ \n\\color{green}{96 \\deg} &= \\angle CDE + \\color{blue}{49\\deg}\\\\ \n\\angle CDE &= \\color{green}{96\\deg} -\\color{blue}{49\\deg}\\\\ \n\\angle CDE &= 47\\deg \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q38a.png"
       ]
     },
     "39": {
@@ -418,6 +484,10 @@
         "\\begin{align*} \n\\cos 120\\deg &= \\frac{OQ^2 +OR^2 -QR^2}{2(OQ)(OR)}\\\\[2pt]\n\\cos 120\\deg &= \\frac{OQ^2 +OQ^2 -QR^2}{2(OQ)(OQ)}\\ \\because(OQ = OR)\\\\[2pt]\n\\frac{-1}{2} &= \\frac{2OQ^2 -a^2}{2OQ^2}\\\\[2pt]\n-OQ^2 &= 2OQ^2 -a^2\\\\[2pt]\na^2 &= 3OQ^2\\\\[2pt]\nOQ^2 &= \\frac{a^2}{3}\\\\[2pt]\nOQ &= \\frac{a}{\\sqrt{3}} \n\\end{align*}",
         "\\begin{align*} \n\\cos \\angle PQO &amp;= \\frac{OQ}{PQ}\\\\[2pt]\n\\cos \\angle PQO &amp;= \\frac{\\frac{a}{\\sqrt{3}}}{a}\\\\[2pt]\n\\cos \\angle PQO &amp;= \\frac{1}{\\sqrt{3}}\\\\[2pt]\n\\angle PQO &amp;\\approx 55\\deg \n\\end{align*}",
         "\\begin{align*} \n\\cos \\angle PQO &= \\frac{OQ}{PQ}\\\\[2pt]\n\\cos \\angle PQO &= \\frac{\\frac{a}{\\sqrt{3}}}{a}\\\\[2pt]\n\\cos \\angle PQO &= \\frac{1}{\\sqrt{3}}\\\\[2pt]\n\\angle PQO &\\approx 55\\deg \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q40a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q40b.png"
       ]
     },
     "41": {
@@ -433,6 +503,11 @@
         "\\begin{align*} \n&\\ \\text{面積 Area}\\\\[2pt]\n=&\\ \\frac{21\\times20}{2}\\\\[2pt]\n=&\\ 210 \n\\end{align*}",
         "\\begin{align*} \nOU^2 +OV^2 &amp;= UV^2\\\\ \n20^2 +v^2 &amp;= (v-6 +14)^2\\\\ \n400 +v^2 &amp;= (v +8)^2\\\\ \n400 +v^2 &amp;= v^2 +16v +64\\\\ \n336 &amp;= 16v\\\\ \nv &amp;= 21 \n\\end{align*}",
         "\\begin{align*} \nOU^2 +OV^2 &= UV^2\\\\ \n20^2 +v^2 &= (v-6 +14)^2\\\\ \n400 +v^2 &= (v +8)^2\\\\ \n400 +v^2 &= v^2 +16v +64\\\\ \n336 &= 16v\\\\ \nv &= 21 \n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q41a.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q41b.png",
+        "https://mathseasy.hk/wp-content/uploads/2025/06/dse-2025-p2-q41c.png"
       ]
     },
     "42": {
@@ -619,6 +694,9 @@
       "solution_text": "參考下圖，\n\n$$\\begin{align*}\n\n\\frac{H}{h} &= \\frac{32}{15}\\\\[12pt]\n\\frac{\\pi(25)^2H}{\\frac{1}{3}\\pi r^2h} &= \\frac{10}{9}\\\\[2pt]\n\\frac{25^2H}{\\frac{1}{3}r^2h} &= \\frac{10}{9}\\\\[2pt]\n\\frac{625H}{r^2h} &= \\frac{10}{9} \\times \\frac{1}{3}\\\\[2pt]\n\\frac{625}{r^2} \\times \\frac{32}{15} &= \\frac{10}{27}\\ \\Big(\\because\\frac{H}{h} = \\frac{32}{15}\\Big)\\\\[2pt]\n\\frac{1}{r^2} &= \\frac{1}{3600}\\\\[2pt]\nr^2 &= 3600\\\\[2pt]\nr &= 60\\,\\text{cm}\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n\\frac{H}{h} &#038;= \\frac{32}{15}\\\\[12pt]\n\\frac{\\pi(25)^2H}{\\frac{1}{3}\\pi r^2h} &#038;= \\frac{10}{9}\\\\[2pt]\n\\frac{25^2H}{\\frac{1}{3}r^2h} &#038;= \\frac{10}{9}\\\\[2pt]\n\\frac{625H}{r^2h} &#038;= \\frac{10}{9} \\times \\frac{1}{3}\\\\[2pt]\n\\frac{625}{r^2} \\times \\frac{32}{15} &#038;= \\frac{10}{27}\\ \\Big(\\because\\frac{H}{h} = \\frac{32}{15}\\Big)\\\\[2pt]\n\\frac{1}{r^2} &#038;= \\frac{1}{3600}\\\\[2pt]\nr^2 &#038;= 3600\\\\[2pt]\nr &#038;= 60\\,\\text{cm}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q16.png"
       ]
     },
     "17": {
@@ -629,6 +707,13 @@
         "\\begin{align*}<br>\n\\frac{4}{x} &#038;= \\Big(\\frac{2k}{2k +2k +k}\\Big)^2\\\\[2pt]\n\\frac{4}{x} &#038;= \\Big(\\frac{2k}{5k}\\Big)^2\\\\[2pt]\n\\frac{4}{x} &#038;= \\frac{4}{25}\\\\[2pt]\nx &#038;= 25<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\frac{(2k+2k+k)(2k)}{2} &#038;= 25\\\\[2pt]\n\\frac{(5k)(2k)}{2} &#038;= 25\\\\[2pt]\n5k^2 &#038;= 25\\\\[2pt]\nk^2 &#038;= 5\\\\<br>\nk &#038;= \\sqrt{5}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ AEGH\\text{ 面積}\\\\<br>\n=&#038;\\ (4k)^2 -\\color{blue}{\\frac{(2k)(k)}{2}} -\\color{green}{\\frac{(4k)(2k)}{2}} -\\color{red}{\\frac{(2k)(4k)}{2}} +4\\\\[2pt]\n=&#038;\\ 16k^2 -\\color{blue}{k^2} -\\color{green}{4k^2} -\\color{red}{4k^2} +4\\\\<br>\n=&#038;\\ 7k^2 +4\\\\<br>\n=&#038;\\ 7(5) +4\\ \\ (\\because k^2=5)\\\\<br>\n=&#038;\\ 39\\,\\text{cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q17b.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q17c.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q17d.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q17e.png"
       ]
     },
     "18": {
@@ -640,6 +725,9 @@
         "\\begin{align*}<br>\nAB^2 +BD^2 &#038;= AD^2\\\\<br>\nAB^2 +12^2 &#038;= 37^2\\\\<br>\nAB &#038;= 35<br>\n\\end{align*}",
         "\\begin{align*}<br>\nAC^2 + CE^2 &#038;= AE^2\\\\<br>\n(5+35)^2 + 9^2 &#038;= AE^2\\\\<br>\nAE &#038;= 41<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ \\text{周界 Perimeter}\\\\<br>\n=&#038;\\ 37 +13 +9 +41\\\\<br>\n=&#038;\\ 100\\,\\text{cm}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q18.png"
       ]
     },
     "19": {
@@ -649,6 +737,9 @@
       "latex": [
         "\\begin{align*}<br>\n\\color{purple}{\\theta} &#038;= 360\\deg -\\color{green}{r} -\\color{blue}{(180\\deg -s)}\\\\<br>\n&#038;= 360\\deg -r -180\\deg +s\\\\<br>\n&#038;= 180\\deg -r +s<br>\n\\end{align*}",
         "\\begin{align*}<br>\nq &#038;= \\color{red}{(360\\deg -p)} +\\color{purple}{\\theta}\\\\<br>\nq &#038;= 360\\deg -p +180\\deg -r +s\\\\<br>\np +q +r -s &#038;= 540\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q19.png"
       ]
     },
     "20": {
@@ -657,13 +748,24 @@
       "solution_text": "設 \nn\n 為多邊形的邊數\n\nLet \nn\n be the number of side of the polygon.\n$$\\begin{align*}\n\n(n -2)\\times 180\\deg &= 900\\deg\\\\\n\nn -2 &= 5\\\\\n\nn &= 7\n\n\\end{align*}$$\nI)\n\n對角線數目 Number of Diagonals ##= C_2^7 -7=14##，所以選項 I 錯誤。\nII)\n\nNumber of folds 折數 = 邊數 = 7，所以選項 II 正確。\nIII)\n\nNumber of axes 對稱軸數目 = 邊數 = 7，所以選項 III 正確。\n相關文章：\n文憑試實戰篇 #7 多邊形性質",
       "latex": [
         "\\begin{align*}<br>\n(n -2)\\times 180\\deg &#038;= 900\\deg\\\\<br>\nn -2 &#038;= 5\\\\<br>\nn &#038;= 7<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q20.png"
       ]
     },
     "21": {
       "answer": "B",
       "pct": 36,
       "solution_text": "留意菱形亦即是4條邊長度相同的平行四邊形。其性質如下圖所示。\n\nA rhombus is a parallelogram with four equal sides. The figure below shows its properties.\n\nI)\n\n∵∠\nDEC\n = ∠\nFCG\n = 90°\n \n\n∴\nDE\n//FC\n \n\n下圖所示的5隻角大小相同。\n\nThe 5 angles shown below are the same.\n\n∠\nADE\n = ∠\nEDI\n (Prop. of Rhombus 菱形性質)\n \n\n∠\nEDI\n = ∠\nICF\n (alt. ∠s 錯角, \nDE\n//\nFC\n)\n \n\n∠\nADE\n = ∠\nDEI\n (alt. ∠s 錯角, \nAD\n//\nEI\n)\n \n\n∠\nDEI\n = ∠\nIFC\n (alt. ∠s 錯角, \nDE\n//\nFC\n)\n \n\n∵∠\nIFC\n = ∠\nICF\n \n\n∴\nCI\n = \nFI\n \n因此選項 I 正確。\nII)\n\n設 \n∠\nABE\n = \nx\n,\n\n得到 \n∠\nEBC\n = \nx\n, ∠\nBCE\n = 90° − \nx\n \n\n∠\nGCH\n = ∠\nBCE\n (vert. opp ∠s 對頂角)\n \n\n∴∠\nGCH\n = 90° − \nx\n, ∠\nABE\n = \nx\n \n因此選項 II 並非必然正確。\nIII)\n\n參考下圖，\n\n∠\nDAE\n = ∠\nBCE\n (Prop. of Rhombus 菱形性質)\n \n\n∠\nCHF\n = ∠\nHCG\n (alt. ∠s 錯角, \nFH\n//\nCG\n)\n \n\n∴∠\nDAE\n = ∠\nCHF\n = 90° − \nx\n \n\n∠\nDEA\n = ∠\nCFH\n = 90°\n \n下一步是證明 \nDE\n = \nFC\n \n\n∠\nEDI\n = ∠\nIFC\n (Proved 已證)\n \n\n∠\nDEC\n = ∠\nFCE\n = 90°\n \n\nEC\n = \nCE\n (Common side 公共邊)\n \n\n∴△\nDEC\n ≅ △\nFCE\n (AAS)\n \n\nDE\n = \nFC\n \n\n∴△\nADE\n ≅ △\nHCF\n (AAS)\n \n因此選項 III 正確。",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q21a.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q21b.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q21c.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q21d.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q21e.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q21f.png"
+      ]
     },
     "22": {
       "answer": "B",
@@ -672,6 +774,9 @@
       "latex": [
         "\\begin{align*}<br>\n\\color{red}{\\angle POB} &#038;= \\color{green}{\\angle OAB} +\\color{green}{\\angle OBA}\\ \\text{(Ext}\\ \\angle\\ \\text{of}\\ \\triangle\\ \\text{外角})\\\\<br>\n&#038;= 46\\deg +46\\deg\\\\<br>\n&#038;= 92\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\color{purple}{\\angle APD} &#038;= \\color{red}{\\angle POB} +\\color{blue}{\\angle PBO}\\ \\text{(Ext}\\ \\angle\\ \\text{of}\\ \\triangle\\ \\text{外角})\\\\<br>\n&#038;= 92\\deg +16\\deg\\\\<br>\n&#038;= 108\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q22.png"
       ]
     },
     "23": {
@@ -687,7 +792,10 @@
       "answer": "A",
       "pct": 59,
       "solution_text": "$$U=(-3,-8)\\\\\n\nV=(8,-3)\\\\\n\nW=(-4,-3)$$\n相關文章：\n文憑試實戰篇 #5 坐標旋轉 Rotation of Coordinates",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q24.gif"
+      ]
     },
     "25": {
       "answer": "C",
@@ -699,6 +807,9 @@
         "\\begin{align*} M&#038;=\\Big(\\frac{-3 -7}{2},\\frac{1 -5}{2}\\Big)=(-5,-2)\\\\[8pt]\nm_{AB} &#038;= \\frac{1 +5}{-3 +7}\\\\[2pt]\n&#038;=\\frac{6}{4}\\\\[2pt]\n&#038;=\\frac{3}{2}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nm \\times m_{AB} &#038; = -1\\\\[2pt]\nm \\times \\frac{3}{2} &#038;= -1\\\\<br>\nm &#038;= \\frac{-2}{3}<br>\n\\end{align*}",
         "\\begin{align*}<br>\ny +2 &#038;= \\frac{-2}{3}(x +5)\\\\[2pt]\n3y +6 &#038;= -2x -10\\\\<br>\n2x +3y +16 &#038;= 0<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q25.png"
       ]
     },
     "26": {
@@ -707,6 +818,9 @@
       "solution_text": "兩條直線不相交，即是它們必定平行。\n\nIf two straight lines do not intersect, they must be parallel.\n$$\\begin{cases}\n\n6x -8y = 7k\\\\\n\nkx +12y = 5\n\n\\end{cases}\\\\\n\n\\begin{cases}\n\ny = \\frac{3}{4}x – \\frac{7k}{8}\\\\\n\ny = \\frac{-k}{12}x +\\frac{5}{12}\n\n\\end{cases}$$\n它們的斜率相等\n\nTheir slopes are equal.\n\n$$\\begin{align*}\n\n\\frac{3}{4} &= \\frac{-k}{12}\\\\[2pt]\n36 &= -4k\\\\\n\nk &= -9\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n\\frac{3}{4} &#038;= \\frac{-k}{12}\\\\[2pt]\n36 &#038;= -4k\\\\<br>\nk &#038;= -9<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q26.png"
       ]
     },
     "27": {
@@ -733,6 +847,9 @@
       "solution_text": "分佈域 Range \n= 472 −136 = 336\n \n\n四分位數間距 IQR \n= \nm\n −163\n \n\n$$\\begin{align*}\n\n336 &= 3\\times(m -163)\\\\\n\n112 &= m -163\\\\\n\nm &= 275\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n336 &#038;= 3\\times(m -163)\\\\<br>\n112 &#038;= m -163\\\\<br>\nm &#038;= 275<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q29.png"
       ]
     },
     "30": {
@@ -799,6 +916,9 @@
       "solution_text": "先作圖以瞭解各直線的位置。\n \n透過聯立方程(Simultaneous Equations)，可找到 \nP\n, \nQ\n 及 \nR\n 點坐標。\n\nP\n 點:\n$$\\begin{cases}\n\nx +4y =13\\\\\n\n2x -y=-1\n\n\\end{cases}\\\\[4pt]\nP=(1,3)\n\n$$\n\nQ\n 點:\n$$\\begin{cases}\n\nx -2y =1\\\\\n\n2x -y=-1\n\n\\end{cases}\\\\[4pt]\nQ=(-1,-1)\n\n$$\n\nR\n 點:\n$$\\begin{cases}\n\nx -2y =1\\\\\n\nx +4y=13\n\n\\end{cases}\\\\[4pt]\nR=(5,2)\n\n$$\n然後把各點坐標代入 \n5\nx\n − 2\ny\n。\n\nP\n: \n5(1) −2(3) = −1\n \n\nQ\n: \n5(−1) −2(−1) = \n−3\n \n\nR\n: \n5(5) −2(2) = 21\n \n因此 \n5\nx\n − 2\ny\n 的最小值是 \n−3\n \n\n$$\\begin{align*}\n\n\\color{blue}{5x -2y} +c &= 22\\\\\n\n\\color{blue}{-3} +c &= 22\\\\\n\nc &= 25\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n\\color{blue}{5x -2y} +c &#038;= 22\\\\<br>\n\\color{blue}{-3} +c &#038;= 22\\\\<br>\nc &#038;= 25<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q37.png"
       ]
     },
     "38": {
@@ -808,6 +928,9 @@
       "latex": [
         "\\begin{align*}<br>\n\\angle CPD + \\color{blue}{\\angle PDC} &#038;= \\angle BCD\\\\<br>\n29\\deg + \\color{blue}{\\angle PDC} &#038;= 55\\deg +43\\deg\\\\<br>\n\\color{blue}{\\angle PDC} &#038;= 69\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\color{blue}{\\angle CBE} &#038;=\\color{blue}{ \\angle PDC}\\\\<br>\n&#038;= 69\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q38b.png"
       ]
     },
     "39": {
@@ -828,13 +951,22 @@
         "\\begin{align*}<br>\n\\tan 30\\deg &#038;= \\frac{QS}{QP}\\\\<br>\n\\frac{1}{\\sqrt{3}} &#038;=  \\frac{1}{QP}\\\\<br>\nQP &#038;= \\sqrt{3}\\\\<br>\n\\ \\\\<br>\n\\sin 30\\deg &#038;= \\frac{QS}{SP}\\\\<br>\n\\frac{1}{2} &#038;= \\frac{1}{SP}\\\\[2pt]\nSP &#038;= 2\\\\<br>\n\\ \\\\<br>\n\\tan 45\\deg &#038;= \\frac{QS}{QR}\\\\[2pt]\n1 &#038;= \\frac{1}{QR}\\\\[2pt]\nQR &#038;= 1\\\\<br>\n\\ \\\\<br>\n\\sin 45\\deg &#038;= \\frac{QS}{SR}\\\\[2pt]\n\\frac{1}{\\sqrt{2}} &#038;= \\frac{1}{SR}\\\\[2pt]\nSR &#038;= \\sqrt{2}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nQR^2 + QP^2 &#038;= PR^2\\\\<br>\n1^2 +(\\sqrt{3})^2 &#038;= PR^2\\\\<br>\nPR &#038;= 2<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\cos \\angle PRS &#038;= \\frac{SR^2 +PR^2 -SP^2}{2(SR)(PR)}\\\\<br>\n&#038;= \\frac{(\\sqrt{2})^2 +2^2 -2^2}{2(\\sqrt{2})(2)}\\\\<br>\n&#038;= \\frac{2}{4\\sqrt{2}}\\\\<br>\n&#038;= \\frac{1}{2\\sqrt{2}}\\\\<br>\n&#038;= \\frac{1\\times \\sqrt{2}}{2\\sqrt{2}\\times \\sqrt{2}}\\\\<br>\n&#038;=\\frac{\\sqrt{2}}{4}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q40.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q40b.png"
       ]
     },
     "41": {
       "answer": "A",
       "pct": 27,
       "solution_text": "I)\n\n形心必定在三角形之內。\n\nCentroid must lie inside the triangle.\n因此選項 I 正確。\nII)\n\n對於鈍角三角形，垂心位於三角形之外。\n\nFor obtuse triangles, the orthocentres lie outside the triangle.\n因此選項 II 正確。\nIII)\n\n留意該三角形為等腰三角形。紅色線是三角形的角平分線及垂直平分線。因此 \nI\n 點及 \nJ\n 點都必定在紅色線上。而 \nQ\n 點並不在紅色線上。\n\nNote that the triangle is an isosceles triangle. The red line is the angle bisector and perpendicular bisector of the triangle. Thus, point \nI\n and point \nJ\n must lie on the red line. But point \nQ\n does not.\n因此選項 III 錯誤。",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q41a.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q41b.png",
+        "https://mathseasy.hk/wp-content/uploads/2024/04/dse-2024-p2-q41c.png"
+      ]
     },
     "42": {
       "answer": "C",
@@ -948,6 +1080,9 @@
       "latex": [
         "\\begin{align*}<br>\ny &#038;= 5 +(x -3)^2\\\\<br>\n&#038;= 5 +(x^2 -6x +9)\\\\<br>\n&#038;= x^2 -6x +14<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{RHS 右方} &#038;= 5 +(3 -3)^2\\\\<br>\n&#038;= 5\\\\<br>\n&#038;= \\text{LHS 左方}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q10.png"
       ]
     },
     "11": {
@@ -990,6 +1125,9 @@
       "solution_text": "$$\\begin{cases}\n\n\\pi r^2 h = 60^3\\ …(1)\\\\\n\n2 \\pi rh = 6 \\times 60^2\\ …(2)\n\n\\end{cases}$$\n##(1) \\div (2)##,\n\n$$\\begin{align*}\n\n\\frac{\\pi r^2h}{2 \\pi rh} &= \\frac{60^3}{6 \\times 60^2} \\\\[2pt]\n\\frac{r}{2} &= 10\\\\[2pt]\nr &= 20\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n\\frac{\\pi r^2h}{2 \\pi rh} &#038;= \\frac{60^3}{6 \\times 60^2}  \\\\[2pt]\n\\frac{r}{2} &#038;= 10\\\\[2pt]\nr &#038;= 20<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q15.png"
       ]
     },
     "16": {
@@ -1001,6 +1139,11 @@
         "\\begin{align*}<br>\n\\cos \\frac{\\theta}{2} &#038;= \\frac{10}{20}\\\\[2pt]\n\\frac{\\theta}{2} &#038;= 60\\deg\\\\[2pt]\n\\theta &#038;= 120\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ \\text{Area of segment }DGBC\\text{ 弓形面積}\\\\<br>\n=&#038;\\ \\pi \\times 20^2 \\times \\frac{120\\deg}{360\\deg} -\\frac{1}{2} \\times 10 \\times 2\\sqrt{300}\\\\<br>\n=&#038;\\ 245.67\\text{ cm}^2<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ \\text{Area 面積}\\\\<br>\n=&#038;\\ \\pi \\times 20^2 -\\color{red}{\\frac{1}{2}\\pi \\times {\\sqrt{300}}^2} -\\color{green}{245.67}\\\\<br>\n\\approx&#038;\\ 540\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q16a.png",
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q16b.png",
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q16c.png"
       ]
     },
     "17": {
@@ -1010,6 +1153,10 @@
       "latex": [
         "\\begin{align*}<br>\n\\text{Area of }\\triangle PRS \\text{ 面積} &#038;= \\text{Area of }\\triangle PRQ \\text{ 面積}\\\\<br>\n32k^2 +32k&#038;= 32+58\\\\<br>\n32k^2 +32k -90 &#038;= 0\\\\<br>\nk &#038;= \\frac{5}{4}\\text{ or }\\frac{-9}{4}\\text{ (rej. 捨去)}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{Area of }\\triangle RSY \\text{ 面積} &#038;= 32k^2\\\\<br>\n&#038;= 32 \\times \\Big(\\frac{5}{4}\\Big)^2\\\\<br>\n&#038;= 50\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q17b.png"
       ]
     },
     "18": {
@@ -1018,6 +1165,9 @@
       "solution_text": "I)\n\n參考圖像，加上平行線。\n\nRefer to the figure, construct a parallel line.\n##\\therefore \\angle a +\\angle b = 90\\deg##\n即是選項 I 必定正確。\nII) 很明顯此選項必定正確。\n\nObviously, this option is true.\nIII)\n\n已知選項 I 及 II 正確，如果選項 III 正確，\n\nOption I and II are true. If option III is also true,\n$$\\begin{cases}\n\na +b = 90\\deg\\ …(1)\\\\\n\nc +d = 180\\deg\\ …(2)\\\\\n\na +b +c =d\\ …(3)\n\n\\end{cases}$$\n(1)+(2)−(3)\n\n$$\\begin{align*}\n\na +b +c +d -(a +b +c) &= 90\\deg +180\\deg -d\\\\\n\n2d &= 270\\deg\\\\\n\nd & =135\\deg\n\n\\end{align*}$$\n但 \nd\n 並非必定等於 135°，因此選項 III 並非必為正確。\n\nSince \nd\n = 135°\n is not always true, option III is also not always true.",
       "latex": [
         "\\begin{align*}<br>\na +b +c +d -(a +b +c) &#038;= 90\\deg +180\\deg -d\\\\<br>\n2d &#038;= 270\\deg\\\\<br>\nd &#038; =135\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q18.png"
       ]
     },
     "19": {
@@ -1026,6 +1176,9 @@
       "solution_text": "留意菱形亦即是4條邊長度相同的平行四邊形。其性質如下圖所示。\n\nA rhombus is a parallelogram with four equal sides. The figure below shows its properties.\n\nI)\n\nAE\n 及 \nBE\n 並非必定相等。\n\nAE\n=\nBE\n is not always true.\n因此選項 I 並非必為正確。\n\nOption I is not always true.\nII)\n\n$$AE = EC\\\\\n\nBE = ED\\\\[6pt]\n\\therefore \\frac{AE}{AC} = \\frac{BE}{BD} = \\frac{1}{2}$$\n因此選項 II 必為正確。\n\nOption II must be true.\nIII)\n\n$$\\begin{align*}\n\nAE^2 +BE^2 &= AB^2\\\\\n\nAE^2 +BE^2 &= CD^2\\ (\\because AB = CD)\n\n\\end{align*}$$\n因此選項 III 必為正確。\n\nOption III must be true.",
       "latex": [
         "\\begin{align*}<br>\nAE^2 +BE^2 &#038;= AB^2\\\\<br>\nAE^2 +BE^2 &#038;= CD^2\\ (\\because AB = CD)<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q19.png"
       ]
     },
     "20": {
@@ -1035,13 +1188,19 @@
       "latex": [
         "\\begin{align*}<br>\n90\\deg + 108\\deg +120\\deg +\\alpha &#038;= 360\\deg\\\\<br>\n\\alpha &#038;= 42\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\theta &#038;= \\frac{180\\deg -42\\deg}{2}\\\\<br>\n&#038;= 69\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/04/dse-2023-p2-q20.png"
       ]
     },
     "21": {
       "answer": "C",
       "pct": 34,
       "solution_text": "選項 C 為正確答案，證明如下。\n\nOption C is correct. The proof is as follows.\n\n$$\\angle PTS = \\angle UQT =90\\deg\\\\\n\n\\angle PST = \\angle UTQ\\ (\\text{corr. }\\angle \\text{s 同位角} ,PS//QT)\\\\[10pt]\n\\triangle PST \\sim \\triangle UTQ\\ (AA)$$",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q21.png"
+      ]
     },
     "22": {
       "answer": "B",
@@ -1050,6 +1209,9 @@
       "latex": [
         "\\begin{align*}<br>\n\\because \\angle RST + \\angle RUT &#038;= 180\\deg\\\\<br>\n48\\deg +\\alpha +\\alpha +32\\deg + \\alpha +\\alpha &#038;= 180\\deg\\\\<br>\n4\\alpha &#038;= 100\\deg\\\\<br>\n\\alpha &#038;= 25\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\color{green}{\\angle RSU} &#038;= 48\\deg  +\\alpha\\\\<br>\n&#038;= 48\\deg + 25\\deg\\\\<br>\n&#038;= 73\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q22.png"
       ]
     },
     "23": {
@@ -1060,6 +1222,9 @@
         "\\begin{align*}<br>\n\\sin \\alpha &#038;= \\frac{BE}{AE}\\\\[2pt]\n\\sin \\alpha &#038;= \\frac{BE}{1}\\\\[2pt]\nBE &#038;= \\sin \\alpha<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\cos \\alpha &#038;= \\frac{CE}{BE}\\\\[2pt]\n\\cos \\alpha &#038;= \\frac{CE}{\\sin \\alpha}\\\\[2pt]\nCE &#038;= \\sin \\alpha \\cos \\alpha<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ \\frac{CE}{DE}\\\\[2pt]\n=&#038;\\ \\frac{\\sin \\alpha \\cos \\alpha}{1}\\\\[2pt]\n=&#038;\\ \\sin \\alpha \\cos \\alpha<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q23.png"
       ]
     },
     "24": {
@@ -1091,6 +1256,10 @@
         "\\begin{align*}<br>\n&#038;\\ m_\\Gamma \\times m_{AB}\\\\[2pt]\n=&#038;\\ -\\frac{3}{4} \\times \\frac{765}{592}\\\\<br>\n=&#038;\\ -\\frac{2295}{2368}\\\\<br>\n\\neq&#038;\\ -1<br>\n\\end{align*}",
         "\\begin{align*}<br>\ny &#038;=  -\\frac{3}{4}x + \\frac{\\frac{37}{12} +\\frac{-85}{16}}{2}\\\\<br>\ny &#038;= -\\frac{3}{4}x -\\frac{107}{96}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{RHS 右方} &#038;= -\\frac{3}{4} \\times \\frac{37}{18} -\\frac{107}{96}\\\\[2pt]\n&#038;= -\\frac{85}{32}\\\\[2pt]\n&#038;= \\text{LHS 左方}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q26b.png",
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q26b-1.png"
       ]
     },
     "27": {
@@ -1099,6 +1268,9 @@
       "solution_text": "求 ##G_1, G_2## 及圓形的半徑。\n\nFind ##G_1, G_2## and the radii.\n$$x^2 +y^2 +7x -4y +15 =0\\\\\n\nG_1 = \\Big(\\frac{-7}{2},\\frac{+4}{2}\\Big) = (-3.5, 2)\\\\\n\n\\ \\\\\n\nr_1 = \\sqrt{(3.5)^2 +2^2 -15} = \\sqrt{1.25}$$\n$$\\begin{align*}\n\n2x^2 +2y^2 -2x -16y +17 &=0\\\\\n\nx^2 + y^2 -x -8y +\\frac{17}{2} &=0\n\n\\end{align*}$$\n$$G_2 = \\Big(\\frac{+1}{2},\\frac{+8}{2}\\Big) = (0.5, 4)\\\\\n\n\\ \\\\\n\nr_2 = \\sqrt{(0.5)^2 + 4^2 +8.5} = \\sqrt{24.75}$$\nI)\n\n$$OG_1 = \\sqrt{(-3.5-0)^2 +(2-0)^2} = \\sqrt{16.25}\\\\\n\nOG_2 = \\sqrt{(0.5-0)^2 +(4-0)^2}= \\sqrt{16.25}\\\\\n\nG_1G_2 = \\sqrt{(-3.5-0.5)^2 +(2-4)^2}= \\sqrt{20}$$\n因此選項 I 錯誤。\nII)\n\n$$r_2 = \\sqrt{24.75}\\\\[6pt]\nOG_2 = \\sqrt{16.25} \\lt r_2$$∴ \nO\n 點在 \nC\n2\n 以內。\n\n  Point \nO\n lies inside \nC\n2\n.\n$$G_1G_2 = \\sqrt{20} \\lt r_2$$∴ \nG\n1\n 點在 \nC\n2\n 以內。\n\n  Point \nG\n1\n lies inside \nC\n2\n.\n\nO\n 及 \nG\n1\n 都在 \nC\n2\n 以內　\n\nBoth point \nO\n and \nG\n1\n lie inside \nC\n2\n.\n因此選項 II 正確。\nIII)\n\n$$G_1G_2 = \\sqrt{20} = 4.47\\\\\n\nr_2 +r_1 = \\sqrt{24.75} +\\sqrt{1.25} = 6.09\\\\\n\nr_2 -r_1 = \\sqrt{24.75} -\\sqrt{1.25} = 3.85$$\n##\\because r_2-r_1 \\lt G_1G_2 \\lt r_2+r_1##\n\n∴ 共有兩個交點。\n因此選項 III 正確。\n \n相關文章：\n兩圓形的交點數目",
       "latex": [
         "\\begin{align*}<br>\n2x^2 +2y^2 -2x -16y +17 &#038;=0\\\\<br>\nx^2 + y^2 -x -8y +\\frac{17}{2} &#038;=0<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q27.png"
       ]
     },
     "28": {
@@ -1150,6 +1322,9 @@
         "\\begin{align*}<br>\nx^{10}y^3 &#038;= 64^{10} \\times 1^3\\\\<br>\n&#038;= 1.152921505 \\times 10^{18}\\\\<br>\n&#038;= 8^{20}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nx^{10}y^3 &#038;= 1^{10} \\times 32768^3\\\\<br>\n&#038;= 3.518437209 \\times 10^{13}\\\\<br>\n&#038;\\neq 8^{20}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nx^9y^{10} &#038;= 64^9 \\times 1^{10}\\\\<br>\n&#038;= 1.801439851 \\times 10^{16}\\\\<br>\n&#038;\\neq 8^{30}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q33.png"
       ]
     },
     "34": {
@@ -1187,6 +1362,9 @@
         "\\begin{align*}<br>\n\\beta (-3) +6(6) &#038;\\le 24\\\\<br>\n-3\\beta &#038;\\le 24 -36\\\\<br>\n\\beta &#038;\\ge 4<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\beta (-3) +6(-1) &#038;\\le 24\\\\<br>\n-3\\beta &#038;\\le 24 +6\\\\<br>\n\\beta &#038;\\ge -10<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\beta (0) +6(4) &#038;\\le 24\\\\<br>\n24 &#038;\\le 24\\\\<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q37.png"
       ]
     },
     "38": {
@@ -1197,6 +1375,9 @@
         "\\begin{align*}<br>\n\\alpha &#038;= \\frac{180\\deg -34\\deg}{2}\\\\<br>\n\\alpha &#038;= 73\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\angle PRV &#038;= \\angle QPT\\\\<br>\n&#038;= 46\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\angle RPS &#038;= \\angle PRV +\\angle PVQ\\ \\text{(Ext. }\\angle\\text{ of }\\triangle\\text{ 三角形外角)}\\\\<br>\n73\\deg &#038;= 46\\deg +\\angle PVQ\\\\<br>\n\\angle PVQ &#038;= 27\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q38.png"
       ]
     },
     "39": {
@@ -1207,6 +1388,9 @@
         "\\begin{align*}<br>\nh(1) +k(0) &#038;= 6\\\\<br>\nh &#038;= 6<br>\n\\end{align*}",
         "\\begin{align*}<br>\n6x +ky &#038;= 6\\\\<br>\nky &#038;= -6x +6\\\\<br>\ny&#038;= \\frac{-6}{k}x +\\frac{6}{k}\\\\[6pt]\n\\therefore m &#038;= \\frac{-6}{k}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nm \\times m_{HK} &#038;= -1\\\\<br>\n\\frac{-6}{k} \\times \\frac{2}{3} &#038;= -1\\\\<br>\n-12 &#038;= -3k\\\\<br>\nk &#038; =4<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q39.png"
       ]
     },
     "40": {
@@ -1218,6 +1402,11 @@
         "\\begin{align*}<br>\n\\frac{1}{2} AK \\times VB &#038;= \\text{area of }\\triangle \\text{ 面積}\\\\<br>\n\\frac{1}{2} AK \\times 4 &#038;= \\frac{5\\sqrt{39}}{4}\\\\<br>\nAK &#038;= \\frac{5\\sqrt{39}}{8}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nAC^2 &#038;= AB^2 +BC^2\\\\<br>\nAC^2 &#038;= 5^2 +5^2\\\\<br>\nAC &#038;= \\sqrt{50}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\cos \\theta =&#038; \\frac{AK^2 +CK^2 -AC^2}{2(AK)(CK)}\\\\[2pt]\n=&#038; \\frac{\\big(\\frac{5\\sqrt{39}}{8}\\big)^2 +\\big(\\frac{5\\sqrt{39}}{8}\\big)^2 -\\sqrt{50}^2}{2\\big(\\frac{5\\sqrt{39}}{8}\\big)\\big(\\frac{5\\sqrt{39}}{8}\\big)}\\\\[2pt]\n=&#038; \\frac{-\\frac{625}{32}}{\\frac{975}{32}}\\\\[2pt]\n=&#038; \\frac{-25}{39}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q40.gif",
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q40b.png",
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q40c.png"
       ]
     },
     "41": {
@@ -1226,6 +1415,9 @@
       "solution_text": "先求 \nL\n1\n 及 \nL\n2\n 的截距以作圖\n\nFind the intercepts of \nL\n1\n 及 \nL\n2\n to draft the graph.\n\nL\n1\n:\n\nx\n-intercept \nx\n-截距 ##=\\frac{-k}{3}##\n\ny\n-intercept \ny\n-截距 ##=\\frac{k}{4}##\n\nL\n2\n:\n\nx\n-intercept \nx\n-截距 ##=\\frac{k}{4}##\n\ny\n-intercept \ny\n-截距 ##=\\frac{k}{3}##\n設 \nL\n3\n為通過 \nP\n 及 \nR\n 的直線。\n\nLet \nL\n3\n be the line passing through \nP\n and \nR\n.\n \n由於 \nx\n-軸是 \n∠\nQPR\n 的角平分線，\nL\n3\n 的斜率 = −\nL\n1\n 的斜率。從而可找到 \nL\n3\n 的方程。\n\nSince \nx\n-axis is the angle bisector of \n∠\nQPR\n, the slope of \nL\n3\n = −slope of \nL\n1\n. The equation of \nL\n3\n can be found.\n由於 \nx\n 軸是 \n∠\nQPR\n 的角平分線，\n\nL\n3\n 的斜率 = −\nL\n1\n 的斜率。\n\n從而可找到 \nL\n3\n 的方程。\n\nSince \nx\n-axis is the angle bisector of \n∠\nQPR\n,\n\nthe slope of \nL\n3\n = −slope of \nL\n1\n.\n\nThe equation of \nL\n3\n can be found.\n$$m_1 = \\frac{3}{4}\\\\\n\nm_3 = -m_1 = \\frac{-3}{4}$$\n\nL\n3\n 的方程\n\nEquation of \nL\n3\n \n$$\\begin{align*}\n\ny -0 &= \\frac{-3}{4}\\big(x +\\frac{k}{3}\\big)\\\\\n\n4y &= -3x -k\\\\\n\n3x +4y +k &= 0\n\n\\end{align*}$$\n\nR\n 為 \nL\n2\n 及 \nL\n3\n 的交點。\n\nPoint \nR\n is the intersection of \nL\n2\n and \nL\n3\n.\n$$\\begin{cases}\n\n4x +3y -k = 0\\\\\n\n3x +4y +k = 0\n\n\\end{cases}$$\nSolving 解聯立方程，\n\n$$x = k$$",
       "latex": [
         "\\begin{align*}<br>\ny -0 &#038;= \\frac{-3}{4}\\big(x +\\frac{k}{3}\\big)\\\\<br>\n4y &#038;= -3x -k\\\\<br>\n3x +4y +k &#038;= 0<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2023/05/dse-2023-p2-q41.png"
       ]
     },
     "42": {
@@ -1368,7 +1560,10 @@
       "answer": "C",
       "pct": 83,
       "solution_text": "方法一: 從數列的定義入手\n\n$$(n+1)^{\\text{th}}\\text{ term} = n^{\\text{th}}\\text{ term} + (2n +3)$$\n$$\\begin{array} {c|l|c} n & n^{\\text{th}}\\text{ term} & 2n+3 \\\\ \\hline 1 & 3 & 5 \\\\ \\hline 2 & 3+5=8 & 7 \\\\ \\hline 3 & 8+7=15 & 9 \\\\ \\hline 4 & 15+9=24 & 11 \\\\ \\hline 5 & 24+11=35 & 13 \\\\ \\hline 6 & 35+13=48 & 15 \\\\ \\hline 7 & 48+15=63 & 17 \\\\ \\hline 8 & 63+17=\\color{red}{80} & \\\\ \\end{array}$$\n方法二: 觀察數列的模式 Observe the pattern\n參考以下圖像，黑色數字為各圖案點子的數目，紅色數字為它們的差。從而得知每項之差每次增加2。\n\nReferring to the figure below, the numbers in black are the numbers of dots of each pattern and the numbers in red are their differences. Thus, it can be determined that each difference increases by 2.\n$$1^\\text{st} \\text{ term} = \\ 3\\\\\n\n2^\\text{nd} \\text{ term} = \\ 3+5 = 8\\\\\n\n3^\\text{rd} \\text{ term} = \\ 8+7 = 15\\\\\n\n4^\\text{th} \\text{ term} = 15+9 = 24\\\\\n\n5^\\text{th} \\text{ term} = 24+11 = 35\\\\\n\n6^\\text{th} \\text{ term} = 35+13= 48\\\\\n\n7^\\text{th} \\text{ term} = 48+15= 63\\\\\n\n8^\\text{th} \\text{ term} = 63+17 = \\color{red}{80}$$",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q13.png"
+      ]
     },
     "14": {
       "answer": "A",
@@ -1387,6 +1582,10 @@
         "\\begin{align*}<br>\n\\text{base area 底面積} &#038;= \\frac{1}{2}(8)(8)\\sin 60\\deg \\times 6\\\\<br>\n&#038;= 96\\sqrt{3}\\text{ cm}^2<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{底面積} \\times \\text{高} &#038;= \\text{體積}\\\\<br>\n96\\sqrt{3} \\times h &#038;= 288\\\\<br>\nh &#038;= \\sqrt{3}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\text{Total surface area 總表面面積}\\\\<br>\n=&#038;\\ 8\\times \\sqrt{3} \\times 6 + 96\\sqrt{3} \\times 2\\\\<br>\n\\approx&#038;\\ 416\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q15a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q15b.png"
       ]
     },
     "16": {
@@ -1407,6 +1606,10 @@
         "\\begin{align*}<br>\n&#038;\\ \\text{Perimeter 周界}\\\\<br>\n=&#038;\\ 2 + 2 + 2\\pi(2)\\times \\frac{90\\deg}{360\\deg}\\\\<br>\n=&#038;\\ (4 +\\pi)\\text{ cm}<br>\n\\end{align*}",
         "\\begin{align*}<br>\nAB &#038;= \\sqrt{2^2 +2^2}\\\\<br>\n&#038;= 2\\sqrt{2}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ \\text{Area 圓面積}\\\\<br>\n＝&#038;\\ \\pi\\Big(\\frac{2\\sqrt{2}}{2}\\Big)^2\\\\<br>\n=&#038;\\ 2\\pi\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q17b.png"
       ]
     },
     "18": {
@@ -1416,13 +1619,20 @@
       "latex": [
         "\\begin{align*}<br>\n&#038;\\angle BAC = \\angle ADC = 28\\deg\\ (alt\\ \\angle s,AB//CD)\\\\<br>\n&#038;\\angle BCA = \\angle BAC = x+28\\deg\\ (base\\ \\angle s,isos\\ \\triangle)<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\angle BEA &#038;= \\angle EAC + \\angle ECA\\ (ext.\\ \\angle\\ of \\triangle)\\\\<br>\n94\\deg &#038;= x + (x +28\\deg)\\\\<br>\n66\\deg &#038;= 2x\\\\<br>\nx &#038;= 33\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q18.png"
       ]
     },
     "19": {
       "answer": "D",
       "pct": 36,
       "solution_text": "Referring to the figure, the line segments having the same length are in the same colour.\n\n參考下圖，長度相同的線段以相同顏色表示。\n\nΔ\nCFB\n 是等腰三角形 isosceles triangle 及 \n∠\nCEB\n = 90°\n。\n\n∴ \nBE\n = \nFE\n \n設 \n∠\nCAB\n = \nx\n 及 \n∠\nDAC\n = 90°−\nx\n。\n\n運用各種幾何定理，以 \nx\n 及 \n90°−\nx\n 表示下圖所示的角。\nI) \n∠\nDAE\n = ∠\nDGF\n = 90°−\nx\n因此選項 I 正確。\nII)\n\n∠\nBCE\n = ∠\nCGE\n = 90°−\nx\n \n\n∠\nCEB\n = ∠\nGEC\n = 90°\n \n\n∴ \nΔ\nBCE\n ~ Δ\nCGE\n (AA)\n \n因此選項 II 正確。\n\nBC\n = \nFC\n \n\nBE\n = \nFE\n \n\nCE\n = \nCE\n \n\n∴ Δ\nBCE\n ≅ Δ\nFCE\n (SSS)\n \n因此選項 III 正確。",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q19a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q19b.png"
+      ]
     },
     "20": {
       "answer": "C",
@@ -1432,6 +1642,11 @@
         "\\begin{align*}<br>\n\\frac{AD}{AE} &#038;= \\frac{BE}{BF}\\\\[2pt]\n\\frac{4k}{3k} &#038;= \\frac{k}{BF}\\\\[2pt]\n4k(BF) &#038;= 3k^2\\\\[2pt]\nBF &#038;= \\frac{3}{4}k\\\\[8pt]\nCF &#038;= 4k -\\frac{3}{4}k\\\\[2pt]\n&#038;= \\frac{13}{4}k<br>\n\\end{align*}",
         "\\begin{align*}<br>\n(4k)^2 -\\frac{(4k)(3k)}{2} -\\frac{(k)(\\frac{3}{4}k)}{2} -\\frac{(4k)(\\frac{13}{4}k)}{2} &#038;= 25\\\\<br>\n16k^2 -6k^2 -\\frac{3}{8}k^2 -\\frac{13}{2}k^2 &#038;= 25\\\\<br>\n\\frac{25}{8}k^2 &#038;= 25\\\\<br>\nk^2 &#038;= 8\\\\<br>\nk &#038;= \\sqrt{8}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\text{Area 面積}\\\\<br>\n=&#038;\\ \\frac{(4k)(\\frac{13}{4}k)}{2}\\\\[2pt]\n=&#038;\\ \\frac{13}{2}k^2\\\\[2pt]\n=&#038;\\ \\frac{13}{2}\\big(\\sqrt{8}\\big)^2\\\\[2pt]\n=&#038;\\ 52\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q20b.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q20c.png"
       ]
     },
     "21": {
@@ -1443,6 +1658,12 @@
         "\\begin{align*}<br>\n\\angle GAB +\\angle FBA &#038;= 112.5\\deg + 67.5\\deg\\\\<br>\n&#038;= 180\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\angle CAG &#038;= 135\\deg -22.5\\deg -22.5\\deg\\\\<br>\n&#038;= 90\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\angle BDH &#038;= 67.5\\deg -22.5\\deg\\\\<br>\n&#038;= 45\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q21a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q21b.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q21c.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q21d.png"
       ]
     },
     "22": {
@@ -1453,6 +1674,11 @@
         "\\begin{align*}<br>\n\\angle ACD &#038;= 180\\deg -96\\deg\\ (opp.\\ \\angle s, cyclic\\ quad.,\\text{圓內接四邊形對角})\\\\<br>\n&#038;= 84\\deg\\\\[10pt]\n\\angle BAC &#038;= \\angle BDC\\ (\\angle s\\ in\\ the\\ same\\ seg.,\\text{同弓形內的圓周角})\\\\<br>\n&#038;= 14\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\because BD &#038;= AC\\\\<br>\n\\angle BAD &#038;= \\angle CDA\\ (equal\\ chords,equal\\ \\angle s,\\text{等弦對等角})\\\\<br>\n14\\deg +\\angle CAD &#038;= 14\\deg +\\angle BDA\\\\<br>\n\\therefore \\angle CAD &#038;= \\angle BDA<br>\n\\end{align*}",
         "\\begin{align*}<br>\n84\\deg +14\\deg +x +x &#038;= 180\\deg\\\\<br>\n2x &#038;= 82\\deg\\\\<br>\nx &#038;= 41\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q22a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q22b.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q22c.png"
       ]
     },
     "23": {
@@ -1475,6 +1701,9 @@
       "solution_text": "方法一:\n\nLet \nP\n be (\nx\n, \ny\n)\n.\n\n$$\\begin{align*}\n\nPM &= MN\\\\\n\n\\sqrt{(x -5)^2 +(y -7)^2} &= \\sqrt{(5-6)^2 +(7-8)^2}\\\\\n\nx^2 -10x +25 +y^2 -14y +49 &= 1 + 1\\\\\n\nx^2 +y^2 -10x -14y +72 &=0\n\n\\end{align*}$$\n方法二:\n\nM\n and \nN\n are two fixed points. So, the length \nMN\n is a constant. Thus, \nPM\n=\nMN\n means that the distance between point \nP\n and \nM\n is a constant. The locus of \nP\n is a circle with centre \nM\n(5, 7)\n. Obviously, C is the answer.\n\nM\n 及 \nN\n 是兩個固定點，因此 \nMN\n的長度不變。而 \nPM\n=\nMN\n 的意思是 \nP\n 點 及 \nM\n 點的距離是常數。\nP\n 的軌跡是一個以 \nM\n(5, 7)\n 為圓心的圓形。明顯地，C 為正確答案。\n相關文章：\n常見軌跡 Common Loci",
       "latex": [
         "\\begin{align*}<br>\nPM &#038;= MN\\\\<br>\n\\sqrt{(x -5)^2 +(y -7)^2} &#038;= \\sqrt{(5-6)^2 +(7-8)^2}\\\\<br>\nx^2 -10x +25 +y^2 -14y +49 &#038;= 1 + 1\\\\<br>\nx^2 +y^2 -10x -14y +72 &#038;=0<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q25.png"
       ]
     },
     "26": {
@@ -1484,6 +1713,9 @@
       "latex": [
         "\\begin{align*}<br>\nP &#038;= \\Big(\\frac{5+9}{2},\\frac{8+2}{2}\\Big)\\\\<br>\n&#038;=(7, 5)<br>\n\\end{align*}",
         "\\begin{align*}<br>\ny -3 &#038;=\\frac{5-3}{7-3}\\big(x -3\\big)\\\\<br>\ny -3 &#038;=\\frac{1}{2}\\big(x -3\\big)\\\\<br>\n2y -6 &#038;= x -3\\\\[2pt]\nx -2y +3 &#038;=0<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q26.png"
       ]
     },
     "27": {
@@ -1504,6 +1736,9 @@
       "latex": [
         "\\begin{align*}<br>\nQ_1 &#038;= \\frac{62 +62}{2}\\\\<br>\n&#038;=62\\\\[12pt]\\end{align*}",
         "\\begin{align*}<br>\nP(\\ge 62) &#038;= \\frac{20}{24}\\\\[2pt]\n&#038;= \\frac{5}{6}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q28.png"
       ]
     },
     "29": {
@@ -1548,6 +1783,9 @@
       "latex": [
         "\\begin{align*}<br>\ny &#038;= a +\\log_b x\\\\<br>\n0 &#038;= a +\\log_b s\\\\<br>\n\\log_b s &#038;= -a\\\\<br>\ns &#038;= b^{-a}\\\\[10pt]\ny &#038;= \\log_c x\\\\<br>\n0 &#038;= \\log_c t\\\\<br>\nt &#038;= c^0 \\\\<br>\nt &#038;= 1<br>\n\\end{align*}",
         "\\begin{align*}<br>\nOT : OS &#038;= t : s\\\\<br>\n&#038;= 1 : b^{-a}\\\\<br>\n&#038;= 1 : \\frac{1}{b^a}\\\\<br>\n&#038;= 1 \\times b^a: \\frac{1}{b^a} \\times b^a\\\\<br>\n&#038;= b^a : 1<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q33.png"
       ]
     },
     "34": {
@@ -1601,6 +1839,11 @@
         "\\begin{align*}<br>\n\\angle AEH &#038;= \\angle CGE\\\\<br>\n&#038;= 75.176\\deg\\\\[12pt]\n\\angle DAH &#038;= 90\\deg -\\angle BAF\\\\<br>\n&#038;=90\\deg -16.260\\deg\\\\<br>\n&#038;=73.740\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\frac{AH}{\\sin \\angle AEH} &#038;= \\frac{AE}{\\sin \\angle AHE}\\\\[2pt]\n\\frac{AH}{\\sin 75.176\\deg} &#038;= \\frac{638}{\\sin (180\\deg -16.260\\deg -75.176\\deg)}\\\\[2pt]\nAH &#038;= 616.959<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\cos \\angle DAH &#038;= \\frac{AD^2 +AH^2 -DH^2}{2(AD)(AH)}\\\\[2pt]\n\\cos 73.740\\deg &#038;= \\frac{597^2 +616.959^2 -DH^2}{2(597)(616.959)}\\\\[2pt]\nDH^2 &#038;= 530788.2015\\\\<br>\nDH &#038;= 728.55\\\\<br>\nDH &#038;\\approx 729\\text{ cm}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q38a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q38b.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q38c.png"
       ]
     },
     "39": {
@@ -1612,6 +1855,10 @@
         "\\begin{align*}<br>\n\\angle CDF &#038;= \\angle ECD +\\angle CED\\ (ext.\\ \\angle\\ of\\ \\triangle)\\\\<br>\n49\\deg &#038;= \\beta +31\\deg\\\\<br>\n\\beta &#038;= 18\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\theta &#038;= \\angle CDF\\ (\\angle\\ in\\ alt.\\ segment)\\\\<br>\n&#038;= 49\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n90\\deg +18\\deg +(90\\deg -x) +49\\deg &#038;= 180\\deg\\\\<br>\n90\\deg -x &#038;= 23\\deg\\\\<br>\nx &#038;= 90\\deg -23\\deg\\\\<br>\nx &#038;= 67\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q39a.png",
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q39b.png"
       ]
     },
     "40": {
@@ -1623,6 +1870,9 @@
         "\\begin{align*}<br>\nx^2 +\\Big(\\frac{4x}{3}\\Big)^2 -4x -22\\Big(\\frac{4x}{3}\\Big) +75 &#038;= 0\\\\<br>\n\\frac{25}{9} x^2 -\\frac{100}{3}x +75 &#038;= 0\\\\<br>\n25x^2 -300x +675 &#038;= 0\\\\<br>\nx^2 -12x +27 &#038;= 0\\\\<br>\nx &#038;= 3\\text{ or }9<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{Radius 半徑} &#038;= MN \\div 2\\\\<br>\n&#038;= \\sqrt{(9 -3)^2 +(12 -4)^2} \\div 2 \\\\<br>\n&#038;= 5<br>\n\\end{align*}",
         "\\begin{align*}<br>\n(x -6)^2 +(y -8)^2 &#038;= 5^2\\\\<br>\n(x -6)^2 +(y -8)^2 &#038;= 25<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q40.png"
       ]
     },
     "41": {
@@ -1632,6 +1882,9 @@
       "latex": [
         "\\begin{align*}<br>\n\\frac{k +3}{h -21}\\times\\frac{-18 -0}{26 -0} &#038;= -1\\\\[2pt]\n\\frac{k +3}{h -21} &#038;= \\frac{13}{9}\\\\[2pt]\n13h -273 &#038;= 9k +27\\\\[2pt]\n13h -9k &#038;= 300<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\frac{-3 -0}{21 -0}\\times\\frac{k +18}{h -26} &#038;= -1\\\\[2pt]\n\\frac{k +18}{h -26} &#038;= \\frac{7}{1}\\\\[2pt]\n7h -182 &#038;= k +18\\\\[2pt]\n7h -k &#038;= 200<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2021/05/dse-2021-p2-q41.png"
       ]
     },
     "42": {
@@ -1767,7 +2020,10 @@
       "answer": "D",
       "pct": 83,
       "solution_text": "方法一: 從數列的定義入手\n\n$$(n+1)^{\\text{th}}\\text{ term} = n^{\\text{th}}\\text{ term} + (2n +1)$$\n$$\\begin{array} {c|l|c} n & n^{\\text{th}}\\text{ term} & 2n+1 \\\\ \\hline 1 & 3 & 3 \\\\ \\hline 2 & 3+3=6 & 5 \\\\ \\hline 3 & 6+5=11 & 7 \\\\ \\hline 4 & 11+7=18 & 9 \\\\ \\hline 5 & 18+9=27 & 11 \\\\ \\hline 6 & 27+11=38 & 13 \\\\ \\hline 7 & 38+13=\\color{red}{51} & \\end{array}$$\n方法二: 觀察數列的模式 Observe the pattern\n\n參考以下圖像，黑色數字為各圖案點子的數目，紅色數字為它們的差。從而得知每項之差每次增加2。\n\nReferring to the figure below, the numbers in black are the numbers of dots of each pattern and the numbers in red are their differences. Thus, it can be determined that each difference increases by 2.\n$$1^\\text{st} \\text{ term} = \\ 3\\\\\n\n2^\\text{nd} \\text{ term} = \\ 3+3 = 6\\\\\n\n3^\\text{rd} \\text{ term} = \\ 6+5 = 11\\\\\n\n4^\\text{th} \\text{ term} = 11+7 = 18\\\\\n\n5^\\text{th} \\text{ term} = 18+9 = 27\\\\\n\n6^\\text{th} \\text{ term} = 27+11= 38\\\\\n\n7^\\text{th} \\text{ term} = 38+13 = \\color{red}{51}$$",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/dse-2020-p2-q12.png"
+      ]
     },
     "13": {
       "answer": "D",
@@ -1781,7 +2037,10 @@
       "answer": "B",
       "pct": 41,
       "solution_text": "先考慮面積的最大值，參考下圖\n\n把圖形分割成一個長方形及一個梯形，要得到最大面積，就要把每條邊取最大值。\n\nPT\n、\nQR\n 及 \nPQ\n 都是取最大值，即是\n\nPT\n = 5.5 cm\n \n\nQR\n = 10.5 cm\n \n\nPQ\n = 6.5 cm\n \n問題是 \nSR\n，如果取 \n3.5cm\n，就會令 \nPM\n 變短。但如果取 \n2.5cm\n，雖然 \nPM\n 長度增加，但卻令 \nMQ\n 的長度變短。\n解決此問題最簡單的方法就是「逐個試」\n取 \nSR\n = 3.5cm\n \n$$\\text{面積 }= \\frac{(10.5+5.5) \\times (6.5-3.5)}{2} + 10.5 \\times 3.5 = 60.75$$\n取 \nSR\n = 2.5cm\n \n$$\\text{面積 }= \\frac{(10.5+5.5) \\times (6.5-2.5)}{2} + 10.5 \\times 2.5 = 58.25$$\n較大者為 \n60.75\n，所以面積上限=\n60.75cm\n2\n \n在四個選項中，只有選項 B 的上限是 \n60.75\n，足以判斷答案為 B。",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/dse-2020-p2-q14.png"
+      ]
     },
     "15": {
       "answer": "D",
@@ -1808,6 +2067,9 @@
         "\\begin{align*}<br>\nA_1:A_2:A_3 =&#038; 1^2:2^2:3^2\\\\<br>\n=&#038; 1:4:9<br>\n\\end{align*}",
         "\\begin{align*}<br>\nPQTU\\text{ Area}:QRST\\text{ Area} &#038;= (4 -1): (9-4)\\\\<br>\n&#038;= 3:5<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;PQTU\\text{ Area}:QRST\\text{ Area}\\\\<br>\n=&#038; (4 -1): (9-4)\\\\<br>\n=&#038; 3:5<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q17.png"
       ]
     },
     "18": {
@@ -1818,6 +2080,11 @@
         "\\begin{align*}<br>\n\\therefore \\frac{48}{48 +A_0} &#038;= \\Big(\\frac{2k}{2k +5k}\\Big)^2\\\\[2pt]\n\\frac{48}{48 +A_0} &#038;= \\frac{4}{49}\\\\<br>\n48 \\times 49 &#038;= 4(48 + A_0)\\\\<br>\n2352 &#038;= 192 +4A_0\\\\<br>\nA_0 &#038;= 540\\text{ cm}^2<br>\n\\end{align*}",
         "\\begin{align*}<br>\nAG:GB &#038;= AE:ED\\\\<br>\n&#038;= 2:5\\end{align*}",
         "\\begin{align*}\\therefore A_2 &#038;= 588 \\times \\frac{7}{7+5}\\\\[3pt]\n&#038;=343\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q18a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q18b.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q18d.png"
       ]
     },
     "19": {
@@ -1828,6 +2095,9 @@
         "\\begin{align*}<br>\nu +(180\\deg -w) +v &#038;= 360\\deg\\\\<br>\nu +v -w &#038;= 180\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n2u &#038;= 180\\deg\\\\<br>\nu &#038;= 90\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n2w &#038;= 270\\deg\\\\<br>\nw &#038;= 135\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q19.png"
       ]
     },
     "20": {
@@ -1836,6 +2106,10 @@
       "solution_text": "此題目的圖像非常誤導，\nABED\n 並非梯形，而圖像亦不是左右對稱。\n下圖為該圖像的真實形狀。\n留意\n∠\nADC\n=∠\nCAD\n，即是 \nCA\n=\nCD\n。\n$$\\begin{align*}\n\n\\alpha =&\\ 180\\deg -40\\deg -40\\deg\\\\\n\n=&\\ \\color{red}{100\\deg}\\\\[12pt]\n\\beta =&\\ 360\\deg -\\color{red}{100\\deg} -\\color{blue}{60\\deg} -\\color{green}{78\\deg}\\\\\n\n=&\\ \\color{orange}{122\\deg}\\\\[12pt]\n\\theta =&\\ (180\\deg -\\color{orange}{122\\deg})\\div 2\\\\\n\n=&\\ 29\\deg\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n\\alpha =&#038;\\ 180\\deg -40\\deg -40\\deg\\\\<br>\n=&#038;\\ \\color{red}{100\\deg}\\\\[12pt]\n\\beta =&#038;\\ 360\\deg -\\color{red}{100\\deg} -\\color{blue}{60\\deg} -\\color{green}{78\\deg}\\\\<br>\n=&#038;\\ \\color{orange}{122\\deg}\\\\[12pt]\n\\theta =&#038;\\ (180\\deg -\\color{orange}{122\\deg})\\div 2\\\\<br>\n=&#038;\\ 29\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q20b.png"
       ]
     },
     "21": {
@@ -1845,6 +2119,9 @@
       "latex": [
         "\\begin{align*}<br>\nBE^2 +EC^2 &#038;= 8^2 +15^2\\\\<br>\n&#038;= 289\\\\[6pt]\nBC^2 &#038;= 17^2\\\\<br>\n&#038;= 289\\\\[10pt]\n\\therefore BE^2 +EC^2 &#038;= BC^2<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\ ABCD\\text{ 面積}\\\\[2pt]\n=&#038;\\ \\triangle EBC \\text{ 面積} \\times 2\\\\[2pt]\n=&#038;\\ \\frac{8\\times 15}{2} \\times 2\\\\[3pt]\n=&#038;\\ 120\\text{ cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q21.png"
       ]
     },
     "22": {
@@ -1854,6 +2131,10 @@
       "latex": [
         "\\begin{align*}<br>\nAC^2 &#038;= 10^2 +25^2\\\\<br>\nAC &#038;= \\sqrt{125}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\sin 40\\deg &#038;= \\frac{CD}{AC}\\\\[3pt]\n\\sin 40\\deg &#038;= \\frac{CD}{\\sqrt{125}}\\\\[3pt]\nCD &#038;= \\sqrt{125}\\times\\sin 40\\deg\\\\<br>\n&#038;= 7.19\\\\<br>\n&#038;\\approx 7\\text{ cm}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q22a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q22b.png"
       ]
     },
     "23": {
@@ -1862,6 +2143,9 @@
       "solution_text": "$$\\begin{align*}\n\n\\sin(90\\deg -60\\deg) &= \\frac{x}{50}\\\\[3pt]\nx &= 50\\sin 30\\deg\\\\\n\n&= 25\\text{ km}\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n\\sin(90\\deg -60\\deg) &#038;= \\frac{x}{50}\\\\[3pt]\nx &#038;= 50\\sin 30\\deg\\\\<br>\n&#038;= 25\\text{ km}<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q23.png"
       ]
     },
     "24": {
@@ -1871,13 +2155,21 @@
       "latex": [
         "\\begin{align*}<br>\nr &#038;= \\sqrt{1^2 +1^2}\\\\<br>\n&#038;= \\sqrt{2}<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\tan \\alpha &#038;= \\frac{1}{1}\\\\<br>\n\\alpha &#038;= 45\\deg\\\\[8pt]\n\\theta &#038;= 180\\deg +45\\deg\\\\<br>\n&#038;= 225\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q24a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q24b.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q24c.png"
       ]
     },
     "25": {
       "answer": "A",
       "pct": 70,
       "solution_text": "A\n 點只是一固定點，而 \nP\n 點與 \nA\n 點保持固定距離，因此其軌跡是圓形。\n\nPoint \nA\n is a fixed point. The distance between Point \nP\n and Point \nA\n is a constant. Thus, its locus is a circle.\n相關文章: \n常見軌跡 Common Loci",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q25.gif"
+      ]
     },
     "26": {
       "answer": "D",
@@ -1901,6 +2193,10 @@
         "\\begin{align*}<br>\nO_2 =&#038; (4,10)\\\\<br>\nr_2 =&#038; \\sqrt{4^2 +10^2 +53}\\\\<br>\n=&#038;\\sqrt{169}\\\\<br>\n=&#038;13<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{LHS} &#038;= x^2+y^2 -8x -20y -53\\\\<br>\n&#038;= (-1)^2 +(-2)^2 -8(-1) -20(-2) -53\\\\<br>\n&#038;= 0<br>\n\\end{align*}",
         "\\begin{align*}<br>\nr_1 &#038;= \\sqrt{79.5}\\\\<br>\nr_2 &#038;= 13<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q27a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q27b.gif"
       ]
     },
     "28": {
@@ -1917,6 +2213,9 @@
       "solution_text": "總共有 28 個數據，分成兩組，每組 14 個。再從當中找到 \nQ\n1\n 位於第 7 和第 8 個數據之間，而 \nQ\n3\n 位於第 21 和第 22 個數據之間。\n\n從棒形圖得到:\n$$\\begin{align*}\n\nQ_1 &= (5 +5) \\div 2 = 5\\\\\n\nQ_3 &= (6 +6) \\div 2 = 6\\\\[12pt]\n\\text{IQR} &= 6 -5 = 1\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\nQ_1 &#038;= (5 +5) \\div 2 = 5\\\\<br>\nQ_3 &#038;= (6 +6) \\div 2 = 6\\\\[12pt]\n\\text{IQR} &#038;= 6 -5 = 1<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q29.png"
       ]
     },
     "30": {
@@ -1948,6 +2247,10 @@
       "latex": [
         "\\begin{align*}<br>\n&#038;\\ a \\times b\\\\<br>\n=&#038;\\ \\frac{1}{b} \\times b\\\\<br>\n=&#038;\\ 1<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\therefore a^{-h} &#038;= b^h\\\\<br>\n\\frac{1}{a^h} &#038;= b^h\\\\<br>\n1 &#038;= a^h \\times b^h\\\\<br>\n(ab)^h &#038;=1\\\\<br>\nab &#038;= 1<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q33.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q33b.png"
       ]
     },
     "34": {
@@ -1975,6 +2278,10 @@
       "solution_text": "透過直線的截距來作圖。\n$$2x +y +3=0\\\\\n\nx\\text{-intercept} = -1.5, y\\text{-intercept} = -3\\\\[12pt]\nx +y +1 =0\\\\\n\nx\\text{-intercept} = -1, y\\text{-intercept} = -1$$\n運用代數技巧，找到以下各點坐標。\n然後求 ##4x+3y## 的最小值。\n$$(0,-1):4(0)+3(-1)=-3\\\\\n\n(0,-3):4(0)+3(-3)=-9\\\\\n\n(2,-3):4(2)+3(-3)=-1\\\\\n\n(2,-7):4(2)+3(-7)=\\color{red}{-13}$$\n已知 ##4x +3y +k## 的最小值是 \n24\n。\n\n$$\\begin{align*}\n\n4(2)+3(-7)+k &= 24\\\\\n\n-13 +k &=24\\\\\n\nk &= 37\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n4(2)+3(-7)+k &#038;= 24\\\\<br>\n-13 +k &#038;=24\\\\<br>\nk &#038;= 37<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q36a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q36b.png"
       ]
     },
     "37": {
@@ -1996,6 +2303,9 @@
         "\\begin{align*}<br>\nBP^2 &#038;= AP^2 +AB^2\\\\<br>\nBP^2 &#038;= 9^2 +12^2\\\\<br>\nBP &#038;= 15\\\\[12pt]\nDP^2 &#038;= EP^2 +ED^2\\\\<br>\nDP^2 &#038;= 5^2 + 12^2\\\\<br>\nDP &#038;= 13<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\text{Let }s &#038;=\\frac{2k+13+15}{2}\\\\[2pt]\n&#038;=\\frac{2k+28}{2}\\\\[2pt]\n&#038;= k +14<br>\n\\end{align*}",
         "\\begin{align*}<br>\n&#038;\\text{Area 面積}\\\\<br>\n=&#038; \\sqrt{s(s -a)(s -b)(s -c)}\\\\<br>\n=&#038; \\sqrt{(k +14)(k +14 -13)(k +14 -15)(k+14 -2k)}\\\\<br>\n=&#038; \\sqrt{(k +14)(k +1)(k -1)(14 -k)}\\\\<br>\n=&#038; \\sqrt{\\color{red}{(k +1)(k -1)} \\color{blue}{(14 -k)(14 +k)}}\\\\<br>\n=&#038; \\sqrt{\\color{red}{(k^2 -1)} \\color{blue}{(196 -k^2)}}\\ \\text{cm}^2<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q38.png"
       ]
     },
     "39": {
@@ -2005,6 +2315,12 @@
       "latex": [
         "\\begin{align*}<br>\n\\angle AED &#038;= 180\\deg -35\\deg -100\\deg\\\\<br>\n&#038;= 45\\deg\\\\[8pt]\n\\angle CDE &#038;= 180\\deg -100\\deg\\\\<br>\n&#038;=80\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\nx &#038;= 180\\deg -45\\deg -80\\deg\\\\<br>\n&#038;= 55\\deg<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q39a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q39b.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q39c.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q39d.png"
       ]
     },
     "40": {
@@ -2015,6 +2331,13 @@
         "\\begin{align*}<br>\n\\because \\text{slope 斜率} &#038;=\\frac{4}{3}\\\\[2pt]\n\\therefore \\tan \\alpha &#038;= \\frac{4}{3}\\\\<br>\n\\alpha &#038;= 53.13\\deg\\\\[10pt]\n\\theta &#038;= 90\\deg -53.13\\deg\\\\<br>\n&#038;= 36.87\\deg<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\tan \\frac{\\theta}{2} &#038;= \\frac{a -31}{\\frac{4}{3}a-8}\\\\[3pt]\n\\tan \\frac{36.87\\deg}{2} &#038;= \\frac{a -31}{\\frac{4}{3}a-8}\\\\[3pt]\n0.3333 &#038;= \\frac{a -31}{\\frac{4}{3}a-8}\\\\[3pt]\n0.4444a -2.6664 &#038;= a -31\\\\<br>\n28.3336 &#038;= 0.5556a\\\\<br>\na &#038;=50.996\\\\<br>\na &#038;\\approx 51<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\tan \\alpha &#038;= \\frac{4}{3}\\ \\text{(From the slope)}\\\\[3pt]\n\\sin \\alpha &#038;= \\frac{4}{5}\\ \\text{(By Calculator)}\\\\[3pt]\n\\frac{a -31}{31 -6} &#038;= \\frac{4}{5}\\\\[3pt]\n5a -155 &#038;= 100\\\\<br>\n5a &#038;= 255\\\\<br>\na &#038;= 51<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q40a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q40b.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q40c.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q40d.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q40e.png"
       ]
     },
     "41": {
@@ -2024,6 +2347,9 @@
       "latex": [
         "\\begin{align*}<br>\nx^2 +(x+9)^2 -6x +c(x +9) -7 &#038;=0\\\\<br>\nx^2 +x^2 +18x +81 -6x +cx +9c -7 &#038;=0\\\\<br>\n2x^2 +12x +cx +74 +9c &#038;=0<br>\n\\end{align*}",
         "\\begin{align*}<br>\n\\Delta &#038;\\ge 0\\\\<br>\n(12+c)^2 -4(2)(74+9c) &#038;\\ge 0\\\\<br>\n144 +24c +c^2 -592 -72c &#038;\\ge 0\\\\<br>\nc^2 -48c -448 &#038;\\ge 0\\\\<br>\nc \\le -8 \\ \\ \\text{or}\\ \\  c&#038;\\ge 56<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q41.gif"
       ]
     },
     "42": {
@@ -2032,6 +2358,10 @@
       "solution_text": "先把 \n5\n 名女生隨機排成一行，共有 \n5!\n 種排列方式。\n下圖中藍色線的地方就是可放置男生的地方。可放置男生的地方有6處，而男生的數目亦是 6，因此共有 ##P_6^6## 種排列方式。\n$$\\begin{align*}\n\n&\\text{排列方式的總數}\\\\\n\n=&\\ 5! \\times P_6^6\\\\\n\n=&\\ 86400\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}<br>\n&#038;\\text{排列方式的總數}\\\\<br>\n=&#038;\\ 5! \\times P_6^6\\\\<br>\n=&#038;\\ 86400<br>\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q42a.png",
+        "https://mathseasy.hk/wp-content/uploads/2020/10/hkdse-2020-p2-q42b.png"
       ]
     },
     "43": {
@@ -2186,6 +2516,9 @@
       "latex": [
         "\\begin{align*}\n\nh &= \\sqrt{\\Big(\\frac{18}{2}\\Big)^2+12^2}\\\\\n\n&=15\n\n\\end{align*}",
         "\\begin{align*}\n\n&\\text{總表面面積 Total Surface Area}\\\\[2pt]\n=&\\frac{15 \\times 18}{2} \\times 4 + 18^2\\\\[2pt]\n=&\\ 864\\text{ cm}^2\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q15.png"
       ]
     },
     "16": {
@@ -2197,6 +2530,11 @@
         "\\begin{align*}\n\n\\frac{\\triangle ABX \\text{ 面積}}{\\triangle ADX \\text{ 面積}} &= \\frac{BE}{AD}\\\\[2pt]\n\\frac{24}{\\triangle ADX \\text{ 面積}} &= \\frac{2k}{12k}\\\\[2pt]\n\\triangle ADX \\text{ 面積} &= 144\n\n\\end{align*}",
         "\\begin{align*}\n\n\\frac{\\triangle BEX \\text{ 面積}}{\\triangle BFY \\text{ 面積}} &=\\Big(\\frac{BE}{BF}\\Big)^2\\\\[2pt]\n\\frac{4}{\\triangle BFY \\text{ 面積}} &= \\Big(\\frac{2k}{2k+7k}\\Big)^2\\\\[2pt]\n\\frac{4}{\\triangle BFY \\text{ 面積}} &= \\frac{4}{81}\\\\[2pt]\n\\triangle BFY \\text{ 面積} &= 81\\\\[2pt]\n\\end{align*}",
         "\\begin{align*}\n\n&\\ CDYF\\text{ 面積}\\\\\n\n=&\\ \\triangle CDB\\text{ 面積}-\\triangle BFY \\text{ 面積}\\\\\n\n=&\\ (24+144)-(81)\\\\\n\n=&\\ 87\\text{ cm}^2\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q16a.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q16b.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q16c.png"
       ]
     },
     "17": {
@@ -2209,6 +2547,10 @@
         "\\text{In }\\triangle BCD,\\\\\n\n\\begin{align*}\n\n2x+2x+\\theta &= 180\\deg\\\\\n\n\\theta &= 180\\deg -4\\times38\\deg\\\\\n\n&= 28\\deg\n\n\\end{align*}",
         "\\begin{align*}\n\nx+2x+66\\deg &= 180\\deg\\\\\n\n3x&=114\\deg\\\\\n\nx &= 38\\deg\n\n\\end{align*}",
         "\\begin{align*}\n\n2x+2x+\\theta &= 180\\deg\\\\\n\n\\theta &= 180\\deg -4\\times38\\deg\\\\\n\n&= 28\\deg\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q17a.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q17b.png"
       ]
     },
     "18": {
@@ -2220,6 +2562,11 @@
         "\\text{In }\\triangle DEF,\\\\[2pt]\n\\begin{align*}\n\nDE^2+DF^2 &= EF^2\\\\\n\n(4k)^2 + 30^2 &= (5k)^2\\\\\n\n16k^2 + 900 &= 25k^2\\\\\n\n900 &= 9k^2\\\\\n\nk^2 &= 100\\\\\n\nk &= 10\n\n\\end{align*}\\\\\n\n\\ \\\\\n\n\\therefore EF = 5k = 5 \\times 10 = 50\\text{ cm}",
         "\\begin{align*}\n\nAD &= ED\\ \\text{(given)}\\\\\n\nFD &= FD\\  \\text{(common)}\\\\\n\n\\angle ADF &= \\angle EDF = 90\\deg\\ \\text{(given)}\\\\\n\n\\end{align*}",
         "\\begin{align*}\n\nDE^2+DF^2 &= EF^2\\\\\n\n(4k)^2 + 30^2 &= (5k)^2\\\\\n\n16k^2 + 900 &= 25k^2\\\\\n\n900 &= 9k^2\\\\\n\nk^2 &= 100\\\\\n\nk &= 10\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q18a.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q18b.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q18c.png"
       ]
     },
     "19": {
@@ -2228,6 +2575,9 @@
       "solution_text": "參考下圖，留意 \n∠\nBDC\n=90°\n。只要運用畢氏定理便可找到 \nBD\n及 \nCD\n 的長度。\n\n$$\\begin{align*}\n\n\\text{面積 Area} &= \\frac{18\\times24}{2}+\\frac{24\\times10}{2}\\\\[2pt]\n&= 336\\text{ cm}^2\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}\n\n\\text{面積 Area} &= \\frac{18\\times24}{2}+\\frac{24\\times10}{2}\\\\[2pt]\n&= 336\\text{ cm}^2\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q19.png"
       ]
     },
     "20": {
@@ -2238,6 +2588,10 @@
         "\\begin{align*}\n\n\\angle FBE &= \\frac{180\\deg-56\\deg}{2}\\\\[2pt]\n&= 62\\deg\n\n\\end{align*}",
         "\\because CD //AE\\\\\n\n\\therefore \\angle BCD = \\angle FBE= 62\\deg",
         "\\begin{align*}\n\n\\angle BDC &= \\frac{180\\deg-62\\deg}{2}\\\\[2pt]\n&= 59\\deg\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q20a.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q20b.png"
       ]
     },
     "21": {
@@ -2250,6 +2604,11 @@
         "\\text{In }\\triangle ABC,\\\\\n\n\\begin{align*}\n\nx+x+24\\deg+90\\deg &= 180\\deg\\\\\n\n2x &= 66\\deg\\\\\n\nx &=33\\deg\n\n\\end{align*}",
         "\\begin{align*}\n\nAC &= BD\\ \\text{(given 已知)}\\\\\n\nOA &= OB\\ \\text{(radii 半徑)}\\\\\n\nOC &= OD\\ \\text{(radii 半徑)}\\\\\n\n\\end{align*}",
         "\\begin{align*}\n\nx+x+24\\deg+90\\deg &= 180\\deg\\\\\n\n2x &= 66\\deg\\\\\n\nx &=33\\deg\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q21a.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q21b.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q21c.png"
       ]
     },
     "22": {
@@ -2289,13 +2648,19 @@
       "answer": "D",
       "pct": 69,
       "solution_text": "相關文章：\n文憑試實戰篇 #5 坐標旋轉 Rotation of Coordinates",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q25b.gif"
+      ]
     },
     "26": {
       "answer": "D",
       "pct": 68,
       "solution_text": "紅色線為 \nP\n 的軌跡\n\nThe red lines are the locus of \nP\n.\n相關文章：\n常見軌跡 Common Loci",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q26.png"
+      ]
     },
     "27": {
       "answer": "B",
@@ -2306,6 +2671,9 @@
         "\\begin{align*}\n\n\\text{圓心 centre}&=(-1,3)\\\\[2pt]\n\\text{半徑 radius}&=\\sqrt{1^2+3^2-7.5}\\\\[2pt]\n&=\\sqrt{2.5}\n\n\\end{align*}",
         "\\begin{align*}\n\n\\text{LHS} &= 2(-3)^2+2(3)^2+4(-3)-12(3)+15\\\\\n\n&=3\\\\\n\n&\\gt0\n\n\\end{align*}",
         "(-3,3)\\text{ 與圓心之距離}\\\\\n\n=\\sqrt{(-3+1)^2+(3-3)^2}\\\\\n\n=2\\\\\n\n\\gt \\sqrt{2.5}\\ (\\approx 1.6)"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q27.png"
       ]
     },
     "28": {
@@ -2382,6 +2750,9 @@
         "\\begin{cases}\n\n13x+6y=20\\\\\n\n7x-6y=20\n\n\\end{cases}\\\\[4pt]\nQ=(2,-1)\n",
         "\\begin{cases}\n\nx+2y=20\\\\\n\n7x-6y=20\n\n\\end{cases}\\\\[4pt]\nR=(8,6)\n",
         "\n\nP:7(-4)+8(12)+9 = 77\\\\\n\nQ:7(2)+8(-1)+9 = 15\\\\\n\nR:7(8)+8(6)+9 = \\color{red}{113}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q35.png"
       ]
     },
     "36": {
@@ -2407,6 +2778,9 @@
         "\\begin{align*}\n\n5x^2+5(3x-2)^2+kx+4(3x-2)-20 &=0\\\\\n\n5x^2+5(9x^2-12x+4)+kx+12x-8-20 &=0\\\\\n\n5x^2+45x^2-60x+20+kx+12x-28 &= 0\\\\\n\n50x^2-48x+kx-8 &= 0\n\n\\end{align*}",
         "\\begin{align*}\n\n&PQ \\text{ 中點的 }x\\text{坐標 }x\\text{-coordinate of mid-point of }PQ\\\\[2pt]\n=& (\\alpha+\\beta) \\times \\frac{1}{2}\\\\[2pt]\n=& \\frac{-(-48+k)}{50} \\times \\frac{1}{2}\\\\[2pt]\n=& \\frac{48-k}{100}\n\n\\end{align*}",
         "\\begin{align*}\n\n\\frac{48-k}{100} &= 2\\\\[2pt]\n48-k &= 200\\\\[2pt]\nk &=-152\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q37.png"
       ]
     },
     "38": {
@@ -2417,6 +2791,10 @@
         "\\begin{align*}\n\n\\frac{\\sin 45\\deg}{OD} &= \\frac{\\sin 105\\deg}{12}\\\\[2pt]\nOD &= 8.7846\n\n\\end{align*}",
         "\\ \\triangle OCD\\text{ 面積}\\\\\n\n=\\frac{1}{2}(12)(8.7846)\\sin 30\\deg\\\\\n\n=26.3538",
         "\\ \\text{Area of shaded region}\\\\\n\n=\\pi (12)^2\\times\\frac{30\\deg}{360\\deg}-26.3538\\\\\n\n= 11.3262\\\\\n\n\\approx 11 \\text{ cm}^2"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q38.png",
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q38b.png"
       ]
     },
     "39": {
@@ -2425,6 +2803,9 @@
       "solution_text": "1) \n∠\nDCE\n = ∠\nDAE\n = 22°(∠s in the same segment)\n \n\n2) \n∠\nADB\n = ∠\nFAB\n (∠ in alt. segment)\n$$\\begin{align*}\n\n\\therefore \\angle ADB &= \\angle FAB\\\\\n\n&=180\\deg-64\\deg-22\\deg-38\\deg\\\\\n\n&=56\\deg\n\n\\end{align*}$$",
       "latex": [
         "\\begin{align*}\n\n\\therefore \\angle ADB &= \\angle FAB\\\\\n\n&=180\\deg-64\\deg-22\\deg-38\\deg\\\\\n\n&=56\\deg\n\n\\end{align*}"
+      ],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q39.png"
       ]
     },
     "40": {
@@ -2446,7 +2827,10 @@
       "answer": "B",
       "pct": 44,
       "solution_text": "I) 直角三角形的垂心位於直角的頂點。\n\nThe orthocentre of right angled triangle is located at the vertex of the right angle.\n因此選項 I 錯誤。\nII) 形心 centroid 必定為位三角形之內\n因此選項 II 正確。\nIII) 內心 in-centre 必定為位三角形之內\n因此選項 III 錯誤。\n相關文章：\n三角形四心筆記",
-      "latex": []
+      "latex": [],
+      "solution_images": [
+        "https://mathseasy.hk/wp-content/uploads/2019/04/dse-2019-p2-q41.png"
+      ]
     },
     "42": {
       "answer": "C",
