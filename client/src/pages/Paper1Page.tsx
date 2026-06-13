@@ -1,8 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useParams, Link } from "wouter";
+import { useParams } from "wouter";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, TrendingUp, TrendingDown, BarChart3 } from "lucide-react";
+import { TrendingUp, TrendingDown } from "lucide-react";
 import dseData from "@/data/dseData.json";
 import YearSelector from "@/components/YearSelector";
 import PerformanceBar from "@/components/PerformanceBar";
@@ -21,9 +21,6 @@ export default function Paper1Page() {
   const topics = useMemo(() => {
     return (dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)[selectedYear] || [];
   }, [selectedYear]);
-
-  const pdfId = (dseData.paper1_pdfs as Record<string, string>)[selectedYear];
-  const pdfUrl = pdfId ? `https://drive.google.com/file/d/${pdfId}/view` : null;
 
   // Stats
   const avgRate = yearData.length > 0
@@ -55,24 +52,13 @@ export default function Paper1Page() {
           <p className="text-muted-foreground mt-1">{t("paper1.desc")}</p>
         </div>
 
-        {/* Year Selector + Actions */}
+        {/* Year Selector */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <YearSelector
             years={years}
             selected={selectedYear}
             onChange={setSelectedYear}
           />
-          {pdfUrl && (
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium border border-border/60 hover:bg-muted transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-              {t("link.viewPaper")}
-            </a>
-          )}
         </div>
 
         {/* Stats Summary */}

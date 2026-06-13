@@ -16,6 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { path: "/paper1", label: t("nav.paper1") },
     { path: "/paper2", label: t("nav.paper2") },
     { path: "/m2", label: t("nav.m2") },
+    { path: "/topics", label: t("nav.topics") },
   ];
 
   const isActive = (path: string) => {

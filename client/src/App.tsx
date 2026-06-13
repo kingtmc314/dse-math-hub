@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Paper1Page from "./pages/Paper1Page";
 import Paper2Page from "./pages/Paper2Page";
 import M2Page from "./pages/M2Page";
+import TopicFilterPage from "./pages/TopicFilterPage";
 import Layout from "./components/Layout";
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/paper2/:year" component={Paper2Page} />
       <Route path="/m2" component={M2Page} />
       <Route path="/m2/:year" component={M2Page} />
+      <Route path="/topics" component={TopicFilterPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
