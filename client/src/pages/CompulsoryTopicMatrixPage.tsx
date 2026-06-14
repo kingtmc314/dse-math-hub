@@ -23,18 +23,20 @@ export default function CompulsoryTopicMatrixPage() {
     const matrix: Record<string, Record<string, string>> = {};
 
     if (activePaper === "paper1") {
+      // Paper 1: new numbered format {year: [{topic: "1. ...", questions: "3, 6"}]}
       const p1Source = dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>;
       for (const yearTopics of Object.values(p1Source)) {
         for (const t of yearTopics) {
-          if (t.topic.startsWith("J") || t.topic.startsWith("S") || t.topic === "Out of Syllabus" || t.topic === "Deleted / Out of Syllabus") {
-            topicSet.add(t.topic);
-          }
+          topicSet.add(t.topic);
         }
       }
+      // Sort: numbered topics by their number, OOS last
       const sortedTopics = Array.from(topicSet).sort((a, b) => {
-        const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
-        const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
-        if (catA !== catB) return catA - catB;
+        const numA = a.match(/^(\d+)\./)?.[1];
+        const numB = b.match(/^(\d+)\./)?.[1];
+        if (numA && numB) return parseInt(numA) - parseInt(numB);
+        if (numA) return -1;
+        if (numB) return 1;
         return getTopicSortKey(a) - getTopicSortKey(b);
       });
       for (const topic of sortedTopics) matrix[topic] = {};
@@ -50,15 +52,21 @@ export default function CompulsoryTopicMatrixPage() {
       return { sortedTopics, matrix };
     } else {
       // Paper 2: new flat format {year: {q: topic_name}}
+      // Topics are in numbered format: "7. Functions and Graphs"
       const p2Source = dseData.paper2_topics as Record<string, Record<string, string>>;
       for (const yearTopicMap of Object.values(p2Source)) {
         for (const topicName of Object.values(yearTopicMap)) {
-          if (topicName.startsWith("J") || topicName.startsWith("S") || topicName === "Out of Syllabus" || topicName === "Deleted / Out of Syllabus") {
-            topicSet.add(topicName);
-          }
+          topicSet.add(topicName);
         }
       }
+      // Sort: numbered topics by their number, OOS last
       const sortedTopics = Array.from(topicSet).sort((a, b) => {
+        const numA = a.match(/^(\d+)\./)?.[1];
+        const numB = b.match(/^(\d+)\./)?.[1];
+        if (numA && numB) return parseInt(numA) - parseInt(numB);
+        if (numA) return -1;
+        if (numB) return 1;
+        // Fall back to J/S sort for legacy format
         const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
         const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
         if (catA !== catB) return catA - catB;
@@ -184,31 +192,23 @@ export default function CompulsoryTopicMatrixPage() {
               </thead>
               <tbody>
                 {matrixData.sortedTopics.map((topic, idx) => {
-                  const isJunior = topic.startsWith("J");
-                  const isSenior = topic.startsWith("S");
-                  const isOther = !isJunior && !isSenior;
+                  // All topics now use numbered format ("1. ...", "2. ...") — no J/S grouping needed
+                  const isOOS = topic.toLowerCase().includes("out of syllabus") || topic.toLowerCase().includes("deleted");
                   const prevTopic = idx > 0 ? matrixData.sortedTopics[idx - 1] : null;
-                  const showDivider = prevTopic && (
-                    (prevTopic.startsWith("J") && isSenior) ||
-                    (prevTopic.startsWith("S") && isOther)
-                  );
+                  // Show divider before OOS topics
+                  const showDivider = prevTopic && !isOOS && false; // no dividers needed for numbered topics
+                  const showOOSDivider = isOOS && prevTopic && !prevTopic.toLowerCase().includes("out of syllabus");
 
                   return (
                     <React.Fragment key={topic}>
-                      {showDivider && (
+                      {showOOSDivider && (
                         <tr>
                           <td colSpan={YEARS.length + 2} className="bg-gradient-to-r from-gray-100 to-gray-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-gray-500 border-b border-gray-200">
-                            {isSenior ? (lang === "zh" ? "高中課題" : "Senior Topics") : (lang === "zh" ? "其他" : "Others")}
+                            {lang === "zh" ? "不在課程範圍" : "Out of Syllabus"}
                           </td>
                         </tr>
                       )}
-                      {idx === 0 && isJunior && (
-                        <tr>
-                          <td colSpan={YEARS.length + 2} className="bg-gradient-to-r from-gray-100 to-gray-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-gray-500 border-b border-gray-200">
-                            {lang === "zh" ? "初中課題" : "Junior Topics"}
-                          </td>
-                        </tr>
-                      )}
+                      {showDivider && null}
                       <tr className="hover:bg-teal-50/30 transition-colors group">
                         <td className="sticky left-0 z-10 bg-white group-hover:bg-teal-50/30 px-3 py-2 border-b border-r border-gray-100 font-medium text-gray-700 text-[11px] leading-tight transition-colors">
                           {getTopicDisplayName(topic, lang)}
@@ -254,7 +254,7 @@ export default function CompulsoryTopicMatrixPage() {
           </div>
           <div className="bg-white rounded-lg border border-gray-200 p-3">
             <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">{lang === "zh" ? "年份跨度" : "Year Span"}</p>
-            <p className="text-xl font-bold text-gray-900">2012–2026</p>
+            <p className="text-xl font-bold text-gray-900">{YEARS[0]}–{YEARS[YEARS.length - 1]}</p>
           </div>
           <div className="bg-white rounded-lg border border-gray-200 p-3">
             <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1">{lang === "zh" ? "每年必出" : "Every Year"}</p>

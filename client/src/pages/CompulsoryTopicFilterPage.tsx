@@ -5,7 +5,7 @@ import { Search, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import dseData from "@/data/dseData.json";
 import { matchPaper1Questions } from "@/lib/topicMatcher";
-import { CURRICULUM_TOPICS, CurriculumTopic } from "@/data/curriculumTopics";
+import { CURRICULUM_TOPICS, CurriculumTopic, topicMatchesCurriculum } from "@/data/curriculumTopics";
 import PerformanceBar from "@/components/PerformanceBar";
 
 interface QuestionResult {
@@ -16,22 +16,6 @@ interface QuestionResult {
   performance: number;
   answer?: string;
   fullMarks?: number;
-}
-
-/**
- * Check if a LU code string (e.g. "J3. Approximate Values...") matches any of the LUs in a curriculum topic.
- * Handles combined codes like "J21/22".
- */
-function luMatchesCurriculum(luStr: string, ct: CurriculumTopic): boolean {
-  // Extract prefix code e.g. "J3", "J21/22", "S14"
-  const match = luStr.match(/^([JS]\d+(?:\/\d+)?)/);
-  if (!match) return false;
-  const code = match[1];
-  // Handle combined codes like "J21/22"
-  const prefix = code.match(/^([JS])/)?.[1] || "";
-  const nums = code.replace(/^[JS]/, "").split("/");
-  const codes = nums.map(n => prefix + n);
-  return ct.lus.some(lu => codes.includes(lu));
 }
 
 export default function CompulsoryTopicFilterPage() {
@@ -60,7 +44,7 @@ export default function CompulsoryTopicFilterPage() {
     if (selectedPaper === "all" || selectedPaper === "paper1") {
       for (const [year, topics] of Object.entries(dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
         for (const topicEntry of topics) {
-          if (!luMatchesCurriculum(topicEntry.topic, selectedCurriculum)) continue;
+          if (!topicMatchesCurriculum(topicEntry.topic, selectedCurriculum)) continue;
           const yearQuestions = (dseData.paper1 as any)[year] || [];
           const matched = matchPaper1Questions(topicEntry.questions, yearQuestions);
           for (const qData of matched) {
@@ -83,7 +67,7 @@ export default function CompulsoryTopicFilterPage() {
       for (const [year, topicMap] of Object.entries(paper2TopicsFlat)) {
         const yearQuestions = (dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)[year] || [];
         for (const [qNum, topicName] of Object.entries(topicMap)) {
-          if (!luMatchesCurriculum(topicName, selectedCurriculum)) continue;
+          if (!topicMatchesCurriculum(topicName, selectedCurriculum)) continue;
           const qData = yearQuestions.find(q => q.q === Number(qNum));
           if (qData) {
             const correctRate = qData[qData.ans as keyof Pick<typeof qData, "A" | "B" | "C" | "D">] as number || 0;

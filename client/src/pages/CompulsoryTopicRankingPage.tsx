@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { TrendingDown, ArrowUpDown } from "lucide-react";
 import dseData from "@/data/dseData.json";
 import { matchPaper1Questions } from "@/lib/topicMatcher";
-import { CURRICULUM_TOPICS, CurriculumTopic } from "@/data/curriculumTopics";
+import { CURRICULUM_TOPICS, CurriculumTopic, topicMatchesCurriculum } from "@/data/curriculumTopics";
 import PerformanceBar from "@/components/PerformanceBar";
 
 interface CurriculumTopicStat {
@@ -14,19 +14,6 @@ interface CurriculumTopicStat {
   avgPerformance: number;
   minPerformance: number;
   maxPerformance: number;
-}
-
-/**
- * Check if a LU code string (e.g. "J3. Approximate Values...") matches any of the LUs in a curriculum topic.
- */
-function luMatchesCurriculum(luStr: string, ct: CurriculumTopic): boolean {
-  const match = luStr.match(/^([JS]\d+(?:\/\d+)?)/);
-  if (!match) return false;
-  const code = match[1];
-  const prefix = code.match(/^([JS])/)?.[1] || "";
-  const nums = code.replace(/^[JS]/, "").split("/");
-  const codes = nums.map(n => prefix + n);
-  return ct.lus.some(lu => codes.includes(lu));
 }
 
 export default function CompulsoryTopicRankingPage() {
@@ -45,7 +32,7 @@ export default function CompulsoryTopicRankingPage() {
     if (paperFilter === "all" || paperFilter === "paper1") {
       for (const [year, topics] of Object.entries(dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
         for (const topicEntry of topics) {
-          const ct = CURRICULUM_TOPICS.find(c => luMatchesCurriculum(topicEntry.topic, c));
+          const ct = CURRICULUM_TOPICS.find(c => topicMatchesCurriculum(topicEntry.topic, c));
           if (!ct) continue;
           const yearQuestions = (dseData.paper1 as any)[year] || [];
           const matched = matchPaper1Questions(topicEntry.questions, yearQuestions);
@@ -64,7 +51,7 @@ export default function CompulsoryTopicRankingPage() {
       for (const [year, topicMap] of Object.entries(paper2TopicsFlat)) {
         const yearQuestions = (dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)[year] || [];
         for (const [qNum, topicName] of Object.entries(topicMap)) {
-          const ct = CURRICULUM_TOPICS.find(c => luMatchesCurriculum(topicName, c));
+          const ct = CURRICULUM_TOPICS.find(c => topicMatchesCurriculum(topicName, c));
           if (!ct) continue;
           const qData = yearQuestions.find(q => q.q === Number(qNum));
           if (!qData) continue;

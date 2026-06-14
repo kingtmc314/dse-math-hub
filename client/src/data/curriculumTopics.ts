@@ -169,9 +169,20 @@ export function findCurriculumTopicsForLU(luCode: string): number[] {
 }
 
 /**
- * Check if a given topic string (e.g. "J3. Approximate Values...") belongs to a curriculum topic
+ * Check if a given topic string belongs to a curriculum topic.
+ * Handles both:
+ *   - J/S LU code format: "J3. Approximate Values..." or "S2. Functions..."
+ *   - Numbered curriculum format: "7. Functions and Graphs" (paper2_topics format)
  */
 export function topicMatchesCurriculum(topicStr: string, curriculumTopic: CurriculumTopic): boolean {
+  // Check numbered curriculum format first: "7. Functions and Graphs"
+  const numberedMatch = topicStr.match(/^(\d+)\./);
+  if (numberedMatch) {
+    const topicId = parseInt(numberedMatch[1], 10);
+    return curriculumTopic.id === topicId;
+  }
+  // Check Out of Syllabus numbered: "23. Out of Syllabus (OOS)"
+  // These don't belong to any curriculum topic
   const luCode = extractLUCode(topicStr);
   // Handle combined codes like "J21/22"
   const parts = luCode.replace(/^([JS])/, "").split("/");
