@@ -13,13 +13,13 @@ interface TopicStats {
   yearsAppeared: number;
   yearScores: { year: string; avg: number }[];
   trend: "up" | "down" | "stable"; // recent trend
-  category: "J" | "S" | "O";
+  category: "J" | "S" | "M2" | "O";
 }
 
 export default function TopicRankingPage() {
   const { t, lang } = useLanguage();
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc"); // asc = hardest first
-  const [filterCategory, setFilterCategory] = useState<"all" | "J" | "S">("all");
+  const [filterCategory, setFilterCategory] = useState<"all" | "J" | "S" | "M2">("all");
   const [expandedTopic, setExpandedTopic] = useState<string | null>(null);
 
   // Compute topic stats from dseData
@@ -67,6 +67,37 @@ export default function TopicRankingPage() {
       }
     }
 
+    // M2 data (has pct)
+    const m2Topics = (dseData as any).m2_topics as Record<string, Array<{ topic: string; questions: string }>> | undefined;
+    const m2Data = (dseData as any).m2 as Record<string, Array<{ q: string; full: number; mean: number; pct: number }>> | undefined;
+    if (m2Topics && m2Data) {
+      for (const [year, topics] of Object.entries(m2Topics)) {
+        const yearQuestions = m2Data[year] || [];
+        for (const topicEntry of topics) {
+          const topic = topicEntry.topic;
+          if (!statsMap[topic]) statsMap[topic] = { scores: [], years: new Set(), yearScores: {} };
+          const parts = topicEntry.questions.split(",").map(s => s.trim());
+          for (const part of parts) {
+            const cleaned = part.replace(/^Q/, "").trim();
+            if (!cleaned || cleaned === "-") continue;
+            const match = cleaned.match(/^(\d+)/);
+            if (match) {
+              const mainNum = match[1];
+              const matchingQs = yearQuestions.filter(q => q.q.startsWith(mainNum) && (q.q === mainNum || q.q.startsWith(mainNum + "(")));
+              for (const qData of matchingQs) {
+                if (qData.pct > 0) {
+                  statsMap[topic].scores.push(qData.pct);
+                  statsMap[topic].years.add(year);
+                  if (!statsMap[topic].yearScores[year]) statsMap[topic].yearScores[year] = [];
+                  statsMap[topic].yearScores[year].push(qData.pct);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     // Convert to array
     const results: TopicStats[] = [];
     for (const [topic, data] of Object.entries(statsMap)) {
@@ -90,7 +121,7 @@ export default function TopicRankingPage() {
         else if (diff < -5) trend = "down";
       }
 
-      const category = topic.startsWith("J") ? "J" : topic.startsWith("S") ? "S" : "O";
+      const category = topic.startsWith("J") ? "J" : topic.startsWith("S") ? "S" : topic.match(/^\d+\./) ? "M2" : "O";
 
       results.push({
         topic,
@@ -210,10 +241,11 @@ export default function TopicRankingPage() {
               { value: "all", label: lang === "zh" ? "全部" : "All" },
               { value: "J", label: lang === "zh" ? "初中" : "Junior" },
               { value: "S", label: lang === "zh" ? "高中" : "Senior" },
+              { value: "M2", label: "M2" },
             ].map((opt) => (
               <button
                 key={opt.value}
-                onClick={() => setFilterCategory(opt.value as "all" | "J" | "S")}
+                onClick={() => setFilterCategory(opt.value as "all" | "J" | "S" | "M2")}
                 className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-180 ${
                   filterCategory === opt.value
                     ? "bg-white text-primary shadow-sm"

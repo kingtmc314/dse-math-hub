@@ -10,7 +10,7 @@ import TopicBadge from "@/components/TopicBadge";
 
 interface QuestionResult {
   year: string;
-  paper: "paper1" | "paper2";
+  paper: "paper1" | "paper2" | "m2";
   question: string;
   topic: string;
   performance: number; // pct or correct rate
@@ -22,7 +22,7 @@ export default function TopicFilterPage() {
   const { t, lang } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
-  const [selectedPaper, setSelectedPaper] = useState<"all" | "paper1" | "paper2">("all");
+  const [selectedPaper, setSelectedPaper] = useState<"all" | "paper1" | "paper2" | "m2">("all");
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
 
   // Collect all unique topics
@@ -38,27 +38,37 @@ export default function TopicFilterPage() {
         topics.add(t.topic);
       }
     }
+    const m2Topics = (dseData as any).m2_topics as Record<string, Array<{ topic: string; questions: string }>> | undefined;
+    if (m2Topics) {
+      for (const yearTopics of Object.values(m2Topics)) {
+        for (const t of yearTopics) {
+          topics.add(t.topic);
+        }
+      }
+    }
     return Array.from(topics).sort((a, b) => {
-      // Sort by category first (J before S before Other)
-      const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
-      const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
+      // Sort by category first (J before S before M2/Other)
+      const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : a.match(/^\d+\./) ? 2 : 3;
+      const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : b.match(/^\d+\./) ? 2 : 3;
       if (catA !== catB) return catA - catB;
       // Then by numeric prefix
       return getTopicSortKey(a) - getTopicSortKey(b);
     });
   }, []);
 
-  // Group topics by category (J = Junior, S = Senior)
+  // Group topics by category (J = Junior, S = Senior, M2, Other)
   const topicGroups = useMemo(() => {
     const junior: string[] = [];
     const senior: string[] = [];
+    const m2: string[] = [];
     const other: string[] = [];
     for (const t of allTopics) {
       if (t.startsWith("J")) junior.push(t);
       else if (t.startsWith("S")) senior.push(t);
+      else if (t.match(/^\d+\./)) m2.push(t);
       else other.push(t);
     }
-    return { junior, senior, other };
+    return { junior, senior, m2, other };
   }, [allTopics]);
 
   // Filter topics by search
@@ -145,10 +155,49 @@ export default function TopicFilterPage() {
       }
     }
 
+    // Search M2
+    if (selectedPaper === "all" || selectedPaper === "m2") {
+      const m2Topics = (dseData as any).m2_topics as Record<string, Array<{ topic: string; questions: string }>> | undefined;
+      if (m2Topics) {
+        for (const [year, topics] of Object.entries(m2Topics)) {
+          for (const topicEntry of topics) {
+            if (topicEntry.topic !== selectedTopic) continue;
+            // M2 questions format: "Q13a", "Q11a, Q11b", "Q4a, 10a"
+            const parts = topicEntry.questions.split(",").map(s => s.trim());
+            const yearQuestions = ((dseData as any).m2 as Record<string, Array<{ q: string; full: number; mean: number; pct: number }>>)[year] || [];
+            for (const part of parts) {
+              const cleaned = part.replace(/^Q/, "").trim();
+              if (!cleaned || cleaned === "-") continue;
+              // Match to actual question data by main number
+              const match = cleaned.match(/^(\d+)/);
+              if (match) {
+                const mainNum = match[1];
+                // Find all sub-questions for this main number
+                const matchingQs = yearQuestions.filter(q => q.q.startsWith(mainNum) && (q.q === mainNum || q.q.startsWith(mainNum + "(")));
+                for (const qData of matchingQs) {
+                  // Avoid duplicates
+                  if (!results.find(r => r.year === year && r.paper === "m2" && r.question === `Q${qData.q}`)) {
+                    results.push({
+                      year,
+                      paper: "m2",
+                      question: `Q${qData.q}`,
+                      topic: topicEntry.topic,
+                      performance: qData.pct,
+                      fullMarks: qData.full,
+                    });
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
     // Sort by year descending, then question number
     results.sort((a, b) => {
       if (b.year !== a.year) return Number(b.year) - Number(a.year);
-      return Number(a.question.replace("Q", "")) - Number(b.question.replace("Q", ""));
+      return Number(a.question.replace(/Q|\(.*\)/g, "")) - Number(b.question.replace(/Q|\(.*\)/g, ""));
     });
 
     return results;
@@ -213,10 +262,11 @@ export default function TopicFilterPage() {
                   { value: "all", label: lang === "zh" ? "全部" : "All" },
                   { value: "paper1", label: lang === "zh" ? "卷一" : "P1" },
                   { value: "paper2", label: lang === "zh" ? "卷二" : "P2" },
+                  { value: "m2", label: "M2" },
                 ].map((opt) => (
                   <button
                     key={opt.value}
-                    onClick={() => setSelectedPaper(opt.value as "all" | "paper1" | "paper2")}
+                    onClick={() => setSelectedPaper(opt.value as "all" | "paper1" | "paper2" | "m2")}
                     className={`flex-1 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-180 ${
                       selectedPaper === opt.value
                         ? "bg-white text-primary shadow-sm"
@@ -244,8 +294,13 @@ export default function TopicFilterPage() {
                       <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
                     ))}
                   </optgroup>
+                  <optgroup label={lang === "zh" ? "延伸部分 M2" : "Extended M2"}>
+                    {allTopics.filter(t => t.match(/^\d+\./)).map((topic) => (
+                      <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
+                    ))}
+                  </optgroup>
                   <optgroup label={lang === "zh" ? "其他" : "Other"}>
-                    {allTopics.filter(t => !t.startsWith("J") && !t.startsWith("S")).map((topic) => (
+                    {allTopics.filter(t => !t.startsWith("J") && !t.startsWith("S") && !t.match(/^\d+\./)).map((topic) => (
                       <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
                     ))}
                   </optgroup>
@@ -274,10 +329,11 @@ export default function TopicFilterPage() {
                 { value: "all", label: lang === "zh" ? "全部" : "All" },
                 { value: "paper1", label: lang === "zh" ? "卷一" : "P1" },
                 { value: "paper2", label: lang === "zh" ? "卷二" : "P2" },
+                { value: "m2", label: "M2" },
               ].map((opt) => (
                 <button
                   key={opt.value}
-                  onClick={() => setSelectedPaper(opt.value as "all" | "paper1" | "paper2")}
+                  onClick={() => setSelectedPaper(opt.value as "all" | "paper1" | "paper2" | "m2")}
                   className={`flex-1 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-180 ${
                     selectedPaper === opt.value
                       ? "bg-white text-primary shadow-sm"
@@ -335,13 +391,35 @@ export default function TopicFilterPage() {
                 </div>
               )}
 
+              {/* M2 Topics */}
+              {filteredTopics.filter(t => t.match(/^\d+\./)).length > 0 && (
+                <div>
+                  <div className="px-4 py-2 bg-muted/30 text-xs font-medium text-muted-foreground uppercase tracking-wider border-b border-border/30">
+                    {lang === "zh" ? "延伸部分 M2" : "Extended M2"}
+                  </div>
+                  {filteredTopics.filter(t => t.match(/^\d+\./)).map((topic) => (
+                    <button
+                      key={topic}
+                      onClick={() => setSelectedTopic(topic)}
+                      className={`w-full text-left px-4 py-2.5 text-sm border-b border-border/20 transition-colors ${
+                        selectedTopic === topic
+                          ? "bg-primary/10 text-primary font-medium"
+                          : "hover:bg-muted/30 text-foreground"
+                      }`}
+                    >
+                      {getTopicDisplayName(topic, lang)}
+                    </button>
+                  ))}
+                </div>
+              )}
+
               {/* Other */}
-              {filteredTopics.filter(t => !t.startsWith("J") && !t.startsWith("S")).length > 0 && (
+              {filteredTopics.filter(t => !t.startsWith("J") && !t.startsWith("S") && !t.match(/^\d+\./)).length > 0 && (
                 <div>
                   <div className="px-4 py-2 bg-muted/30 text-xs font-medium text-muted-foreground uppercase tracking-wider border-b border-border/30">
                     {lang === "zh" ? "其他" : "Other"}
                   </div>
-                  {filteredTopics.filter(t => !t.startsWith("J") && !t.startsWith("S")).map((topic) => (
+                  {filteredTopics.filter(t => !t.startsWith("J") && !t.startsWith("S") && !t.match(/^\d+\./)).map((topic) => (
                     <button
                       key={topic}
                       onClick={() => setSelectedTopic(topic)}
@@ -522,9 +600,11 @@ export default function TopicFilterPage() {
                                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                                             q.paper === "paper1"
                                               ? "bg-blue-100 text-blue-700"
+                                              : q.paper === "m2"
+                                              ? "bg-violet-100 text-violet-700"
                                               : "bg-amber-100 text-amber-700"
                                           }`}>
-                                            {q.paper === "paper1" ? (lang === "zh" ? "卷一" : "P1") : (lang === "zh" ? "卷二" : "P2")}
+                                            {q.paper === "paper1" ? (lang === "zh" ? "卷一" : "P1") : q.paper === "m2" ? "M2" : (lang === "zh" ? "卷二" : "P2")}
                                           </span>
                                         </td>
                                         {selectedPaper !== "paper1" && (

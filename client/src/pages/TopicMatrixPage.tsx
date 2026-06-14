@@ -1,11 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useMemo, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Grid3X3, BookOpen, Calculator, ChevronLeft, ChevronRight } from "lucide-react";
+import { Grid3X3, BookOpen, Calculator, Sigma, ChevronLeft, ChevronRight } from "lucide-react";
 import dseData from "@/data/dseData.json";
 import { getTopicDisplayName, getTopicSortKey } from "@/data/topicTranslations";
 
-type PaperType = "paper1" | "paper2";
+type PaperType = "paper1" | "paper2" | "m2";
 
 const YEARS = [
   "2012", "2013", "2014", "2015", "2016", "2017", "2018",
@@ -19,9 +19,14 @@ export default function TopicMatrixPage() {
 
   // Build matrix data: for each topic, what questions appear in each year
   const matrixData = useMemo(() => {
-    const topicsSource = activePaper === "paper1"
-      ? (dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)
-      : (dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>);
+    let topicsSource: Record<string, Array<{ topic: string; questions: string }>>;
+    if (activePaper === "paper1") {
+      topicsSource = dseData.paper1_topics as any;
+    } else if (activePaper === "paper2") {
+      topicsSource = dseData.paper2_topics as any;
+    } else {
+      topicsSource = (dseData as any).m2_topics as any || {};
+    }
 
     // Collect all unique topics
     const topicSet = new Set<string>();
@@ -31,8 +36,12 @@ export default function TopicMatrixPage() {
       }
     }
 
-    // Sort topics: J before S, then by number
+    // Sort topics
     const sortedTopics = Array.from(topicSet).sort((a, b) => {
+      if (activePaper === "m2") {
+        // M2 topics start with numbers: "2. Mathematical induction"
+        return getTopicSortKey(a) - getTopicSortKey(b);
+      }
       const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
       const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
       if (catA !== catB) return catA - catB;
@@ -49,7 +58,6 @@ export default function TopicMatrixPage() {
       const yearData = topicsSource[year] || [];
       for (const entry of yearData) {
         if (matrix[entry.topic]) {
-          // Some topics appear multiple times in same year (shouldn't, but handle gracefully)
           if (matrix[entry.topic][year]) {
             matrix[entry.topic][year] += ", " + entry.questions;
           } else {
@@ -129,6 +137,17 @@ export default function TopicMatrixPage() {
             <Calculator className="w-4 h-4" />
             {lang === "zh" ? "卷二 (MC)" : "Paper 2 (MC)"}
           </button>
+          <button
+            onClick={() => setActivePaper("m2")}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+              activePaper === "m2"
+                ? "bg-violet-600 text-white shadow-md shadow-violet-200"
+                : "bg-white text-gray-600 border border-gray-200 hover:border-violet-300 hover:text-violet-700"
+            }`}
+          >
+            <Sigma className="w-4 h-4" />
+            {lang === "zh" ? "延伸 M2" : "M2"}
+          </button>
         </div>
 
         {/* Legend */}
@@ -194,22 +213,21 @@ export default function TopicMatrixPage() {
                   ))}
                 </tr>
               </thead>
-              <tbody>
-                {matrixData.sortedTopics.map((topic, idx) => {
+              {matrixData.sortedTopics.map((topic, idx) => {
                   const isJunior = topic.startsWith("J");
                   const isSenior = topic.startsWith("S");
-                  const isOutOfSyllabus = topic === "Out of Syllabus";
-                  // Add section divider between J and S topics
+                  const isOutOfSyllabus = topic === "Out of Syllabus" || topic === "Deleted / Out of Syllabus";
+                  // Add section divider between J and S topics (only for compulsory)
                   const prevTopic = idx > 0 ? matrixData.sortedTopics[idx - 1] : null;
-                  const showDivider = prevTopic && (
+                  const showDivider = activePaper !== "m2" && prevTopic && (
                     (prevTopic.startsWith("J") && isSenior) ||
                     (prevTopic.startsWith("S") && isOutOfSyllabus)
                   );
 
                   return (
-                    <>
+                    <tbody key={topic}>
                       {showDivider && (
-                        <tr key={`divider-${idx}`}>
+                        <tr>
                           <td
                             colSpan={YEARS.length + 2}
                             className="bg-gradient-to-r from-gray-100 to-gray-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-gray-500 border-b border-gray-200"
@@ -220,8 +238,8 @@ export default function TopicMatrixPage() {
                           </td>
                         </tr>
                       )}
-                      {idx === 0 && isJunior && (
-                        <tr key="divider-junior">
+                      {idx === 0 && activePaper !== "m2" && isJunior && (
+                        <tr>
                           <td
                             colSpan={YEARS.length + 2}
                             className="bg-gradient-to-r from-gray-100 to-gray-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-gray-500 border-b border-gray-200"
@@ -231,7 +249,6 @@ export default function TopicMatrixPage() {
                         </tr>
                       )}
                       <tr
-                        key={topic}
                         className="hover:bg-teal-50/30 transition-colors group"
                       >
                         <td className="sticky left-0 z-10 bg-white group-hover:bg-teal-50/30 px-3 py-2 border-b border-r border-gray-100 font-medium text-gray-700 text-[11px] leading-tight transition-colors">
@@ -275,10 +292,9 @@ export default function TopicMatrixPage() {
                           );
                         })}
                       </tr>
-                    </>
+                    </tbody>
                   );
                 })}
-              </tbody>
             </table>
           </div>
         </motion.div>

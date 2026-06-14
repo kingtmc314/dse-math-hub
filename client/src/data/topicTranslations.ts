@@ -1,5 +1,5 @@
 // Mapping of official English topic names to Chinese translations
-// Based on HKEAA DSE Mathematics Compulsory Part syllabus
+// Based on HKEAA DSE Mathematics Compulsory Part & M2 syllabus
 
 export const topicTranslations: Record<string, string> = {
   // Junior topics (初中課題)
@@ -40,8 +40,25 @@ export const topicTranslations: Record<string, string> = {
   "S15. Permutations & Combinations": "S15. 排列與組合",
   "S16. More about Probability": "S16. 續概率",
   "S17. Measures of Dispersion": "S17. 離差的量度",
+  // M2 topics (延伸部分二課題)
+  "2. Mathematical induction": "2. 數學歸納法",
+  "3. Binomial Theorem": "3. 二項式定理",
+  "4. More about trigonometric functions": "4. 續三角函數",
+  "6. Limits": "6. 極限",
+  "7. Differentiation": "7. 微分",
+  "8. Applications of differentiation": "8. 微分的應用",
+  "9. Indefinite integration": "9. 不定積分",
+  "10. Definite integration": "10. 定積分",
+  "11. Applications of definite integration": "11. 定積分的應用",
+  "12. Determinants": "12. 行列式",
+  "13. Matrices": "13. 矩陣",
+  "14. Systems of linear equations": "14. 線性方程組",
+  "15. Introduction to vectors": "15. 向量入門",
+  "16. Scalar product and vector product": "16. 純量積與向量積",
+  "17. Applications of vectors": "17. 向量的應用",
   // Special
   "Out of Syllabus": "超出課程範圍",
+  "Deleted / Out of Syllabus": "已刪除 / 超出課程範圍",
 };
 
 /**
@@ -57,10 +74,15 @@ export function getTopicDisplayName(topic: string, lang: "zh" | "en"): string {
 /**
  * Extract numeric value from topic prefix for proper sorting
  * e.g., "J1. Basic Computation" → 1, "J10. Indices" → 10, "J11/12. Poly" → 11
+ * Also handles M2 topics: "2. Mathematical induction" → 2, "10. Definite integration" → 10
  */
 export function getTopicSortKey(topic: string): number {
-  const match = topic.match(/^[JS](\d+)/);
-  if (match) return parseInt(match[1], 10);
-  // For "Out of Syllabus" or other, sort last
+  // Compulsory part: J or S prefix
+  const matchJS = topic.match(/^[JS](\d+)/);
+  if (matchJS) return parseInt(matchJS[1], 10);
+  // M2 topics: start with number directly
+  const matchM2 = topic.match(/^(\d+)\./);
+  if (matchM2) return parseInt(matchM2[1], 10);
+  // For "Out of Syllabus" or "Deleted / Out of Syllabus", sort last
   return 999;
 }

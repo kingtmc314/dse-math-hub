@@ -2,16 +2,23 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useParams } from "wouter";
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { TrendingUp, TrendingDown } from "lucide-react";
+import { TrendingUp, TrendingDown, FileText } from "lucide-react";
 import dseData from "@/data/dseData.json";
 import YearSelector from "@/components/YearSelector";
 import PerformanceBar from "@/components/PerformanceBar";
+import TopicBadge from "@/components/TopicBadge";
+import { getTopicDisplayName } from "@/data/topicTranslations";
 
 interface M2Question {
   q: string;
   full: number;
   mean: number;
   pct: number;
+}
+
+interface M2TopicEntry {
+  topic: string;
+  questions: string;
 }
 
 export default function M2Page() {
@@ -24,12 +31,74 @@ export default function M2Page() {
     return ((dseData.m2 as Record<string, M2Question[]>)[selectedYear] || []);
   }, [selectedYear]);
 
+  // Get topic mapping for this year
+  const topicMapping = useMemo(() => {
+    const m2Topics = (dseData as any).m2_topics as Record<string, M2TopicEntry[]> | undefined;
+    if (!m2Topics || !m2Topics[selectedYear]) return {};
+
+    // Build a map: question number -> topic
+    // The questions field contains entries like "Q13a", "Q11a, Q11b", "Q4a, 10a"
+    const qToTopic: Record<string, string> = {};
+    for (const entry of m2Topics[selectedYear]) {
+      const questions = entry.questions;
+      // Parse question references - split by comma and clean up
+      const parts = questions.split(",").map(s => s.trim());
+      for (const part of parts) {
+        // Extract the question number: "Q13a" -> "13(a)", "Q4a" -> "4(a)", "10a" -> "10(a)"
+        const cleaned = part.replace(/^Q/, "").trim();
+        if (!cleaned || cleaned === "-") continue;
+        
+        // Match patterns like "13a", "11b", "4a", "10c", "12b(i)", "12b(ii)"
+        const match = cleaned.match(/^(\d+)([a-z])?(?:\(([^)]+)\))?/);
+        if (match) {
+          const qNum = match[1];
+          const subPart = match[2] || "";
+          const subSub = match[3] || "";
+          
+          // Build the question key to match the data format
+          // Data format: "1", "2(a)", "2(b)", "10(a)", "11(b)(i)"
+          let qKey = qNum;
+          if (subPart) {
+            qKey += `(${subPart})`;
+          }
+          if (subSub) {
+            qKey += `(${subSub})`;
+          }
+          
+          // Also try just the main question number for matching
+          if (!qToTopic[qKey]) {
+            qToTopic[qKey] = entry.topic;
+          }
+          // Also map just the number for broader matching
+          if (!qToTopic[qNum]) {
+            qToTopic[qNum] = entry.topic;
+          }
+        }
+      }
+    }
+    return qToTopic;
+  }, [selectedYear]);
+
+  // Find topic for a question
+  const getTopicForQuestion = (q: string): string | undefined => {
+    // Try exact match first
+    if (topicMapping[q]) return topicMapping[q];
+    // Try just the main question number
+    const mainQ = q.match(/^(\d+)/);
+    if (mainQ && topicMapping[mainQ[1]]) return topicMapping[mainQ[1]];
+    return undefined;
+  };
+
   // Stats
   const avgRate = yearData.length > 0
     ? (yearData.reduce((sum, q) => sum + q.pct, 0) / yearData.length).toFixed(1)
     : "0";
   const highest = yearData.length > 0 ? yearData.reduce((a, b) => a.pct > b.pct ? a : b) : null;
   const lowest = yearData.length > 0 ? yearData.reduce((a, b) => a.pct < b.pct ? a : b) : null;
+
+  // PDF link
+  const pdfLinks = dseData.m2_pdfs as Record<string, string> | undefined;
+  const pdfUrl = pdfLinks?.[selectedYear];
 
   return (
     <div className="py-8 md:py-12">
@@ -45,6 +114,17 @@ export default function M2Page() {
         {/* Year Selector */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <YearSelector years={years} selected={selectedYear} onChange={setSelectedYear} />
+          {pdfUrl && (
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              <FileText className="w-3.5 h-3.5" />
+              {t("link.viewPaper")}
+            </a>
+          )}
         </div>
 
         {/* Stats Summary */}
@@ -93,26 +173,37 @@ export default function M2Page() {
                     <th className="text-left px-4 py-3 font-medium text-muted-foreground">{t("table.question")}</th>
                     <th className="text-center px-4 py-3 font-medium text-muted-foreground">{t("table.fullMarks")}</th>
                     <th className="text-center px-4 py-3 font-medium text-muted-foreground">{t("table.mean")}</th>
-                    <th className="text-left px-4 py-3 font-medium text-muted-foreground min-w-[200px]">{t("table.performance")}</th>
+                    <th className="text-left px-4 py-3 font-medium text-muted-foreground min-w-[180px]">{t("table.performance")}</th>
+                    <th className="text-left px-4 py-3 font-medium text-muted-foreground">{t("table.topic")}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {yearData.map((q, idx) => (
-                    <motion.tr
-                      key={q.q}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: idx * 0.02 }}
-                      className="border-b border-border/30 last:border-0 hover:bg-muted/20 transition-colors"
-                    >
-                      <td className="px-4 py-3 font-mono font-medium text-foreground">Q{q.q}</td>
-                      <td className="px-4 py-3 text-center font-mono text-muted-foreground">{q.full}</td>
-                      <td className="px-4 py-3 text-center font-mono text-muted-foreground">{q.mean}</td>
-                      <td className="px-4 py-3">
-                        <PerformanceBar value={q.pct} />
-                      </td>
-                    </motion.tr>
-                  ))}
+                  {yearData.map((q, idx) => {
+                    const topic = getTopicForQuestion(q.q);
+                    return (
+                      <motion.tr
+                        key={q.q}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: idx * 0.02 }}
+                        className="border-b border-border/30 last:border-0 hover:bg-muted/20 transition-colors"
+                      >
+                        <td className="px-4 py-3 font-mono font-medium text-foreground">Q{q.q}</td>
+                        <td className="px-4 py-3 text-center font-mono text-muted-foreground">{q.full}</td>
+                        <td className="px-4 py-3 text-center font-mono text-muted-foreground">{q.mean}</td>
+                        <td className="px-4 py-3">
+                          <PerformanceBar value={q.pct} />
+                        </td>
+                        <td className="px-4 py-3">
+                          {topic ? (
+                            <TopicBadge topic={topic} />
+                          ) : (
+                            <span className="text-xs text-muted-foreground/50">—</span>
+                          )}
+                        </td>
+                      </motion.tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
