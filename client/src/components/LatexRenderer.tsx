@@ -261,9 +261,14 @@ export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }
   // Parse mixed content from solutionText
   const mixedParts = parseMixedContent(solutionText);
 
+  // Determine if solution_text already contains LaTeX (via $$ delimiters)
+  // If so, parseMixedContent handles everything and we skip the separate latex blocks
+  // to avoid rendering duplicate content
+  const solutionTextHasLatex = solutionText.includes("$$");
+
   return (
     <div className="space-y-3">
-      {/* Render parsed mixed content (text + LaTeX) */}
+      {/* Render parsed mixed content (text + LaTeX from solution_text) */}
       {mixedParts.map((part, idx) => (
         <div key={`mixed-${idx}`} className="py-0.5">
           {part.type === "latex" ? (
@@ -274,8 +279,8 @@ export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }
         </div>
       ))}
 
-      {/* Render explicit LaTeX blocks (if any additional ones passed) */}
-      {blocks.filter(b => b !== solutionText).map((block, idx) => (
+      {/* Render explicit LaTeX blocks only when solution_text doesn't already contain them */}
+      {!solutionTextHasLatex && blocks.filter(b => b !== solutionText).map((block, idx) => (
         <div key={`block-${idx}`} className="py-1">
           <LatexRenderer latex={block} />
         </div>
