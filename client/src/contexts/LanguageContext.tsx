@@ -18,6 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.topics": "課題篩選",
     "nav.ranking": "難度排名",
     "nav.mcLookup": "MC 查詢",
+    "nav.answerDist": "答案分佈",
     "nav.about": "關於",
     
     // Hero
@@ -79,6 +80,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.topics": "Topics",
     "nav.ranking": "Ranking",
     "nav.mcLookup": "MC Lookup",
+    "nav.answerDist": "Distribution",
     "nav.about": "About",
     
     // Hero
