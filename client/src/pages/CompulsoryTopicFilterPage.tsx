@@ -1,78 +1,66 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, BookOpen, ChevronDown, ChevronUp, TrendingUp } from "lucide-react";
+import { Search, BookOpen, ChevronDown, ChevronUp } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import dseData from "@/data/dseData.json";
-import { getTopicDisplayName, getTopicSortKey } from "@/data/topicTranslations";
-import { matchPaper1Questions, matchPaper2Questions } from "@/lib/topicMatcher";
+import { matchPaper1Questions } from "@/lib/topicMatcher";
+import { CURRICULUM_TOPICS, CurriculumTopic } from "@/data/curriculumTopics";
 import PerformanceBar from "@/components/PerformanceBar";
 
 interface QuestionResult {
   year: string;
   paper: "paper1" | "paper2";
   question: string;
-  topic: string;
+  luCode: string;
   performance: number;
   answer?: string;
   fullMarks?: number;
 }
 
+/**
+ * Check if a LU code string (e.g. "J3. Approximate Values...") matches any of the LUs in a curriculum topic.
+ * Handles combined codes like "J21/22".
+ */
+function luMatchesCurriculum(luStr: string, ct: CurriculumTopic): boolean {
+  // Extract prefix code e.g. "J3", "J21/22", "S14"
+  const match = luStr.match(/^([JS]\d+(?:\/\d+)?)/);
+  if (!match) return false;
+  const code = match[1];
+  // Handle combined codes like "J21/22"
+  const prefix = code.match(/^([JS])/)?.[1] || "";
+  const nums = code.replace(/^[JS]/, "").split("/");
+  const codes = nums.map(n => prefix + n);
+  return ct.lus.some(lu => codes.includes(lu));
+}
+
 export default function CompulsoryTopicFilterPage() {
   const { lang } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+  const [selectedCurriculum, setSelectedCurriculum] = useState<CurriculumTopic | null>(null);
   const [selectedPaper, setSelectedPaper] = useState<"all" | "paper1" | "paper2">("all");
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
 
-  // Collect all compulsory topics (J and S only)
-  const allTopics = useMemo(() => {
-    const topics = new Set<string>();
-    for (const yearTopics of Object.values(dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
-      for (const t of yearTopics) {
-        if (t.topic.startsWith("J") || t.topic.startsWith("S")) topics.add(t.topic);
-      }
-    }
-    // paper2_topics new flat format: {year: {q: topic_name}}
-    for (const yearTopicMap of Object.values(dseData.paper2_topics as Record<string, Record<string, string>>)) {
-      for (const topicName of Object.values(yearTopicMap)) {
-        if (topicName.startsWith("J") || topicName.startsWith("S")) topics.add(topicName);
-      }
-    }
-    return Array.from(topics).sort((a, b) => {
-      const catA = a.startsWith("J") ? 0 : 1;
-      const catB = b.startsWith("J") ? 0 : 1;
-      if (catA !== catB) return catA - catB;
-      return getTopicSortKey(a) - getTopicSortKey(b);
-    });
-  }, []);
-
-  const topicGroups = useMemo(() => {
-    const junior = allTopics.filter(t => t.startsWith("J"));
-    const senior = allTopics.filter(t => t.startsWith("S"));
-    return { junior, senior };
-  }, [allTopics]);
-
-  const filteredTopics = useMemo(() => {
-    if (!searchQuery) return allTopics;
+  const filteredCurriculumTopics = useMemo(() => {
+    if (!searchQuery) return CURRICULUM_TOPICS;
     const q = searchQuery.toLowerCase();
-    return allTopics.filter(t =>
-      t.toLowerCase().includes(q) ||
-      getTopicDisplayName(t, "zh").toLowerCase().includes(q) ||
-      getTopicDisplayName(t, "en").toLowerCase().includes(q)
+    return CURRICULUM_TOPICS.filter(ct =>
+      ct.zh.toLowerCase().includes(q) ||
+      ct.en.toLowerCase().includes(q) ||
+      ct.lus.some(lu => lu.toLowerCase().includes(q))
     );
-  }, [allTopics, searchQuery]);
+  }, [searchQuery]);
 
-  // Build question results using the new matching utility
+  // Build question results for the selected curriculum topic
   const questionResults = useMemo(() => {
-    if (!selectedTopic) return [];
+    if (!selectedCurriculum) return [];
     const results: QuestionResult[] = [];
 
     // Search Paper 1
     if (selectedPaper === "all" || selectedPaper === "paper1") {
       for (const [year, topics] of Object.entries(dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
         for (const topicEntry of topics) {
-          if (topicEntry.topic !== selectedTopic) continue;
+          if (!luMatchesCurriculum(topicEntry.topic, selectedCurriculum)) continue;
           const yearQuestions = (dseData.paper1 as any)[year] || [];
           const matched = matchPaper1Questions(topicEntry.questions, yearQuestions);
           for (const qData of matched) {
@@ -80,7 +68,7 @@ export default function CompulsoryTopicFilterPage() {
               year,
               paper: "paper1",
               question: `Q${qData.q}`,
-              topic: topicEntry.topic,
+              luCode: topicEntry.topic,
               performance: qData.pct,
               fullMarks: qData.full,
             });
@@ -89,13 +77,13 @@ export default function CompulsoryTopicFilterPage() {
       }
     }
 
-    // Search Paper 2 (new flat format: {year: {q: topic_name}})
+    // Search Paper 2 (flat format: {year: {q: topic_name}})
     if (selectedPaper === "all" || selectedPaper === "paper2") {
       const paper2TopicsFlat = dseData.paper2_topics as Record<string, Record<string, string>>;
       for (const [year, topicMap] of Object.entries(paper2TopicsFlat)) {
         const yearQuestions = (dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)[year] || [];
         for (const [qNum, topicName] of Object.entries(topicMap)) {
-          if (topicName !== selectedTopic) continue;
+          if (!luMatchesCurriculum(topicName, selectedCurriculum)) continue;
           const qData = yearQuestions.find(q => q.q === Number(qNum));
           if (qData) {
             const correctRate = qData[qData.ans as keyof Pick<typeof qData, "A" | "B" | "C" | "D">] as number || 0;
@@ -103,7 +91,7 @@ export default function CompulsoryTopicFilterPage() {
               year,
               paper: "paper2",
               question: `Q${qData.q}`,
-              topic: topicName,
+              luCode: topicName,
               performance: correctRate,
               answer: qData.ans,
             });
@@ -112,13 +100,24 @@ export default function CompulsoryTopicFilterPage() {
       }
     }
 
-    results.sort((a, b) => {
+    // Deduplicate (same year+paper+question might appear from multiple LU entries)
+    const seen = new Set<string>();
+    const deduped: QuestionResult[] = [];
+    for (const r of results) {
+      const key = `${r.year}-${r.paper}-${r.question}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        deduped.push(r);
+      }
+    }
+
+    deduped.sort((a, b) => {
       if (b.year !== a.year) return Number(b.year) - Number(a.year);
       return Number(a.question.replace(/Q|\(.*\)/g, "")) - Number(b.question.replace(/Q|\(.*\)/g, ""));
     });
 
-    return results;
-  }, [selectedTopic, selectedPaper]);
+    return deduped;
+  }, [selectedCurriculum, selectedPaper]);
 
   const groupedResults = useMemo(() => {
     const groups: Record<string, QuestionResult[]> = {};
@@ -150,12 +149,17 @@ export default function CompulsoryTopicFilterPage() {
 
   useMemo(() => {
     setExpandedGroups(new Set(Object.keys(groupedResults)));
-  }, [selectedTopic, selectedPaper]);
+  }, [selectedCurriculum, selectedPaper]);
 
   const totalQuestions = questionResults.length;
   const avgPerformance = totalQuestions > 0
     ? Math.round(questionResults.reduce((s, q) => s + q.performance, 0) / totalQuestions * 10) / 10
     : 0;
+
+  const handleSelectCurriculum = (ct: CurriculumTopic) => {
+    setSelectedCurriculum(ct);
+    setExpandedGroups(new Set());
+  };
 
   return (
     <div className="py-8 md:py-12">
@@ -169,7 +173,7 @@ export default function CompulsoryTopicFilterPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6">
           {/* Left: Topic Selector */}
           <div className="space-y-4">
             {/* Mobile dropdown */}
@@ -193,21 +197,20 @@ export default function CompulsoryTopicFilterPage() {
               </div>
               <div className="relative">
                 <select
-                  value={selectedTopic || ""}
-                  onChange={(e) => setSelectedTopic(e.target.value || null)}
+                  value={selectedCurriculum?.id || ""}
+                  onChange={(e) => {
+                    const ct = CURRICULUM_TOPICS.find(t => t.id === Number(e.target.value));
+                    if (ct) handleSelectCurriculum(ct);
+                    else setSelectedCurriculum(null);
+                  }}
                   className="w-full appearance-none px-4 py-3 pr-10 rounded-xl border border-border/60 bg-card text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
                   <option value="">{lang === "zh" ? "— 選擇課題 —" : "— Select Topic —"}</option>
-                  <optgroup label={lang === "zh" ? "初中課題" : "Junior Topics"}>
-                    {topicGroups.junior.map(topic => (
-                      <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
-                    ))}
-                  </optgroup>
-                  <optgroup label={lang === "zh" ? "高中課題" : "Senior Topics"}>
-                    {topicGroups.senior.map(topic => (
-                      <option key={topic} value={topic}>{getTopicDisplayName(topic, lang)}</option>
-                    ))}
-                  </optgroup>
+                  {CURRICULUM_TOPICS.map(ct => (
+                    <option key={ct.id} value={ct.id}>
+                      {ct.id}. {lang === "zh" ? ct.zh : ct.en}
+                    </option>
+                  ))}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
               </div>
@@ -244,46 +247,47 @@ export default function CompulsoryTopicFilterPage() {
                 ))}
               </div>
 
-              <div className="bg-card rounded-xl border border-border/60 overflow-hidden max-h-[60vh] overflow-y-auto">
-                <div className="px-3 py-2 bg-muted/30 border-b border-border/40">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                    {lang === "zh" ? "初中課題 (JUNIOR)" : "JUNIOR TOPICS"}
-                  </p>
-                </div>
-                {filteredTopics.filter(t => t.startsWith("J")).map(topic => (
-                  <button
-                    key={topic}
-                    onClick={() => setSelectedTopic(topic)}
-                    className={`w-full text-left px-4 py-2.5 text-sm font-medium border-b border-border/20 transition-colors ${
-                      selectedTopic === topic ? "bg-primary/10 text-primary" : "hover:bg-muted/60 text-foreground"
-                    }`}
-                  >
-                    {getTopicDisplayName(topic, lang)}
-                  </button>
-                ))}
-                <div className="px-3 py-2 bg-muted/30 border-b border-border/40">
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                    {lang === "zh" ? "高中課題 (SENIOR)" : "SENIOR TOPICS"}
-                  </p>
-                </div>
-                {filteredTopics.filter(t => t.startsWith("S")).map(topic => (
-                  <button
-                    key={topic}
-                    onClick={() => setSelectedTopic(topic)}
-                    className={`w-full text-left px-4 py-2.5 text-sm font-medium border-b border-border/20 transition-colors ${
-                      selectedTopic === topic ? "bg-primary/10 text-primary" : "hover:bg-muted/60 text-foreground"
-                    }`}
-                  >
-                    {getTopicDisplayName(topic, lang)}
-                  </button>
-                ))}
+              <div className="bg-card rounded-xl border border-border/60 overflow-hidden max-h-[65vh] overflow-y-auto">
+                {filteredCurriculumTopics.length === 0 ? (
+                  <div className="px-4 py-6 text-center text-sm text-muted-foreground">
+                    {lang === "zh" ? "找不到相關課題" : "No topics found"}
+                  </div>
+                ) : (
+                  filteredCurriculumTopics.map(ct => (
+                    <button
+                      key={ct.id}
+                      onClick={() => handleSelectCurriculum(ct)}
+                      className={`w-full text-left px-4 py-3 border-b border-border/20 transition-colors ${
+                        selectedCurriculum?.id === ct.id
+                          ? "bg-primary/10 text-primary"
+                          : "hover:bg-muted/60 text-foreground"
+                      }`}
+                    >
+                      <div className="flex items-start gap-2">
+                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded mt-0.5 shrink-0 ${
+                          selectedCurriculum?.id === ct.id ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"
+                        }`}>
+                          {ct.id}
+                        </span>
+                        <div className="min-w-0">
+                          <p className="text-sm font-medium leading-snug">
+                            {lang === "zh" ? ct.zh : ct.en}
+                          </p>
+                          <p className="text-[10px] text-muted-foreground mt-0.5">
+                            {ct.lus.join(", ")}
+                          </p>
+                        </div>
+                      </div>
+                    </button>
+                  ))
+                )}
               </div>
             </div>
           </div>
 
           {/* Right: Results */}
           <div>
-            {!selectedTopic ? (
+            {!selectedCurriculum ? (
               <div className="flex flex-col items-center justify-center py-20 text-center">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
                   <BookOpen className="w-7 h-7 text-primary" />
@@ -304,14 +308,17 @@ export default function CompulsoryTopicFilterPage() {
                   className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200/60 p-5"
                 >
                   <div className="flex items-start gap-3 mb-3">
-                    <BookOpen className="w-5 h-5 text-teal-600 mt-0.5" />
+                    <BookOpen className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" />
                     <div>
                       <h3 className="font-display font-bold text-lg text-teal-900">
-                        {getTopicDisplayName(selectedTopic, lang)}
+                        {selectedCurriculum.id}. {lang === "zh" ? selectedCurriculum.zh : selectedCurriculum.en}
                       </h3>
-                      <p className="text-sm text-teal-700 mt-0.5">
-                        {totalQuestions} {lang === "zh" ? "題" : "questions"} &nbsp;
-                        {Object.keys(groupedResults).length} {lang === "zh" ? "年份" : "years"} &nbsp;
+                      <p className="text-xs text-teal-600 mt-0.5">
+                        {lang === "zh" ? "涵蓋" : "Covers"}: {selectedCurriculum.lus.join(", ")}
+                      </p>
+                      <p className="text-sm text-teal-700 mt-1">
+                        {totalQuestions} {lang === "zh" ? "題" : "questions"} &nbsp;·&nbsp;
+                        {Object.keys(groupedResults).length} {lang === "zh" ? "年份" : "years"} &nbsp;·&nbsp;
                         {lang === "zh" ? "平均得分率" : "Avg"}: <strong>{avgPerformance}%</strong>
                       </p>
                     </div>
@@ -336,79 +343,91 @@ export default function CompulsoryTopicFilterPage() {
                 </motion.div>
 
                 {/* Year Groups */}
-                {Object.entries(groupedResults)
-                  .sort(([a], [b]) => Number(b) - Number(a))
-                  .map(([year, questions]) => {
-                    const yearAvg = Math.round(questions.reduce((s, q) => s + q.performance, 0) / questions.length * 10) / 10;
-                    const isExpanded = expandedGroups.has(year);
-                    return (
-                      <motion.div
-                        key={year}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="bg-card rounded-xl border border-border/60 overflow-hidden"
-                      >
-                        <button
-                          onClick={() => toggleGroup(year)}
-                          className="w-full flex items-center justify-between px-5 py-3 hover:bg-muted/30 transition-colors"
+                {totalQuestions === 0 ? (
+                  <div className="text-center py-12 text-muted-foreground text-sm">
+                    {lang === "zh" ? "此課題在所選範圍內沒有相關題目" : "No questions found for this topic in the selected scope"}
+                  </div>
+                ) : (
+                  Object.entries(groupedResults)
+                    .sort(([a], [b]) => Number(b) - Number(a))
+                    .map(([year, questions]) => {
+                      const yearAvg = Math.round(questions.reduce((s, q) => s + q.performance, 0) / questions.length * 10) / 10;
+                      const isExpanded = expandedGroups.has(year);
+                      return (
+                        <motion.div
+                          key={year}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="bg-card rounded-xl border border-border/60 overflow-hidden"
                         >
-                          <div className="flex items-center gap-3">
-                            <span className="font-display font-bold text-lg">{year}</span>
-                            <span className="text-xs text-muted-foreground">{questions.length} {lang === "zh" ? "題" : "Q"}</span>
-                            <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                              yearAvg >= 70 ? "bg-green-100 text-green-700" :
-                              yearAvg >= 50 ? "bg-amber-100 text-amber-700" :
-                              "bg-red-100 text-red-700"
-                            }`}>
-                              {lang === "zh" ? "平均" : "Avg"}: {yearAvg}%
-                            </span>
-                          </div>
-                          {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                        </button>
-                        <AnimatePresence>
-                          {isExpanded && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="px-5 pb-4">
-                                <table className="w-full text-sm">
-                                  <thead>
-                                    <tr className="text-xs text-muted-foreground border-b border-border/40">
-                                      <th className="text-left py-2 font-medium">{lang === "zh" ? "題號" : "Q"}</th>
-                                      <th className="text-left py-2 font-medium">{lang === "zh" ? "卷" : "Paper"}</th>
-                                      <th className="text-left py-2 font-medium">{lang === "zh" ? "得分率" : "Score"}</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    {questions.map((q, idx) => (
-                                      <tr key={idx} className="border-b border-border/20 last:border-0">
-                                        <td className="py-2 font-mono font-medium">{q.question}</td>
-                                        <td className="py-2">
-                                          <span className={`text-xs font-medium px-2 py-0.5 rounded ${
-                                            q.paper === "paper1" ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"
-                                          }`}>
-                                            {q.paper === "paper1" ? (lang === "zh" ? "卷一" : "P1") : (lang === "zh" ? "卷二" : "P2")}
-                                          </span>
-                                          {q.answer && <span className="ml-2 text-xs text-muted-foreground">Ans: {q.answer}</span>}
-                                        </td>
-                                        <td className="py-2">
-                                          <PerformanceBar value={q.performance} />
-                                        </td>
+                          <button
+                            onClick={() => toggleGroup(year)}
+                            className="w-full flex items-center justify-between px-5 py-3 hover:bg-muted/30 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <span className="font-display font-bold text-lg">{year}</span>
+                              <span className="text-xs text-muted-foreground">{questions.length} {lang === "zh" ? "題" : "Q"}</span>
+                              <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                                yearAvg >= 70 ? "bg-green-100 text-green-700" :
+                                yearAvg >= 50 ? "bg-amber-100 text-amber-700" :
+                                "bg-red-100 text-red-700"
+                              }`}>
+                                {lang === "zh" ? "平均" : "Avg"}: {yearAvg}%
+                              </span>
+                            </div>
+                            {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                          </button>
+                          <AnimatePresence>
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="px-5 pb-4">
+                                  <table className="w-full text-sm">
+                                    <thead>
+                                      <tr className="text-xs text-muted-foreground border-b border-border/40">
+                                        <th className="text-left py-2 font-medium">{lang === "zh" ? "題號" : "Q"}</th>
+                                        <th className="text-left py-2 font-medium">{lang === "zh" ? "卷" : "Paper"}</th>
+                                        <th className="text-left py-2 font-medium">{lang === "zh" ? "課題代碼" : "LU"}</th>
+                                        <th className="text-left py-2 font-medium">{lang === "zh" ? "得分率" : "Score"}</th>
                                       </tr>
-                                    ))}
-                                  </tbody>
-                                </table>
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </motion.div>
-                    );
-                  })}
+                                    </thead>
+                                    <tbody>
+                                      {questions.map((q, idx) => (
+                                        <tr key={idx} className="border-b border-border/20 last:border-0">
+                                          <td className="py-2 font-mono font-medium">{q.question}</td>
+                                          <td className="py-2">
+                                            <span className={`text-xs font-medium px-2 py-0.5 rounded ${
+                                              q.paper === "paper1" ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"
+                                            }`}>
+                                              {q.paper === "paper1" ? (lang === "zh" ? "卷一" : "P1") : (lang === "zh" ? "卷二" : "P2")}
+                                            </span>
+                                            {q.answer && <span className="ml-2 text-xs text-muted-foreground">Ans: {q.answer}</span>}
+                                          </td>
+                                          <td className="py-2">
+                                            <span className="text-[10px] font-mono text-muted-foreground">
+                                              {q.luCode.match(/^([JS]\d+(?:\/\d+)?)/)?.[1] || ""}
+                                            </span>
+                                          </td>
+                                          <td className="py-2">
+                                            <PerformanceBar value={q.performance} />
+                                          </td>
+                                        </tr>
+                                      ))}
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                      );
+                    })
+                )}
               </div>
             )}
           </div>

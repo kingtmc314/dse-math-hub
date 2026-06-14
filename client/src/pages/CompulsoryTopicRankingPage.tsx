@@ -3,17 +3,30 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { TrendingDown, ArrowUpDown } from "lucide-react";
 import dseData from "@/data/dseData.json";
-import { getTopicDisplayName, getTopicSortKey } from "@/data/topicTranslations";
-import { matchPaper1Questions, matchPaper2Questions } from "@/lib/topicMatcher";
+import { matchPaper1Questions } from "@/lib/topicMatcher";
+import { CURRICULUM_TOPICS, CurriculumTopic } from "@/data/curriculumTopics";
 import PerformanceBar from "@/components/PerformanceBar";
 
-interface TopicStat {
-  topic: string;
+interface CurriculumTopicStat {
+  curriculum: CurriculumTopic;
   totalQuestions: number;
   totalYears: number;
   avgPerformance: number;
   minPerformance: number;
   maxPerformance: number;
+}
+
+/**
+ * Check if a LU code string (e.g. "J3. Approximate Values...") matches any of the LUs in a curriculum topic.
+ */
+function luMatchesCurriculum(luStr: string, ct: CurriculumTopic): boolean {
+  const match = luStr.match(/^([JS]\d+(?:\/\d+)?)/);
+  if (!match) return false;
+  const code = match[1];
+  const prefix = code.match(/^([JS])/)?.[1] || "";
+  const nums = code.replace(/^[JS]/, "").split("/");
+  const codes = nums.map(n => prefix + n);
+  return ct.lus.some(lu => codes.includes(lu));
 }
 
 export default function CompulsoryTopicRankingPage() {
@@ -22,51 +35,59 @@ export default function CompulsoryTopicRankingPage() {
   const [paperFilter, setPaperFilter] = useState<"all" | "paper1" | "paper2">("all");
 
   const topicStats = useMemo(() => {
-    const statsMap: Record<string, { performances: number[]; years: Set<string> }> = {};
+    // Build stats per curriculum topic
+    const statsMap: Record<number, { performances: number[]; years: Set<string> }> = {};
+    for (const ct of CURRICULUM_TOPICS) {
+      statsMap[ct.id] = { performances: [], years: new Set() };
+    }
 
     // Paper 1
     if (paperFilter === "all" || paperFilter === "paper1") {
       for (const [year, topics] of Object.entries(dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
         for (const topicEntry of topics) {
-          if (!topicEntry.topic.startsWith("J") && !topicEntry.topic.startsWith("S")) continue;
+          const ct = CURRICULUM_TOPICS.find(c => luMatchesCurriculum(topicEntry.topic, c));
+          if (!ct) continue;
           const yearQuestions = (dseData.paper1 as any)[year] || [];
           const matched = matchPaper1Questions(topicEntry.questions, yearQuestions);
           if (matched.length === 0) continue;
-
-          if (!statsMap[topicEntry.topic]) statsMap[topicEntry.topic] = { performances: [], years: new Set() };
-          statsMap[topicEntry.topic].years.add(year);
+          statsMap[ct.id].years.add(year);
           for (const q of matched) {
-            statsMap[topicEntry.topic].performances.push(q.pct);
+            statsMap[ct.id].performances.push(q.pct);
           }
         }
       }
     }
 
-    // Paper 2 (new flat format: {year: {q: topic_name}})
+    // Paper 2 (flat format: {year: {q: topic_name}})
     if (paperFilter === "all" || paperFilter === "paper2") {
       const paper2TopicsFlat = dseData.paper2_topics as Record<string, Record<string, string>>;
       for (const [year, topicMap] of Object.entries(paper2TopicsFlat)) {
         const yearQuestions = (dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)[year] || [];
         for (const [qNum, topicName] of Object.entries(topicMap)) {
-          if (!topicName.startsWith("J") && !topicName.startsWith("S")) continue;
+          const ct = CURRICULUM_TOPICS.find(c => luMatchesCurriculum(topicName, c));
+          if (!ct) continue;
           const qData = yearQuestions.find(q => q.q === Number(qNum));
           if (!qData) continue;
           const correctRate = qData[qData.ans as keyof Pick<typeof qData, "A" | "B" | "C" | "D">] as number || 0;
-          if (!statsMap[topicName]) statsMap[topicName] = { performances: [], years: new Set() };
-          statsMap[topicName].years.add(year);
-          statsMap[topicName].performances.push(correctRate);
+          statsMap[ct.id].years.add(year);
+          statsMap[ct.id].performances.push(correctRate);
         }
       }
     }
 
-    const stats: TopicStat[] = Object.entries(statsMap).map(([topic, data]) => ({
-      topic,
-      totalQuestions: data.performances.length,
-      totalYears: data.years.size,
-      avgPerformance: Math.round(data.performances.reduce((s, v) => s + v, 0) / data.performances.length * 10) / 10,
-      minPerformance: Math.round(Math.min(...data.performances) * 10) / 10,
-      maxPerformance: Math.round(Math.max(...data.performances) * 10) / 10,
-    }));
+    const stats: CurriculumTopicStat[] = CURRICULUM_TOPICS
+      .filter(ct => statsMap[ct.id].performances.length > 0)
+      .map(ct => {
+        const data = statsMap[ct.id];
+        return {
+          curriculum: ct,
+          totalQuestions: data.performances.length,
+          totalYears: data.years.size,
+          avgPerformance: Math.round(data.performances.reduce((s, v) => s + v, 0) / data.performances.length * 10) / 10,
+          minPerformance: Math.round(Math.min(...data.performances) * 10) / 10,
+          maxPerformance: Math.round(Math.max(...data.performances) * 10) / 10,
+        };
+      });
 
     switch (sortBy) {
       case "difficulty":
@@ -76,7 +97,7 @@ export default function CompulsoryTopicRankingPage() {
         stats.sort((a, b) => b.totalQuestions - a.totalQuestions);
         break;
       case "name":
-        stats.sort((a, b) => getTopicSortKey(a.topic) - getTopicSortKey(b.topic));
+        stats.sort((a, b) => a.curriculum.id - b.curriculum.id);
         break;
     }
 
@@ -119,7 +140,7 @@ export default function CompulsoryTopicRankingPage() {
             {[
               { value: "difficulty", label: lang === "zh" ? "按難度" : "By Difficulty", icon: <TrendingDown className="w-3.5 h-3.5" /> },
               { value: "frequency", label: lang === "zh" ? "按頻率" : "By Frequency", icon: <ArrowUpDown className="w-3.5 h-3.5" /> },
-              { value: "name", label: lang === "zh" ? "按名稱" : "By Name", icon: null },
+              { value: "name", label: lang === "zh" ? "按編號" : "By No.", icon: null },
             ].map(opt => (
               <button
                 key={opt.value}
@@ -139,13 +160,13 @@ export default function CompulsoryTopicRankingPage() {
         <div className="space-y-2">
           {topicStats.map((stat, idx) => (
             <motion.div
-              key={stat.topic}
+              key={stat.curriculum.id}
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: idx * 0.02 }}
               className="flex items-center gap-4 px-4 py-3 bg-card rounded-xl border border-border/40 hover:border-border/80 transition-colors"
             >
-              <span className={`w-8 h-8 flex items-center justify-center rounded-lg text-xs font-bold ${
+              <span className={`w-8 h-8 flex items-center justify-center rounded-lg text-xs font-bold shrink-0 ${
                 idx < 5 ? "bg-red-100 text-red-700" :
                 idx < 10 ? "bg-amber-100 text-amber-700" :
                 "bg-muted text-muted-foreground"
@@ -153,17 +174,18 @@ export default function CompulsoryTopicRankingPage() {
                 {idx + 1}
               </span>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-foreground truncate">
-                  {getTopicDisplayName(stat.topic, lang)}
+                <p className="text-sm font-medium text-foreground">
+                  <span className="text-xs text-muted-foreground mr-1.5">#{stat.curriculum.id}</span>
+                  {lang === "zh" ? stat.curriculum.zh : stat.curriculum.en}
                 </p>
-                <p className="text-xs text-muted-foreground">
-                  {stat.totalQuestions} {lang === "zh" ? "題" : "Q"} · {stat.totalYears} {lang === "zh" ? "年" : "yrs"}
+                <p className="text-[10px] text-muted-foreground mt-0.5">
+                  {stat.curriculum.lus.join(", ")} · {stat.totalQuestions} {lang === "zh" ? "題" : "Q"} · {stat.totalYears} {lang === "zh" ? "年" : "yrs"}
                 </p>
               </div>
               <div className="w-32 hidden sm:block">
                 <PerformanceBar value={stat.avgPerformance} />
               </div>
-              <span className={`text-sm font-bold tabular-nums ${
+              <span className={`text-sm font-bold tabular-nums shrink-0 ${
                 stat.avgPerformance < 40 ? "text-red-600" :
                 stat.avgPerformance < 60 ? "text-amber-600" :
                 "text-green-600"
