@@ -240,15 +240,16 @@ function parseTextSegment(text: string, parts: Array<{ type: "text" | "latex"; c
 /* ─── SolutionBlock Component ─── */
 interface SolutionBlockProps {
   solutionText: string;
-  latexBlocks: string[];
+  latexBlocks?: string[];
   solutionImages?: string[];
 }
 
-export function SolutionBlock({ solutionText, latexBlocks, solutionImages }: SolutionBlockProps) {
+export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }: SolutionBlockProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  if (!latexBlocks.length && !solutionText && (!solutionImages || !solutionImages.length)) {
+  const blocks = latexBlocks || [];
+  if (!blocks.length && !solutionText && (!solutionImages || !solutionImages.length)) {
     return <p className="text-sm text-muted-foreground italic">No solution available</p>;
   }
 
@@ -274,7 +275,7 @@ export function SolutionBlock({ solutionText, latexBlocks, solutionImages }: Sol
       ))}
 
       {/* Render explicit LaTeX blocks (if any additional ones passed) */}
-      {latexBlocks.filter(b => b !== solutionText).map((block, idx) => (
+      {blocks.filter(b => b !== solutionText).map((block, idx) => (
         <div key={`block-${idx}`} className="py-1">
           <LatexRenderer latex={block} />
         </div>

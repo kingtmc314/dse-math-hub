@@ -36,7 +36,7 @@ export default function Paper2Page() {
 
   // Get solutions for selected year
   const yearSolutions = useMemo(() => {
-    return (solutionsData as Record<string, Record<string, { answer: string; pct: number | null; solution_text: string; latex: string[]; solution_images?: string[] }>>)[selectedYear] || {};
+    return (solutionsData as Record<string, Record<string, { answer?: string; pct?: number | null; solution_text?: string; latex?: string[]; solution_images?: string[] }>>)[selectedYear] || {};
   }, [selectedYear]);
 
   // Stats
@@ -118,7 +118,7 @@ export default function Paper2Page() {
             {yearData.map((q, idx) => {
               const topic = getTopicForQuestion(q.q);
               const solution = yearSolutions[String(q.q)];
-              const hasSolution = solution && (solution.latex.length > 0 || solution.solution_text || (solution.solution_images && solution.solution_images.length > 0));
+              const hasSolution = solution && ((solution.latex && solution.latex.length > 0) || solution.solution_text || (solution.solution_images && solution.solution_images.length > 0));
               const isExpanded = expandedQ.has(q.q);
 
               return (
@@ -193,9 +193,9 @@ export default function Paper2Page() {
                             </span>
                           </div>
                           <SolutionBlock
-                            solutionText={solution.solution_text}
-                            latexBlocks={solution.latex}
-                            solutionImages={solution.solution_images}
+                            solutionText={solution.solution_text || ""}
+                            latexBlocks={solution.latex || []}
+                            solutionImages={solution.solution_images || []}
                           />
                         </div>
                       </motion.div>

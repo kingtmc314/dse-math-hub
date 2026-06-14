@@ -53,7 +53,7 @@ export default function MCLookupPage() {
     return yearSolutions[String(selectedQ)] || null;
   }, [selectedYear, selectedQ]);
 
-  const hasSolution = solution && (solution.solution_text || solution.latex || (solution.solution_images && solution.solution_images.length > 0));
+  const hasSolution = solution && (solution.solution_text || (solution.latex && solution.latex.length > 0) || (solution.solution_images && solution.solution_images.length > 0));
 
   const options: Array<"A" | "B" | "C" | "D"> = ["A", "B", "C", "D"];
 
