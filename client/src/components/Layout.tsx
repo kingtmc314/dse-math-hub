@@ -104,6 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         { path: "/answer-distribution", label: t("nav.answerDist") },
         { path: "/topics", label: t("nav.topics") },
         { path: "/ranking", label: t("nav.ranking") },
+        { path: "/topic-matrix", label: lang === "zh" ? "課題分佈" : "Topic Matrix" },
       ],
     },
     {

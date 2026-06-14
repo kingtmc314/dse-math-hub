@@ -11,6 +11,7 @@ import Paper2Page from "./pages/Paper2Page";
 import M2Page from "./pages/M2Page";
 import TopicFilterPage from "./pages/TopicFilterPage";
 import TopicRankingPage from "./pages/TopicRankingPage";
+import TopicMatrixPage from "./pages/TopicMatrixPage";
 import MCLookupPage from "./pages/MCLookupPage";
 import AnswerDistributionPage from "./pages/AnswerDistributionPage";
 import MCAnswerTablePage from "./pages/MCAnswerTablePage";
@@ -31,6 +32,7 @@ function AppRouter() {
       <Route path="/m2/:year" component={M2Page} />
       <Route path="/topics" component={TopicFilterPage} />
       <Route path="/ranking" component={TopicRankingPage} />
+      <Route path="/topic-matrix" component={TopicMatrixPage} />
       <Route path="/mc-lookup" component={MCLookupPage} />
       <Route path="/answer-distribution" component={AnswerDistributionPage} />
       <Route path="/mc-answer-table" component={MCAnswerTablePage} />
