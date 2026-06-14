@@ -237,7 +237,7 @@ export default function MCLookupPage() {
                   </h3>
                   <SolutionBlock
                     solutionText={solution?.solution_text || ""}
-                    latexBlocks={solution?.latex || (solution?.solution_text ? [solution.solution_text] : [])}
+                    latexBlocks={solution?.latex || []}
                     solutionImages={solution?.solution_images || []}
                   />
                 </div>

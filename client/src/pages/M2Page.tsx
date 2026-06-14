@@ -37,52 +37,58 @@ export default function M2Page() {
     if (!m2Topics || !m2Topics[selectedYear]) return {};
 
     // Build a map: question number -> topic
-    // The questions field contains entries like "Q13a", "Q11a, Q11b", "Q4a, 10a"
+    // Process normal topics first, then "Deleted / Out of Syllabus" entries last so they override
     const qToTopic: Record<string, string> = {};
-    for (const entry of m2Topics[selectedYear]) {
-      const questions = entry.questions;
-      // Parse question references - split by comma and clean up
-      const parts = questions.split(",").map(s => s.trim());
-      for (const part of parts) {
-        // Extract the question number: "Q13a" -> "13(a)", "Q4a" -> "4(a)", "10a" -> "10(a)"
-        const cleaned = part.replace(/^Q/, "").trim();
-        if (!cleaned || cleaned === "-") continue;
-        
-        // Match patterns like "13a", "11b", "4a", "10c", "12b(i)", "12b(ii)"
-        const match = cleaned.match(/^(\d+)([a-z])?(?:\(([^)]+)\))?/);
-        if (match) {
-          const qNum = match[1];
-          const subPart = match[2] || "";
-          const subSub = match[3] || "";
+    const normalEntries = m2Topics[selectedYear].filter(e => !e.topic.toLowerCase().includes('out of syllabus') && !e.topic.toLowerCase().includes('deleted'));
+    const outEntries = m2Topics[selectedYear].filter(e => e.topic.toLowerCase().includes('out of syllabus') || e.topic.toLowerCase().includes('deleted'));
+
+    const parseEntries = (entries: M2TopicEntry[], override: boolean) => {
+      for (const entry of entries) {
+        const questions = entry.questions;
+        const parts = questions.split(",").map(s => s.trim());
+        for (const part of parts) {
+          const cleaned = part.replace(/^Q/, "").trim();
+          if (!cleaned || cleaned === "-") continue;
           
-          // Build the question key to match the data format
-          // Data format: "1", "2(a)", "2(b)", "10(a)", "11(b)(i)"
-          let qKey = qNum;
-          if (subPart) {
-            qKey += `(${subPart})`;
-          }
-          if (subSub) {
-            qKey += `(${subSub})`;
-          }
-          
-          // Also try just the main question number for matching
-          if (!qToTopic[qKey]) {
-            qToTopic[qKey] = entry.topic;
-          }
-          // Also map just the number for broader matching
-          if (!qToTopic[qNum]) {
-            qToTopic[qNum] = entry.topic;
+          // Match patterns like "13a", "11b", "4a", "10c", "12b(i)", "12b(ii)"
+          const match = cleaned.match(/^(\d+)([a-z])?(?:\(([^)]+)\))?/);
+          if (match) {
+            const qNum = match[1];
+            const subPart = match[2] || "";
+            const subSub = match[3] || "";
+            
+            let qKey = qNum;
+            if (subPart) {
+              qKey += `(${subPart})`;
+            }
+            if (subSub) {
+              qKey += `(${subSub})`;
+            }
+            
+            if (override || !qToTopic[qKey]) {
+              qToTopic[qKey] = entry.topic;
+            }
+            // Only map main number if no sub-part specified (avoid overriding specific matches)
+            if (!subPart && (override || !qToTopic[qNum])) {
+              qToTopic[qNum] = entry.topic;
+            }
           }
         }
       }
-    }
+    };
+
+    parseEntries(normalEntries, false);
+    parseEntries(outEntries, true);
     return qToTopic;
   }, [selectedYear]);
 
   // Find topic for a question
   const getTopicForQuestion = (q: string): string | undefined => {
-    // Try exact match first
+    // Try exact match first (e.g. "14(b)(i)")
     if (topicMapping[q]) return topicMapping[q];
+    // Try parent sub-question (e.g. "14(b)" for "14(b)(i)")
+    const parentMatch = q.match(/^(\d+\([a-z]\))/);
+    if (parentMatch && topicMapping[parentMatch[1]]) return topicMapping[parentMatch[1]];
     // Try just the main question number
     const mainQ = q.match(/^(\d+)/);
     if (mainQ && topicMapping[mainQ[1]]) return topicMapping[mainQ[1]];

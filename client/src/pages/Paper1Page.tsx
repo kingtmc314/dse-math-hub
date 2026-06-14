@@ -31,11 +31,29 @@ export default function Paper1Page() {
 
   // Find topic for a question
   const getTopicForQuestion = (qStr: string) => {
-    const qNum = qStr.replace(/\(.*\)/, "").trim();
+    // Extract main question number (e.g. "7(a)" -> 7, "14(b)(i)" -> 14)
+    const mainMatch = qStr.match(/^(\d+)/);
+    if (!mainMatch) return null;
+    const qNum = parseInt(mainMatch[1]);
+
     for (const t of topics) {
       const tqStr = String(t.questions);
-      if (tqStr === qNum || tqStr.includes(qNum)) {
-        return t.topic;
+      // Split by comma (not inside parentheses)
+      const parts = tqStr.split(/,(?![^(]*\))/).map(s => s.trim());
+      for (const part of parts) {
+        // Extract leading number from each part
+        const numMatch = part.match(/^(\d+)/);
+        if (numMatch && parseInt(numMatch[1]) === qNum) {
+          return t.topic;
+        }
+        // Handle ranges like "7-9"
+        const cleaned = part.replace(/\([^)]*\)/g, "").trim();
+        const rangeMatch = cleaned.match(/^(\d+)\s*-\s*(\d+)$/);
+        if (rangeMatch) {
+          const start = parseInt(rangeMatch[1]);
+          const end = parseInt(rangeMatch[2]);
+          if (qNum >= start && qNum <= end) return t.topic;
+        }
       }
     }
     return null;

@@ -258,18 +258,18 @@ export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }
     setLightboxOpen(true);
   };
 
-  // Parse mixed content from solutionText
-  const mixedParts = parseMixedContent(solutionText);
+  // Determine rendering strategy:
+  // - If latex blocks exist, they are the authoritative solution - render ONLY them
+  // - If no latex blocks, fall back to parsing solution_text (which may contain $$ LaTeX)
+  const hasLatexBlocks = blocks.length > 0;
 
-  // Determine if solution_text already contains LaTeX (via $$ delimiters)
-  // If so, parseMixedContent handles everything and we skip the separate latex blocks
-  // to avoid rendering duplicate content
-  const solutionTextHasLatex = solutionText.includes("$$");
+  // Parse mixed content from solutionText (only used when no latex blocks)
+  const mixedParts = !hasLatexBlocks ? parseMixedContent(solutionText) : [];
 
   return (
     <div className="space-y-3">
-      {/* Render parsed mixed content (text + LaTeX from solution_text) */}
-      {mixedParts.map((part, idx) => (
+      {/* When no latex blocks, render solution_text via mixed content parser */}
+      {!hasLatexBlocks && mixedParts.map((part, idx) => (
         <div key={`mixed-${idx}`} className="py-0.5">
           {part.type === "latex" ? (
             <LatexRenderer latex={part.content} />
@@ -279,8 +279,8 @@ export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }
         </div>
       ))}
 
-      {/* Render explicit LaTeX blocks only when solution_text doesn't already contain them */}
-      {!solutionTextHasLatex && blocks.filter(b => b !== solutionText).map((block, idx) => (
+      {/* Render latex blocks as the primary solution content */}
+      {hasLatexBlocks && blocks.map((block, idx) => (
         <div key={`block-${idx}`} className="py-1">
           <LatexRenderer latex={block} />
         </div>
