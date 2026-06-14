@@ -166,6 +166,61 @@ function Lightbox({ images, currentIndex, onClose, onNavigate }: LightboxProps) 
   );
 }
 
+/* ─── Parse mixed text/LaTeX content ─── */
+function parseMixedContent(text: string): Array<{ type: "text" | "latex"; content: string }> {
+  const parts: Array<{ type: "text" | "latex"; content: string }> = [];
+  if (!text) return parts;
+
+  // Split by LaTeX environments and inline/display math
+  // Match: \begin{...}...\end{...}, or lines that start with LaTeX commands
+  const lines = text.split("\n");
+  let currentLatex = "";
+  let currentText = "";
+  let inEnvironment = false;
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    // Check if this line starts or continues a LaTeX environment
+    if (trimmed.match(/^\\begin\{/)) {
+      // Flush any accumulated text
+      if (currentText.trim()) {
+        parts.push({ type: "text", content: currentText.trim() });
+        currentText = "";
+      }
+      inEnvironment = true;
+      currentLatex += (currentLatex ? "\n" : "") + trimmed;
+    } else if (inEnvironment) {
+      currentLatex += "\n" + trimmed;
+      if (trimmed.match(/^\\end\{/)) {
+        inEnvironment = false;
+        parts.push({ type: "latex", content: currentLatex });
+        currentLatex = "";
+      }
+    } else if (trimmed.match(/^\\[a-zA-Z]/) && !trimmed.match(/^\\text\{/)) {
+      // Line starts with a LaTeX command (but not \text)
+      if (currentText.trim()) {
+        parts.push({ type: "text", content: currentText.trim() });
+        currentText = "";
+      }
+      parts.push({ type: "latex", content: trimmed });
+    } else {
+      // Regular text line
+      currentText += (currentText ? "\n" : "") + line;
+    }
+  }
+
+  // Flush remaining
+  if (currentLatex.trim()) {
+    parts.push({ type: "latex", content: currentLatex.trim() });
+  }
+  if (currentText.trim()) {
+    parts.push({ type: "text", content: currentText.trim() });
+  }
+
+  return parts;
+}
+
 /* ─── SolutionBlock Component ─── */
 interface SolutionBlockProps {
   solutionText: string;
@@ -186,21 +241,28 @@ export function SolutionBlock({ solutionText, latexBlocks, solutionImages }: Sol
     setLightboxOpen(true);
   };
 
+  // Parse mixed content from solutionText
+  const mixedParts = parseMixedContent(solutionText);
+
   return (
     <div className="space-y-3">
-      {/* Render LaTeX blocks */}
-      {latexBlocks.map((block, idx) => (
-        <div key={idx} className="py-1">
-          <LatexRenderer latex={block} />
+      {/* Render parsed mixed content (text + LaTeX) */}
+      {mixedParts.map((part, idx) => (
+        <div key={`mixed-${idx}`} className="py-0.5">
+          {part.type === "latex" ? (
+            <LatexRenderer latex={part.content} />
+          ) : (
+            <p className="text-sm text-foreground/80 leading-relaxed">{part.content}</p>
+          )}
         </div>
       ))}
 
-      {/* If no LaTeX but has text, show the text */}
-      {latexBlocks.length === 0 && solutionText && (
-        <div className="text-sm text-foreground/80 whitespace-pre-wrap leading-relaxed">
-          {solutionText}
+      {/* Render explicit LaTeX blocks (if any additional ones passed) */}
+      {latexBlocks.filter(b => b !== solutionText).map((block, idx) => (
+        <div key={`block-${idx}`} className="py-1">
+          <LatexRenderer latex={block} />
         </div>
-      )}
+      ))}
 
       {/* Render solution diagram images */}
       {solutionImages && solutionImages.length > 0 && (

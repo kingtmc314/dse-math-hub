@@ -9,8 +9,10 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, CheckCircle2, XCircle, BarChart3 } from "lucide-react";
 import dseData from "@/data/dseData.json";
+import solutionData from "@/data/solutions.json";
 import TopicBadge from "@/components/TopicBadge";
 import { getTopicDisplayName } from "@/data/topicTranslations";
+import { SolutionBlock } from "@/components/LatexRenderer";
 
 const paper2 = dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>;
 const paper2Topics = dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>;
@@ -43,6 +45,15 @@ export default function MCLookupPage() {
     return null;
   }, [selectedYear, selectedQ]);
 
+
+  // Get solution data for this question
+  const solution = useMemo(() => {
+    const yearSolutions = (solutionData as Record<string, Record<string, { solution_text?: string; solution_images?: string[] }>>)[selectedYear];
+    if (!yearSolutions) return null;
+    return yearSolutions[String(selectedQ)] || null;
+  }, [selectedYear, selectedQ]);
+
+  const hasSolution = solution && (solution.solution_text || (solution.solution_images && solution.solution_images.length > 0));
 
   const options: Array<"A" | "B" | "C" | "D"> = ["A", "B", "C", "D"];
 
@@ -217,6 +228,20 @@ export default function MCLookupPage() {
                 </div>
               </div>
 
+              {/* Solution Section */}
+              {hasSolution && (
+                <div className="p-6">
+                  <h3 className="text-sm font-semibold text-slate-600 mb-4 flex items-center gap-2">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    {lang === "zh" ? "題解" : "Solution"}
+                  </h3>
+                  <SolutionBlock
+                    solutionText={solution?.solution_text || ""}
+                    latexBlocks={solution?.solution_text ? [solution.solution_text] : []}
+                    solutionImages={solution?.solution_images || []}
+                  />
+                </div>
+              )}
 
             </motion.div>
           )}
