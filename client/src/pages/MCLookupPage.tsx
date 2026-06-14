@@ -48,12 +48,12 @@ export default function MCLookupPage() {
 
   // Get solution data for this question
   const solution = useMemo(() => {
-    const yearSolutions = (solutionData as Record<string, Record<string, { solution_text?: string; solution_images?: string[] }>>)[selectedYear];
+    const yearSolutions = (solutionData as Record<string, Record<string, { solution_text?: string; solution_images?: string[]; latex?: string[] }>>)[selectedYear];
     if (!yearSolutions) return null;
     return yearSolutions[String(selectedQ)] || null;
   }, [selectedYear, selectedQ]);
 
-  const hasSolution = solution && (solution.solution_text || (solution.solution_images && solution.solution_images.length > 0));
+  const hasSolution = solution && (solution.solution_text || solution.latex || (solution.solution_images && solution.solution_images.length > 0));
 
   const options: Array<"A" | "B" | "C" | "D"> = ["A", "B", "C", "D"];
 
@@ -237,7 +237,7 @@ export default function MCLookupPage() {
                   </h3>
                   <SolutionBlock
                     solutionText={solution?.solution_text || ""}
-                    latexBlocks={solution?.solution_text ? [solution.solution_text] : []}
+                    latexBlocks={solution?.latex || (solution?.solution_text ? [solution.solution_text] : [])}
                     solutionImages={solution?.solution_images || []}
                   />
                 </div>
