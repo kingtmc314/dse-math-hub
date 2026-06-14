@@ -59,6 +59,30 @@ export const topicTranslations: Record<string, string> = {
   // Special
   "Out of Syllabus": "超出課程範圍",
   "Deleted / Out of Syllabus": "已刪除 / 超出課程範圍",
+  // Numbered curriculum topics (paper2_topics format)
+  "1. Approx. Values & Percentages": "估算及百分法",
+  "2. Algebraic Expressions": "代數",
+  "3. Rectilinear Figures": "幾何 – 直線圖形",
+  "4. Symmetry and Transformations": "對稱及變換",
+  "5. Elementary Prob. and Stats": "簡易概率和統計",
+  "6. Quad. Eq. & Complex Numbers": "一元二次方程與複數",
+  "7. Functions and Graphs": "函數及其圖像",
+  "8. Exp. and Logarithmic Functions": "指數及對數函數",
+  "9. More about Polynomials": "續多項式",
+  "10. Rates, Ratios and Variations": "率、比及變分",
+  "11. Trigonometric Functions": "三角函數及其圖像",
+  "12. Applications of Trigonometry": "三角學的應用",
+  "13. Mensuration": "求積法",
+  "14. Basic Properties of Circles": "圓的基本性質",
+  "15. Tangents to Circles": "圓的切線",
+  "16. Inequalities & Linear Programming": "不等式及線性規畫",
+  "17. Coord. Geo. (I) / Rect. Coord. Sys.": "坐標幾何 (一)",
+  "18. Coord. Geo. (II) / SL & Circles": "坐標幾何 (二)",
+  "19. Sequence, Arithmetic & Geometric Sequences": "數列及等差等比",
+  "20. More about Graphs of Functions": "續函數圖像",
+  "21. Perm., Comb. & More about Prob.": "排列、組合及概率",
+  "22. Measures of Dispersion": "續統計",
+  "23. Out of Syllabus (OOS)": "不在課程範圍",
 };
 
 /**
