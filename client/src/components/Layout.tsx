@@ -18,6 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { path: "/m2", label: t("nav.m2") },
     { path: "/topics", label: t("nav.topics") },
     { path: "/ranking", label: t("nav.ranking") },
+    { path: "/mc-lookup", label: t("nav.mcLookup") },
   ];
 
   const isActive = (path: string) => {
