@@ -15,6 +15,8 @@ import TopicMatrixPage from "./pages/TopicMatrixPage";
 import MCLookupPage from "./pages/MCLookupPage";
 import AnswerDistributionPage from "./pages/AnswerDistributionPage";
 import MCAnswerTablePage from "./pages/MCAnswerTablePage";
+import CompulsoryHubPage from "./pages/CompulsoryHubPage";
+import M2HubPage from "./pages/M2HubPage";
 import Layout from "./components/Layout";
 
 // Detect base path from Vite's import.meta.env.BASE_URL
@@ -24,6 +26,8 @@ function AppRouter() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/compulsory" component={CompulsoryHubPage} />
+      <Route path="/m2-hub" component={M2HubPage} />
       <Route path="/paper1" component={Paper1Page} />
       <Route path="/paper1/:year" component={Paper1Page} />
       <Route path="/paper2" component={Paper2Page} />

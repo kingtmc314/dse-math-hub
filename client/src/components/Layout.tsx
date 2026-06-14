@@ -94,25 +94,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navEntries: NavEntry[] = [
     { path: "/", label: t("nav.home") },
-    {
-      label: lang === "zh" ? "必修部分" : "Compulsory",
-      children: [
-        { path: "/paper1", label: t("nav.paper1") },
-        { path: "/paper2", label: t("nav.paper2") },
-        { path: "/mc-lookup", label: t("nav.mcLookup") },
-        { path: "/mc-answer-table", label: lang === "zh" ? "答案總表" : "Answer Table" },
-        { path: "/answer-distribution", label: t("nav.answerDist") },
-        { path: "/topics", label: t("nav.topics") },
-        { path: "/ranking", label: t("nav.ranking") },
-        { path: "/topic-matrix", label: lang === "zh" ? "課題分佈" : "Topic Matrix" },
-      ],
-    },
-    {
-      label: lang === "zh" ? "數學延伸 M2" : "M2 Extended",
-      children: [
-        { path: "/m2", label: lang === "zh" ? "M2 得分率" : "M2 Scores" },
-      ],
-    },
+    { path: "/compulsory", label: lang === "zh" ? "必修部分" : "Compulsory" },
+    { path: "/m2-hub", label: lang === "zh" ? "數學延伸 M2" : "M2 Extended" },
   ];
 
   const isActive = (path: string) => {
