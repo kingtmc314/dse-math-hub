@@ -171,8 +171,28 @@ function parseMixedContent(text: string): Array<{ type: "text" | "latex"; conten
   const parts: Array<{ type: "text" | "latex"; content: string }> = [];
   if (!text) return parts;
 
-  // Split by LaTeX environments and inline/display math
-  // Match: \begin{...}...\end{...}, or lines that start with LaTeX commands
+  // First, handle $$ delimited blocks by splitting on them
+  // Pattern: split text by $$ ... $$ blocks
+  const dollarSplit = text.split(/\$\$/);
+  
+  for (let i = 0; i < dollarSplit.length; i++) {
+    const segment = dollarSplit[i];
+    if (!segment.trim()) continue;
+    
+    if (i % 2 === 1) {
+      // Odd index = inside $$ delimiters = LaTeX block
+      parts.push({ type: "latex", content: segment.trim() });
+    } else {
+      // Even index = outside $$ = may contain text mixed with \begin environments
+      parseTextSegment(segment, parts);
+    }
+  }
+
+  return parts;
+}
+
+/** Parse a text segment that may contain \begin{} environments and LaTeX commands */
+function parseTextSegment(text: string, parts: Array<{ type: "text" | "latex"; content: string }>) {
   const lines = text.split("\n");
   let currentLatex = "";
   let currentText = "";
@@ -183,7 +203,6 @@ function parseMixedContent(text: string): Array<{ type: "text" | "latex"; conten
 
     // Check if this line starts or continues a LaTeX environment
     if (trimmed.match(/^\\begin\{/)) {
-      // Flush any accumulated text
       if (currentText.trim()) {
         parts.push({ type: "text", content: currentText.trim() });
         currentText = "";
@@ -205,7 +224,6 @@ function parseMixedContent(text: string): Array<{ type: "text" | "latex"; conten
       }
       parts.push({ type: "latex", content: trimmed });
     } else {
-      // Regular text line
       currentText += (currentText ? "\n" : "") + line;
     }
   }
@@ -217,8 +235,6 @@ function parseMixedContent(text: string): Array<{ type: "text" | "latex"; conten
   if (currentText.trim()) {
     parts.push({ type: "text", content: currentText.trim() });
   }
-
-  return parts;
 }
 
 /* ─── SolutionBlock Component ─── */
