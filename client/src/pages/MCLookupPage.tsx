@@ -9,14 +9,11 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, CheckCircle2, XCircle, BarChart3 } from "lucide-react";
 import dseData from "@/data/dseData.json";
-import solutionsData from "@/data/solutions.json";
 import TopicBadge from "@/components/TopicBadge";
-import { SolutionBlock } from "@/components/LatexRenderer";
 import { getTopicDisplayName } from "@/data/topicTranslations";
 
 const paper2 = dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>;
 const paper2Topics = dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>;
-const solutions = solutionsData as Record<string, Record<string, { answer?: string; pct?: number | null; solution_text?: string; latex?: string[]; solution_images?: string[] }>>;
 
 const YEARS = Object.keys(paper2).sort((a, b) => Number(b) - Number(a));
 const QUESTIONS = Array.from({ length: 45 }, (_, i) => i + 1);
@@ -46,12 +43,6 @@ export default function MCLookupPage() {
     return null;
   }, [selectedYear, selectedQ]);
 
-  // Get solution data
-  const solutionData = useMemo(() => {
-    const yearSol = solutions[selectedYear];
-    if (!yearSol) return null;
-    return yearSol[String(selectedQ)] || null;
-  }, [selectedYear, selectedQ]);
 
   const options: Array<"A" | "B" | "C" | "D"> = ["A", "B", "C", "D"];
 
@@ -226,26 +217,7 @@ export default function MCLookupPage() {
                 </div>
               </div>
 
-              {/* Solution Section */}
-              {solutionData && (solutionData.solution_text || (solutionData.solution_images && solutionData.solution_images.length > 0)) && (
-                <div className="p-6">
-                  <h3 className="text-sm font-semibold text-slate-600 mb-4">
-                    {lang === "zh" ? "題解" : "Solution"}
-                  </h3>
-                  <SolutionBlock
-                    solutionText={solutionData.solution_text || ""}
-                    latexBlocks={solutionData.latex || []}
-                    solutionImages={solutionData.solution_images}
-                  />
-                </div>
-              )}
 
-              {/* No solution available */}
-              {(!solutionData || (!solutionData.solution_text && (!solutionData.solution_images || solutionData.solution_images.length === 0))) && (
-                <div className="p-6 text-center text-slate-400 text-sm">
-                  {lang === "zh" ? "暫無題解" : "No solution available"}
-                </div>
-              )}
             </motion.div>
           )}
         </AnimatePresence>

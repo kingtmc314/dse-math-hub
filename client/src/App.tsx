@@ -13,6 +13,7 @@ import TopicFilterPage from "./pages/TopicFilterPage";
 import TopicRankingPage from "./pages/TopicRankingPage";
 import MCLookupPage from "./pages/MCLookupPage";
 import AnswerDistributionPage from "./pages/AnswerDistributionPage";
+import MCAnswerTablePage from "./pages/MCAnswerTablePage";
 import Layout from "./components/Layout";
 
 // Detect base path from Vite's import.meta.env.BASE_URL
@@ -32,6 +33,7 @@ function AppRouter() {
       <Route path="/ranking" component={TopicRankingPage} />
       <Route path="/mc-lookup" component={MCLookupPage} />
       <Route path="/answer-distribution" component={AnswerDistributionPage} />
+      <Route path="/mc-answer-table" component={MCAnswerTablePage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

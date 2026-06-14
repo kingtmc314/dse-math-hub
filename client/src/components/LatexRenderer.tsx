@@ -7,14 +7,33 @@ interface LatexRendererProps {
   displayMode?: boolean;
 }
 
+// Clean HTML artifacts from LaTeX strings scraped from web
+function cleanLatex(raw: string): string {
+  let s = raw;
+  // Remove <br> / <br/> tags
+  s = s.replace(/<br\s*\/?>/gi, "\n");
+  // Decode HTML entities
+  s = s.replace(/&#038;/g, "&");
+  s = s.replace(/&amp;/g, "&");
+  s = s.replace(/&lt;/g, "<");
+  s = s.replace(/&gt;/g, ">");
+  s = s.replace(/&nbsp;/g, " ");
+  s = s.replace(/&quot;/g, '"');
+  // Remove any remaining HTML tags
+  s = s.replace(/<[^>]+>/g, "");
+  return s.trim();
+}
+
 export default function LatexRenderer({ latex, displayMode = true }: LatexRendererProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!containerRef.current || !latex) return;
 
+    const cleaned = cleanLatex(latex);
+
     try {
-      katex.render(latex, containerRef.current, {
+      katex.render(cleaned, containerRef.current, {
         displayMode,
         throwOnError: false,
         trust: true,
@@ -28,7 +47,7 @@ export default function LatexRenderer({ latex, displayMode = true }: LatexRender
     } catch (e) {
       // Fallback: show raw LaTeX in a code block
       if (containerRef.current) {
-        containerRef.current.innerHTML = `<pre class="text-xs bg-muted/50 p-2 rounded overflow-x-auto"><code>${latex.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>`;
+        containerRef.current.innerHTML = `<pre class="text-xs bg-muted/50 p-2 rounded overflow-x-auto"><code>${cleaned.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>`;
       }
     }
   }, [latex, displayMode]);

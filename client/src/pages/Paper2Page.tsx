@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useParams } from "wouter";
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { TrendingUp, TrendingDown, CheckCircle2, ChevronDown, ExternalLink } from "lucide-react";
+import { TrendingUp, TrendingDown, CheckCircle2, ChevronDown } from "lucide-react";
 import dseData from "@/data/dseData.json";
 import solutionsData from "@/data/solutions.json";
 import YearSelector from "@/components/YearSelector";
@@ -33,7 +33,6 @@ export default function Paper2Page() {
     return (dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>)[selectedYear] || [];
   }, [selectedYear]);
 
-  const solutionUrl = (dseData.mathseasy_links as Record<string, string>)?.[selectedYear];
 
   // Get solutions for selected year
   const yearSolutions = useMemo(() => {
@@ -93,17 +92,6 @@ export default function Paper2Page() {
         {/* Year Selector + Actions */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <YearSelector years={years} selected={selectedYear} onChange={setSelectedYear} />
-          {solutionUrl && (
-            <a
-              href={solutionUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-              {lang === "zh" ? "完整題解 (mathseasy.hk)" : "Full Solutions (mathseasy.hk)"}
-            </a>
-          )}
         </div>
 
         {/* Stats Summary */}
