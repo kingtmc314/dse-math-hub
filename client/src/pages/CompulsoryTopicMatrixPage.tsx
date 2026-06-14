@@ -19,45 +19,63 @@ export default function CompulsoryTopicMatrixPage() {
   const tableRef = useRef<HTMLDivElement>(null);
 
   const matrixData = useMemo(() => {
-    const topicsSource = activePaper === "paper1"
-      ? (dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>)
-      : (dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>);
-
     const topicSet = new Set<string>();
-    for (const yearTopics of Object.values(topicsSource)) {
-      for (const t of yearTopics) {
-        if (t.topic.startsWith("J") || t.topic.startsWith("S") || t.topic === "Out of Syllabus" || t.topic === "Deleted / Out of Syllabus") {
-          topicSet.add(t.topic);
-        }
-      }
-    }
-
-    const sortedTopics = Array.from(topicSet).sort((a, b) => {
-      const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
-      const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
-      if (catA !== catB) return catA - catB;
-      return getTopicSortKey(a) - getTopicSortKey(b);
-    });
-
     const matrix: Record<string, Record<string, string>> = {};
-    for (const topic of sortedTopics) {
-      matrix[topic] = {};
-    }
 
-    for (const year of YEARS) {
-      const yearData = topicsSource[year] || [];
-      for (const entry of yearData) {
-        if (matrix[entry.topic]) {
-          if (matrix[entry.topic][year]) {
-            matrix[entry.topic][year] += ", " + entry.questions;
-          } else {
-            matrix[entry.topic][year] = entry.questions;
+    if (activePaper === "paper1") {
+      const p1Source = dseData.paper1_topics as Record<string, Array<{ topic: string; questions: string }>>;
+      for (const yearTopics of Object.values(p1Source)) {
+        for (const t of yearTopics) {
+          if (t.topic.startsWith("J") || t.topic.startsWith("S") || t.topic === "Out of Syllabus" || t.topic === "Deleted / Out of Syllabus") {
+            topicSet.add(t.topic);
           }
         }
       }
+      const sortedTopics = Array.from(topicSet).sort((a, b) => {
+        const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
+        const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
+        if (catA !== catB) return catA - catB;
+        return getTopicSortKey(a) - getTopicSortKey(b);
+      });
+      for (const topic of sortedTopics) matrix[topic] = {};
+      for (const year of YEARS) {
+        const yearData = p1Source[year] || [];
+        for (const entry of yearData) {
+          if (matrix[entry.topic] !== undefined) {
+            if (matrix[entry.topic][year]) matrix[entry.topic][year] += ", " + entry.questions;
+            else matrix[entry.topic][year] = entry.questions;
+          }
+        }
+      }
+      return { sortedTopics, matrix };
+    } else {
+      // Paper 2: new flat format {year: {q: topic_name}}
+      const p2Source = dseData.paper2_topics as Record<string, Record<string, string>>;
+      for (const yearTopicMap of Object.values(p2Source)) {
+        for (const topicName of Object.values(yearTopicMap)) {
+          if (topicName.startsWith("J") || topicName.startsWith("S") || topicName === "Out of Syllabus" || topicName === "Deleted / Out of Syllabus") {
+            topicSet.add(topicName);
+          }
+        }
+      }
+      const sortedTopics = Array.from(topicSet).sort((a, b) => {
+        const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
+        const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
+        if (catA !== catB) return catA - catB;
+        return getTopicSortKey(a) - getTopicSortKey(b);
+      });
+      for (const topic of sortedTopics) matrix[topic] = {};
+      for (const year of YEARS) {
+        const yearTopicMap = p2Source[year] || {};
+        for (const [qNum, topicName] of Object.entries(yearTopicMap)) {
+          if (matrix[topicName] !== undefined) {
+            if (matrix[topicName][year]) matrix[topicName][year] += ", " + qNum;
+            else matrix[topicName][year] = qNum;
+          }
+        }
+      }
+      return { sortedTopics, matrix };
     }
-
-    return { sortedTopics, matrix };
   }, [activePaper]);
 
   const topicFrequency = useMemo(() => {

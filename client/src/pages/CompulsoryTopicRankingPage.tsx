@@ -42,21 +42,19 @@ export default function CompulsoryTopicRankingPage() {
       }
     }
 
-    // Paper 2
+    // Paper 2 (new flat format: {year: {q: topic_name}})
     if (paperFilter === "all" || paperFilter === "paper2") {
-      for (const [year, topics] of Object.entries(dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
-        for (const topicEntry of topics) {
-          if (!topicEntry.topic.startsWith("J") && !topicEntry.topic.startsWith("S")) continue;
-          const yearQuestions = (dseData.paper2 as any)[year] || [];
-          const matched = matchPaper2Questions(topicEntry.questions, yearQuestions);
-          if (matched.length === 0) continue;
-
-          if (!statsMap[topicEntry.topic]) statsMap[topicEntry.topic] = { performances: [], years: new Set() };
-          statsMap[topicEntry.topic].years.add(year);
-          for (const q of matched) {
-            const correctRate = q[q.ans as keyof Pick<typeof q, "A" | "B" | "C" | "D">] as number || 0;
-            statsMap[topicEntry.topic].performances.push(correctRate);
-          }
+      const paper2TopicsFlat = dseData.paper2_topics as Record<string, Record<string, string>>;
+      for (const [year, topicMap] of Object.entries(paper2TopicsFlat)) {
+        const yearQuestions = (dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)[year] || [];
+        for (const [qNum, topicName] of Object.entries(topicMap)) {
+          if (!topicName.startsWith("J") && !topicName.startsWith("S")) continue;
+          const qData = yearQuestions.find(q => q.q === Number(qNum));
+          if (!qData) continue;
+          const correctRate = qData[qData.ans as keyof Pick<typeof qData, "A" | "B" | "C" | "D">] as number || 0;
+          if (!statsMap[topicName]) statsMap[topicName] = { performances: [], years: new Set() };
+          statsMap[topicName].years.add(year);
+          statsMap[topicName].performances.push(correctRate);
         }
       }
     }

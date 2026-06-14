@@ -19,50 +19,61 @@ export default function TopicMatrixPage() {
 
   // Build matrix data: for each topic, what questions appear in each year
   const matrixData = useMemo(() => {
+    const topicSet = new Set<string>();
+    const matrix: Record<string, Record<string, string>> = {};
+
+    if (activePaper === "paper2") {
+      // Paper 2: new flat format {year: {q: topic_name}}
+      const p2Source = dseData.paper2_topics as Record<string, Record<string, string>>;
+      for (const yearTopicMap of Object.values(p2Source)) {
+        for (const topicName of Object.values(yearTopicMap)) topicSet.add(topicName);
+      }
+      const sortedTopics = Array.from(topicSet).sort((a, b) => {
+        const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
+        const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
+        if (catA !== catB) return catA - catB;
+        return getTopicSortKey(a) - getTopicSortKey(b);
+      });
+      for (const topic of sortedTopics) matrix[topic] = {};
+      for (const year of YEARS) {
+        const yearTopicMap = p2Source[year] || {};
+        for (const [qNum, topicName] of Object.entries(yearTopicMap)) {
+          if (matrix[topicName] !== undefined) {
+            if (matrix[topicName][year]) matrix[topicName][year] += ", " + qNum;
+            else matrix[topicName][year] = qNum;
+          }
+        }
+      }
+      return { sortedTopics, matrix };
+    }
+
+    // Paper 1 and M2: old array format {year: [{topic, questions}]}
     let topicsSource: Record<string, Array<{ topic: string; questions: string }>>;
     if (activePaper === "paper1") {
       topicsSource = dseData.paper1_topics as any;
-    } else if (activePaper === "paper2") {
-      topicsSource = dseData.paper2_topics as any;
     } else {
       topicsSource = (dseData as any).m2_topics as any || {};
     }
 
-    // Collect all unique topics
-    const topicSet = new Set<string>();
     for (const yearTopics of Object.values(topicsSource)) {
-      for (const t of yearTopics) {
-        topicSet.add(t.topic);
-      }
+      for (const t of yearTopics) topicSet.add(t.topic);
     }
 
-    // Sort topics
     const sortedTopics = Array.from(topicSet).sort((a, b) => {
-      if (activePaper === "m2") {
-        // M2 topics start with numbers: "2. Mathematical induction"
-        return getTopicSortKey(a) - getTopicSortKey(b);
-      }
+      if (activePaper === "m2") return getTopicSortKey(a) - getTopicSortKey(b);
       const catA = a.startsWith("J") ? 0 : a.startsWith("S") ? 1 : 2;
       const catB = b.startsWith("J") ? 0 : b.startsWith("S") ? 1 : 2;
       if (catA !== catB) return catA - catB;
       return getTopicSortKey(a) - getTopicSortKey(b);
     });
 
-    // Build the matrix: topic -> year -> questions string
-    const matrix: Record<string, Record<string, string>> = {};
-    for (const topic of sortedTopics) {
-      matrix[topic] = {};
-    }
-
+    for (const topic of sortedTopics) matrix[topic] = {};
     for (const year of YEARS) {
       const yearData = topicsSource[year] || [];
       for (const entry of yearData) {
-        if (matrix[entry.topic]) {
-          if (matrix[entry.topic][year]) {
-            matrix[entry.topic][year] += ", " + entry.questions;
-          } else {
-            matrix[entry.topic][year] = entry.questions;
-          }
+        if (matrix[entry.topic] !== undefined) {
+          if (matrix[entry.topic][year]) matrix[entry.topic][year] += ", " + entry.questions;
+          else matrix[entry.topic][year] = entry.questions;
         }
       }
     }

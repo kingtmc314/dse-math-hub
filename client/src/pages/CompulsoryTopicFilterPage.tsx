@@ -33,9 +33,10 @@ export default function CompulsoryTopicFilterPage() {
         if (t.topic.startsWith("J") || t.topic.startsWith("S")) topics.add(t.topic);
       }
     }
-    for (const yearTopics of Object.values(dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
-      for (const t of yearTopics) {
-        if (t.topic.startsWith("J") || t.topic.startsWith("S")) topics.add(t.topic);
+    // paper2_topics new flat format: {year: {q: topic_name}}
+    for (const yearTopicMap of Object.values(dseData.paper2_topics as Record<string, Record<string, string>>)) {
+      for (const topicName of Object.values(yearTopicMap)) {
+        if (topicName.startsWith("J") || topicName.startsWith("S")) topics.add(topicName);
       }
     }
     return Array.from(topics).sort((a, b) => {
@@ -88,20 +89,21 @@ export default function CompulsoryTopicFilterPage() {
       }
     }
 
-    // Search Paper 2
+    // Search Paper 2 (new flat format: {year: {q: topic_name}})
     if (selectedPaper === "all" || selectedPaper === "paper2") {
-      for (const [year, topics] of Object.entries(dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>)) {
-        for (const topicEntry of topics) {
-          if (topicEntry.topic !== selectedTopic) continue;
-          const yearQuestions = (dseData.paper2 as any)[year] || [];
-          const matched = matchPaper2Questions(topicEntry.questions, yearQuestions);
-          for (const qData of matched) {
+      const paper2TopicsFlat = dseData.paper2_topics as Record<string, Record<string, string>>;
+      for (const [year, topicMap] of Object.entries(paper2TopicsFlat)) {
+        const yearQuestions = (dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)[year] || [];
+        for (const [qNum, topicName] of Object.entries(topicMap)) {
+          if (topicName !== selectedTopic) continue;
+          const qData = yearQuestions.find(q => q.q === Number(qNum));
+          if (qData) {
             const correctRate = qData[qData.ans as keyof Pick<typeof qData, "A" | "B" | "C" | "D">] as number || 0;
             results.push({
               year,
               paper: "paper2",
               question: `Q${qData.q}`,
-              topic: topicEntry.topic,
+              topic: topicName,
               performance: correctRate,
               answer: qData.ans,
             });

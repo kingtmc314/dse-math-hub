@@ -15,7 +15,7 @@ import { getTopicDisplayName } from "@/data/topicTranslations";
 import { SolutionBlock } from "@/components/LatexRenderer";
 
 const paper2 = dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>;
-const paper2Topics = dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>;
+const paper2Topics = dseData.paper2_topics as Record<string, Record<string, string>>;
 
 const YEARS = Object.keys(paper2).sort((a, b) => Number(b) - Number(a));
 const QUESTIONS = Array.from({ length: 45 }, (_, i) => i + 1);
@@ -32,17 +32,11 @@ export default function MCLookupPage() {
     return yearData.find(q => q.q === selectedQ) || null;
   }, [selectedYear, selectedQ]);
 
-  // Get topic for this question
+  // Get topic for this question (new flat format: {q: topic_name})
   const questionTopic = useMemo(() => {
     const topicsForYear = paper2Topics[selectedYear];
     if (!topicsForYear) return null;
-    for (const t of topicsForYear) {
-      const qNums = t.questions.split(",").map(s => s.trim());
-      if (qNums.includes(String(selectedQ))) {
-        return t.topic;
-      }
-    }
-    return null;
+    return topicsForYear[String(selectedQ)] || null;
   }, [selectedYear, selectedQ]);
 
 

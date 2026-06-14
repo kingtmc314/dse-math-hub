@@ -26,24 +26,20 @@ export default function TopicRankingPage() {
   const topicStats = useMemo(() => {
     const statsMap: Record<string, { scores: number[]; years: Set<string>; yearScores: Record<string, number[]> }> = {};
 
-    // Paper 2 data (uses ans + A/B/C/D percentages)
+    // Paper 2 data (uses ans + A/B/C/D percentages) - new flat format: {year: {q: topic_name}}
+    const paper2TopicsFlat = dseData.paper2_topics as Record<string, Record<string, string>>;
     for (const [year, questions] of Object.entries(dseData.paper2 as Record<string, Array<{ q: number; ans: string; A: number; B: number; C: number; D: number }>>)) {
-      const yearTopics = (dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>)[year] || [];
-      for (const topicEntry of yearTopics) {
-        const topic = topicEntry.topic;
+      const yearTopicMap = paper2TopicsFlat[year] || {};
+      for (const qData of questions) {
+        const topic = yearTopicMap[String(qData.q)];
+        if (!topic) continue;
         if (!statsMap[topic]) statsMap[topic] = { scores: [], years: new Set(), yearScores: {} };
-        const qNums = String(topicEntry.questions).split(",").map(s => s.trim());
-        for (const qNum of qNums) {
-          const qData = questions.find(q => q.q === Number(qNum));
-          if (qData) {
-            const pct = (qData as any)[qData.ans] as number;
-            if (pct && pct > 0) {
-              statsMap[topic].scores.push(pct);
-              statsMap[topic].years.add(year);
-              if (!statsMap[topic].yearScores[year]) statsMap[topic].yearScores[year] = [];
-              statsMap[topic].yearScores[year].push(pct);
-            }
-          }
+        const pct = (qData as any)[qData.ans] as number;
+        if (pct && pct > 0) {
+          statsMap[topic].scores.push(pct);
+          statsMap[topic].years.add(year);
+          if (!statsMap[topic].yearScores[year]) statsMap[topic].yearScores[year] = [];
+          statsMap[topic].yearScores[year].push(pct);
         }
       }
     }

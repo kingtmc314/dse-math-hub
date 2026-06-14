@@ -29,8 +29,8 @@ export default function Paper2Page() {
     return ((dseData.paper2 as Record<string, Paper2Question[]>)[selectedYear] || []);
   }, [selectedYear]);
 
-  const topics = useMemo(() => {
-    return (dseData.paper2_topics as Record<string, Array<{ topic: string; questions: string }>>)[selectedYear] || [];
+  const topicMap = useMemo(() => {
+    return (dseData.paper2_topics as Record<string, Record<string, string>>)[selectedYear] || {};
   }, [selectedYear]);
 
 
@@ -47,21 +47,9 @@ export default function Paper2Page() {
       }, 0) / yearData.length).toFixed(1)
     : "0";
 
-  // Find topic for a question number
+  // Find topic for a question number (new flat format: {q: topic_name})
   const getTopicForQuestion = (qNum: number) => {
-    for (const t of topics) {
-      const tqStr = String(t.questions);
-      const nums = tqStr.split(",").map(s => s.trim());
-      if (nums.includes(String(qNum))) return t.topic;
-      for (const n of nums) {
-        if (n.includes("-")) {
-          const [start, end] = n.split("-").map(Number);
-          if (qNum >= start && qNum <= end) return t.topic;
-        }
-        if (Number(n) === qNum) return t.topic;
-      }
-    }
-    return null;
+    return topicMap[String(qNum)] || null;
   };
 
   const toggleExpand = (qNum: number) => {
