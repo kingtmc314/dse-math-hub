@@ -27,8 +27,8 @@ export default function Home() {
       color: "from-sky-500 to-cyan-500",
       bgColor: "bg-sky-50",
       iconColor: "text-sky-600",
-      stats: "14 年 · 553 題",
-      statsEn: "14 Years · 553 Questions",
+      stats: "15 年 · 594 題",
+      statsEn: "15 Years · 594 Questions",
     },
     {
       path: "/paper2",
@@ -38,8 +38,8 @@ export default function Home() {
       color: "from-orange-500 to-amber-500",
       bgColor: "bg-orange-50",
       iconColor: "text-orange-600",
-      stats: "14 年 · 630 題",
-      statsEn: "14 Years · 630 Questions",
+      stats: "15 年 · 675 題",
+      statsEn: "15 Years · 675 Questions",
     },
     {
       path: "/m2",
@@ -49,8 +49,8 @@ export default function Home() {
       color: "from-violet-500 to-purple-500",
       bgColor: "bg-violet-50",
       iconColor: "text-violet-600",
-      stats: "14 年 · 472 題",
-      statsEn: "14 Years · 472 Questions",
+      stats: "15 年 · 507 題",
+      statsEn: "15 Years · 507 Questions",
     },
   ];
 
@@ -128,7 +128,7 @@ export default function Home() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-mono text-muted-foreground/80">
-                        {paper.stats}
+                        {lang === "zh" ? paper.stats : paper.statsEn}
                       </span>
                       <ArrowRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                     </div>
@@ -148,7 +148,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: "15", label: { zh: "年份涵蓋", en: "Years Covered" } },
-              { value: "1,655", label: { zh: "題目總數", en: "Total Questions" } },
+              { value: "1,776", label: { zh: "題目總數", en: "Total Questions" } },
               { value: "3", label: { zh: "考卷類型", en: "Paper Types" } },
               { value: "100%", label: { zh: "數據覆蓋率", en: "Data Coverage" } },
             ].map((stat) => (

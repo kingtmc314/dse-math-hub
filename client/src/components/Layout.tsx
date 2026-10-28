@@ -247,7 +247,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container text-center text-sm text-muted-foreground">
           <p className="font-display font-medium text-foreground/70 mb-1">DSE Maths Hub</p>
           <p>{lang === "zh" ? "數據來源：HKEAA 考評局歷屆試題報告" : "Data Source: HKEAA Examination Reports"}</p>
-          <p className="mt-1 text-xs opacity-70">2012 – 2026 | {lang === "zh" ? "必修卷一、卷二（M2 至 2025）" : "Compulsory Paper 1 & 2 (M2 through 2025)"}</p>
+          <p className="mt-1 text-xs opacity-70">2012 – 2026 | {lang === "zh" ? "必修卷一、卷二及 M2" : "Compulsory Paper 1, Paper 2 & M2"}</p>
         </div>
       </footer>
     </div>

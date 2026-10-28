@@ -24,7 +24,7 @@ interface M2TopicEntry {
 export default function M2Page() {
   const { t, lang } = useLanguage();
   const params = useParams<{ year?: string }>();
-  const [selectedYear, setSelectedYear] = useState(params.year || "2025");
+  const [selectedYear, setSelectedYear] = useState(params.year || "2026");
 
   const years = useMemo(() => dseData.available_years.m2, []);
   const yearData = useMemo(() => {
