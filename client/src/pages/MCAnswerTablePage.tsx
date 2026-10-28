@@ -70,8 +70,8 @@ export default function MCAnswerTablePage() {
           </h1>
           <p className="text-muted-foreground mt-1">
             {lang === "zh"
-              ? "2012-2025 年 Paper II 所有題目正確答案一覽"
-              : "All correct answers for Paper II questions from 2012-2025"}
+              ? "2012-2026 年 Paper II 所有題目正確答案一覽"
+              : "All correct answers for Paper II questions from 2012-2026"}
           </p>
         </div>
 

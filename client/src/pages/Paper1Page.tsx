@@ -11,7 +11,7 @@ import TopicBadge from "@/components/TopicBadge";
 export default function Paper1Page() {
   const { t, lang } = useLanguage();
   const params = useParams<{ year?: string }>();
-  const [selectedYear, setSelectedYear] = useState(params.year || "2025");
+  const [selectedYear, setSelectedYear] = useState(params.year || "2026");
 
   const years = useMemo(() => dseData.available_years.paper1, []);
   const yearData = useMemo(() => {

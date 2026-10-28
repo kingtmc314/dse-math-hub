@@ -24,7 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.title": "DSE 數學歷屆試題分析",
     "hero.subtitle": "從數據找規律，從規律找分數",
-    "hero.description": "涵蓋 2012–2025 年必修卷一、卷二及 M2 所有題目的答題率、答案及課題分析",
+    "hero.description": "涵蓋 2012–2026 年必修卷一、卷二，以及 2012–2025 年 M2 的答題率、答案及課題分析",
     "hero.start": "開始瀏覽",
     
     // Year selector
@@ -86,7 +86,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.title": "DSE Maths Past Paper Analysis",
     "hero.subtitle": "Find patterns in data, find marks in patterns",
-    "hero.description": "Comprehensive answer rate analysis for Compulsory Paper 1, Paper 2, and M2 from 2012 to 2025",
+    "hero.description": "Comprehensive analysis for Compulsory Paper 1 and Paper 2 (2012–2026), and M2 (2012–2025)",
     "hero.start": "Get Started",
     
     // Year selector

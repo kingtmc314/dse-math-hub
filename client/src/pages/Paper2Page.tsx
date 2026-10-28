@@ -21,7 +21,7 @@ interface Paper2Question {
 export default function Paper2Page() {
   const { t, lang } = useLanguage();
   const params = useParams<{ year?: string }>();
-  const [selectedYear, setSelectedYear] = useState(params.year || "2025");
+  const [selectedYear, setSelectedYear] = useState(params.year || "2026");
   const [expandedQ, setExpandedQ] = useState<Set<number>>(new Set());
 
   const years = useMemo(() => dseData.available_years.paper2, []);
