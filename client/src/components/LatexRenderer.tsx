@@ -242,9 +242,15 @@ interface SolutionBlockProps {
   solutionText: string;
   latexBlocks?: string[];
   solutionImages?: string[];
+  showTextWithLatex?: boolean;
 }
 
-export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }: SolutionBlockProps) {
+export function SolutionBlock({
+  solutionText,
+  latexBlocks = [],
+  solutionImages,
+  showTextWithLatex = false,
+}: SolutionBlockProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
@@ -258,18 +264,19 @@ export function SolutionBlock({ solutionText, latexBlocks = [], solutionImages }
     setLightboxOpen(true);
   };
 
-  // Determine rendering strategy:
-  // - If latex blocks exist, they are the authoritative solution - render ONLY them
-  // - If no latex blocks, fall back to parsing solution_text (which may contain $$ LaTeX)
+  // Most imported legacy solutions duplicate their prose and formulas, so their
+  // LaTeX blocks remain authoritative. Generated solutions opt in to showing
+  // their concise written reasoning before the separately stored equations.
   const hasLatexBlocks = blocks.length > 0;
 
-  // Parse mixed content from solutionText (only used when no latex blocks)
-  const mixedParts = !hasLatexBlocks ? parseMixedContent(solutionText) : [];
+  const mixedParts = (!hasLatexBlocks || showTextWithLatex)
+    ? parseMixedContent(solutionText)
+    : [];
 
   return (
     <div className="space-y-3">
-      {/* When no latex blocks, render solution_text via mixed content parser */}
-      {!hasLatexBlocks && mixedParts.map((part, idx) => (
+      {/* Textual reasoning, when there are no separate blocks or it is explicitly opted in */}
+      {mixedParts.map((part, idx) => (
         <div key={`mixed-${idx}`} className="py-0.5">
           {part.type === "latex" ? (
             <LatexRenderer latex={part.content} />

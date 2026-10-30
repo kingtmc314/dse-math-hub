@@ -36,7 +36,7 @@ export default function Paper2Page() {
 
   // Get solutions for selected year
   const yearSolutions = useMemo(() => {
-    return (solutionsData as Record<string, Record<string, { answer?: string; pct?: number | null; solution_text?: string; latex?: string[]; solution_images?: string[] }>>)[selectedYear] || {};
+    return (solutionsData as Record<string, Record<string, { answer?: string; pct?: number | null; solution_text?: string; latex?: string[]; solution_images?: string[]; generated?: boolean }>>)[selectedYear] || {};
   }, [selectedYear]);
 
   // Stats
@@ -184,6 +184,7 @@ export default function Paper2Page() {
                             solutionText={solution.solution_text || ""}
                             latexBlocks={solution.latex || []}
                             solutionImages={solution.solution_images || []}
+                            showTextWithLatex={Boolean(solution.generated)}
                           />
                         </div>
                       </motion.div>

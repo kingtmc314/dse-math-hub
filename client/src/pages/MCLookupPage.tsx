@@ -42,7 +42,7 @@ export default function MCLookupPage() {
 
   // Get solution data for this question
   const solution = useMemo(() => {
-    const yearSolutions = (solutionData as Record<string, Record<string, { solution_text?: string; solution_images?: string[]; latex?: string[] }>>)[selectedYear];
+    const yearSolutions = (solutionData as Record<string, Record<string, { solution_text?: string; solution_images?: string[]; latex?: string[]; generated?: boolean }>>)[selectedYear];
     if (!yearSolutions) return null;
     return yearSolutions[String(selectedQ)] || null;
   }, [selectedYear, selectedQ]);
@@ -233,6 +233,7 @@ export default function MCLookupPage() {
                     solutionText={solution?.solution_text || ""}
                     latexBlocks={solution?.latex || []}
                     solutionImages={solution?.solution_images || []}
+                    showTextWithLatex={Boolean(solution?.generated)}
                   />
                 </div>
               )}

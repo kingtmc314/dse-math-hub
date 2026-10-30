@@ -4011,5 +4011,542 @@
       ],
       "latex": []
     }
+  },
+  "2026": {
+    "1": {
+      "answer": "D",
+      "pct": 89.4,
+      "generated": true,
+      "solution_text": "先以 (k+2)(5k−6) 作公分母。第一個分式的分子須乘以 5k−6，第二個分式的分子須乘以 k+2。相加後，分子為 (5k−6)+3(k+2)=5k−6+3k+6=8k。因此結果為 8k/[(k+2)(5k−6)]，對應選項 D。原式的分母不可為零，故 k≠−2 且 k≠6/5。",
+      "latex": [
+        "\\frac{1}{k+2}+\\frac{3}{5k-6}=\\frac{(5k-6)+3(k+2)}{(k+2)(5k-6)}",
+        "\\frac{5k-6+3k+6}{(k+2)(5k-6)}=\\frac{8k}{(k+2)(5k-6)}",
+        "k\\ne -2,\\qquad k\\ne\\frac65"
+      ]
+    },
+    "2": {
+      "answer": "A",
+      "pct": 74.6,
+      "generated": true,
+      "solution_text": "先把所有底數化為 3。由於 9=3² 及 27=3³，分子可寫成 3^(6n+2)，而分母為 3^(2n+3)×3^(6n+3)=3^(8n+6)。同底數相除時指數相減，所以結果為 3^(−2n−4)。最後把它改寫成以 9 為底的冪，得到 9^(−n−2)，對應選項 A。",
+      "latex": [
+        "9^{3n+1}=(3^2)^{3n+1}=3^{6n+2},\\qquad 27^{2n+1}=(3^3)^{2n+1}=3^{6n+3}",
+        "3^{2n+3}\\cdot27^{2n+1}=3^{(2n+3)+(6n+3)}=3^{8n+6}",
+        "\\frac{3^{6n+2}}{3^{8n+6}}=3^{(6n+2)-(8n+6)}=3^{-2n-4}",
+        "3^{-2n-4}=(3^2)^{-n-2}=9^{-n-2}"
+      ]
+    },
+    "3": {
+      "answer": "D",
+      "pct": 82.3,
+      "generated": true,
+      "solution_text": "利用平方公式 (a−b)²=a²−2ab+b²，分別展開兩個平方。第一項得到 4α²−4αβ+β²，第二項得到 α²−4αβ+4β²。把同類項相加，α² 的係數為 5，αβ 的係數為 −8，β² 的係數為 5。因此結果為 5α²−8αβ+5β²，對應選項 D。",
+      "latex": [
+        "(2\\alpha-\\beta)^2=4\\alpha^2-4\\alpha\\beta+\\beta^2",
+        "(\\alpha-2\\beta)^2=\\alpha^2-4\\alpha\\beta+4\\beta^2",
+        "(2\\alpha-\\beta)^2+(\\alpha-2\\beta)^2=(4+1)\\alpha^2+(-4-4)\\alpha\\beta+(1+4)\\beta^2=5\\alpha^2-8\\alpha\\beta+5\\beta^2"
+      ]
+    },
+    "4": {
+      "answer": "A",
+      "pct": 81.8,
+      "generated": true,
+      "solution_text": "有效數字由第一個非零數字開始計算。230.045678 的首四個有效數字依次是 2、3、0、0，因此須保留至十分位。下一位（百分位）是 4，小於 5，不用進位，結果為 230.0；末尾的 0 必須保留，以表示四位有效數字。若取四位小數，則應為 230.0457，而不是選項 C 或 D 的數值。因此正確選項是 A。",
+      "latex": [
+        "230.045678\\approx230.0\\quad\\text{（準確至四位有效數字）}",
+        "230.045678\\approx230.0457\\quad\\text{（準確至四位小數）}"
+      ]
+    },
+    "5": {
+      "answer": "A",
+      "pct": 79.4,
+      "generated": true,
+      "solution_text": "先展開等式兩邊。左邊為 x²＋(m−9)x−5m−4n，右邊為 x²＋6x＋1。由於等式對所有 x 成立，比較 x 的係數，得 m−9＝6，所以 m＝15。再比較常數項，得 −5m−4n＝1。代入 m＝15，便有 −75−4n＝1，解得 n＝−19，對應選項 A。",
+      "latex": [
+        "(x-5)(x+m)-4(x+n)=x^2+(m-9)x-5m-4n",
+        "x(x+6)+1=x^2+6x+1",
+        "m-9=6\\quad\\Rightarrow\\quad m=15",
+        "-5m-4n=1\\quad\\Rightarrow\\quad-75-4n=1\\quad\\Rightarrow\\quad n=-19"
+      ]
+    },
+    "6": {
+      "answer": "C",
+      "pct": 68.2,
+      "generated": true,
+      "solution_text": "把左邊展開，再將右邊移至左邊，得到 x²＋(s＋t)x＋st＝0。此二次式可因式分解為 (x＋s)(x＋t)＝0。由零乘積性質，x＋s＝0 或 x＋t＝0，因此 x＝−s 或 x＝−t，對應選項 C。",
+      "latex": [
+        "x^2+(2s+t)x+2st=sx+st",
+        "x^2+(s+t)x+st=0",
+        "(x+s)(x+t)=0",
+        "x=-s\\quad\\text{或}\\quad x=-t"
+      ]
+    },
+    "7": {
+      "answer": "A",
+      "pct": 73.8,
+      "generated": true,
+      "solution_text": "將 x＝1＋d 代入函數，則 x＋d＝1＋2d，而 x−2＝d−1。利用 f(1＋d)＝0，得到 (1＋2d)(d−1)＋9(1＋d)＝0。展開並合併同類項，得 2d²＋8d＋8＝0，即 2(d＋2)²＝0。因此 d＝−2，對應選項 A。",
+      "latex": [
+        "f(1+d)=(1+2d)(d-1)+9(1+d)=0",
+        "2d^2-d-1+9+9d=0",
+        "2d^2+8d+8=2(d+2)^2=0",
+        "d=-2"
+      ]
+    },
+    "8": {
+      "answer": "D",
+      "pct": 46.4,
+      "generated": true,
+      "solution_text": "由因式定理，g(x) 可被 x−4 整除，所以 g(4)=0。代入後得 64h+4k+27=0，即 64h+4k=−27。根據餘式定理，g(x) 除以 x+4 的餘數是 g(−4)。因此餘數為 −(64h+4k)+27=27+27=54，對應選項 D。",
+      "latex": [
+        "g(4)=64h+2(4)^2+4k-5=64h+4k+27=0",
+        "64h+4k=-27",
+        "\\begin{aligned}g(-4)&=-64h+2(-4)^2-4k-5\\\\&=-(64h+4k)+27\\\\&=-(-27)+27=54.\\end{aligned}"
+      ]
+    },
+    "9": {
+      "answer": "D",
+      "pct": 72.8,
+      "generated": true,
+      "solution_text": "先分別解兩個不等式。第一個不等式兩邊乘以正數 3，得 3x−3>2x−9，因此 x>−6。第二個不等式為 3x+12≥0，因此 x≥−4。題目以「或」連接兩個條件，所以取兩個解集的聯集。由於 x≥−4 的所有數值都已包含在 x>−6 內，總解集為 x>−6，對應選項 D。",
+      "latex": [
+        "x-1>\\frac{2x-9}{3}\\iff 3x-3>2x-9\\iff x>-6",
+        "3x+12\\geq 0\\iff x\\geq -4",
+        "(-6,\\infty)\\cup[-4,\\infty)=(-6,\\infty)"
+      ]
+    },
+    "10": {
+      "answer": "A",
+      "pct": 63.1,
+      "generated": true,
+      "solution_text": "兩種米的成本分別為 12s 元及 18t 元，而混合後的總重量為 s+t 公斤。混合米每公斤成本為 16 元，故 12s+18t=16(s+t)。整理得 2t=4s，即 t=2s，所以 s:t=1:2，對應選項 A。",
+      "latex": [
+        "\\frac{12s+18t}{s+t}=16",
+        "12s+18t=16s+16t\\implies 2t=4s\\implies t=2s",
+        "s:t=1:2"
+      ]
+    },
+    "11": {
+      "answer": "B",
+      "pct": 77.1,
+      "generated": true,
+      "solution_text": "每季的利率為 4%÷4=1%，5 年共有 5×4=20 個複息期。利用複利公式，80000=P(1.01)²⁰，所以 P=80000÷(1.01)²⁰≈65563.56。四捨五入至最接近的整數，本金為 65564 元，對應選項 B。",
+      "latex": [
+        "r=\\frac{0.04}{4}=0.01,\\qquad n=5\\times4=20",
+        "80000=P(1.01)^{20}",
+        "P=\\frac{80000}{(1.01)^{20}}\\approx65563.56\\approx65564\\quad\\text{（取最接近的整數）}"
+      ]
+    },
+    "12": {
+      "answer": "B",
+      "pct": 72.4,
+      "generated": true,
+      "solution_text": "由正變及反變關係，可設 w＝k√u／v，其中 k 為比例常數。\n當 u 增加 44% 時，新值為 1.44u，所以 √u 變為原來的 √1.44＝1.2 倍。當 v 減少 20% 時，新值為 0.8v。\n因此，w 的新值是原來的 1.2÷0.8＝1.5 倍，即增加了 (1.5－1)×100%＝50%。故選 B。",
+      "latex": [
+        "w=\\frac{k\\sqrt{u}}{v}",
+        "\\frac{w_{\\text{新}}}{w_{\\text{原}}}=\\frac{\\sqrt{1.44}}{0.8}=\\frac{1.2}{0.8}=1.5",
+        "\\text{增加百分率}=(1.5-1)\\times100\\%=50\\%"
+      ]
+    },
+    "13": {
+      "answer": "C",
+      "pct": 67.1,
+      "generated": true,
+      "solution_text": "設相鄰兩項之差為 d_n＝a_{n+1}－a_n。把遞推關係減去 a_{n+1}，得 a_{n+2}－a_{n+1}＝2(a_{n+1}－a_n)，即相鄰項之差每次倍增。\n因此 d_3＝2d_2、d_4＝4d_2。由 a_5－a_2＝35－7＝28，可得 d_2＋d_3＋d_4＝7d_2＝28，所以 d_2＝4。\n繼續倍增，得 d_5＝32、d_6＝64、d_7＝128。因此 a_8＝a_5＋d_5＋d_6＋d_7＝35＋32＋64＋128＝259，對應選項 C。",
+      "latex": [
+        "d_n=a_{n+1}-a_n,\\qquad d_{n+1}=a_{n+2}-a_{n+1}=2(a_{n+1}-a_n)=2d_n",
+        "35-7=a_5-a_2=d_2+d_3+d_4=(1+2+4)d_2\\quad\\Longrightarrow\\quad d_2=4",
+        "d_5=2^3(4)=32,\\qquad d_6=64,\\qquad d_7=128",
+        "a_8=35+32+64+128=259"
+      ]
+    },
+    "14": {
+      "answer": "C",
+      "pct": 57.8,
+      "generated": true,
+      "solution_text": "將兩條直線寫成 y＝－ax＋b 及 y＝－cx＋d，可知它們的 y 軸截距分別為 b 和 d。圖中 L₁ 的 y 軸截距高於 L₂，且兩者均為正，因此 b＞d＞0，敘述 II 正確。\n設兩直線在正 x 軸上的共同交點為 (t,0)，其中 t＞0。代入兩條直線的方程，得 b＝at 及 d＝ct。因此 a＝b／t＞d／t＝c，故敘述 I 的 a＜c 不正確。\n另一方面，ad＝a(ct)＝c(at)＝bc，所以敘述 III 正確。\n只有 II 和 III 正確，故選 C。",
+      "latex": [
+        "L_1:\\ y=-ax+b,\\qquad L_2:\\ y=-cx+d,\\qquad b>d>0",
+        "(t,0),\\ t>0:\\qquad b=at,\\qquad d=ct",
+        "a=\\frac{b}{t}>\\frac{d}{t}=c",
+        "ad=a(ct)=c(at)=bc",
+        "\\text{只有 II 和 III 正確}"
+      ]
+    },
+    "15": {
+      "answer": "A",
+      "pct": 62.2,
+      "generated": true,
+      "solution_text": "把函數展開，得 y=pqx²+(2p+q)x+2。由於 pq<0，二次項系數為負，所以拋物線開口向下，敘述 I 正確。\n令 y=0，得 x=−1/p 或 x=−2/q。由 pq<0 可知 p、q 均不為零且異號，因此這兩個根異號，必定是兩個相異實根；圖像有兩個 x 軸截點，敘述 II 正確。\n當 x=0 時，y=2，所以圖像不通過原點，敘述 III 錯誤。\n因此只有 I 和 II 正確，答案為 A。",
+      "latex": [
+        "y=(px+1)(qx+2)=pqx^2+(2p+q)x+2",
+        "pq<0\\ \\Longrightarrow\\ \\text{拋物線開口向下}",
+        "(px+1)(qx+2)=0\\ \\Longrightarrow\\ x=-\\frac1p\\ \\text{或}\\ x=-\\frac2q",
+        "\\left(-\\frac1p\\right)\\left(-\\frac2q\\right)=\\frac{2}{pq}<0",
+        "y(0)=2\\ne0"
+      ]
+    },
+    "16": {
+      "answer": "B",
+      "pct": 46.6,
+      "generated": true,
+      "solution_text": "設扇形的弧長為 ℓ cm。扇形的周界由一段弧及兩條半徑組成，所以 k=ℓ+2×14=ℓ+28。\n利用扇形面積等於「半徑×弧長÷2」，面積為 14ℓ÷2=7ℓ cm²。題目給定面積為 3k cm²，故 7ℓ=3k。\n代入 k=ℓ+28，得 7ℓ=3(ℓ+28)，即 4ℓ=84，所以 ℓ=21。\n弧長為 21 cm，對應選項 B。",
+      "latex": [
+        "k=\\ell+2(14)=\\ell+28",
+        "A=\\frac12r\\ell=\\frac12(14)\\ell=7\\ell",
+        "7\\ell=3k=3(\\ell+28)",
+        "4\\ell=84\\ \\Longrightarrow\\ \\ell=21\\text{ cm}"
+      ]
+    },
+    "17": {
+      "answer": "B",
+      "pct": 56.6,
+      "generated": true,
+      "solution_text": "原角錐的底面積為 18×16=288 cm²，高為 12 cm，所以體積為 288×12÷3=1152 cm³。\n切割平面平行於原角錐的底面，因此頂部小角錐 X 與原角錐相似。X 的底面闊度為 12 cm，而原底面闊度為 16 cm，故相似長度比為 12/16=3/4。\n相似立體的體積比等於相似長度比的三次方，所以 X 的體積為 1152×(3/4)³=486 cm³。\n台體 Y 的體積等於原角錐體積減去 X 的體積，即 1152−486=666 cm³，對應選項 B。",
+      "latex": [
+        "V_{\\text{原角錐}}=\\frac13(18)(16)(12)=1152\\text{ cm}^3",
+        "\\frac{\\text{X 的對應長度}}{\\text{原角錐的對應長度}}=\\frac{12}{16}=\\frac34",
+        "\\frac{V_X}{V_{\\text{原角錐}}}=\\left(\\frac34\\right)^3=\\frac{27}{64}",
+        "V_X=1152\\times\\frac{27}{64}=486\\text{ cm}^3",
+        "V_Y=1152-486=666\\text{ cm}^3"
+      ]
+    },
+    "18": {
+      "answer": "C",
+      "pct": 51.8,
+      "generated": true,
+      "solution_text": "設 AB＝x，兩條平行線 AB、DC 之間的距離為 h。由 △ABD 的面積為 225 cm²，得 xh＝450；又由 AB：CD＝3：5，得 CD＝5x/3。\n由圖中 B、E、D 共線，且 EF∥AB、BF∥AD，可得 △BEF∼△DBA。因此 EF/AB＝BE/BD＝2/5，即 EF＝2x/5。\n由 BE：ED＝2：3，得 DE/DB＝3/5。沿 DB 由 D 移至 E 時，到直線 DC 的垂直距離按相同比例增加，所以梯形 CDEF 的高為 3h/5。\n故其面積為 ½(5x/3＋2x/5)(3h/5)＝31xh/50＝279 cm²，對應選項 C。",
+      "latex": [
+        "\\frac12 xh=225\\quad\\Rightarrow\\quad xh=450,\\qquad CD=\\frac53x",
+        "\\triangle BEF\\sim\\triangle DBA,\\qquad \\frac{EF}{AB}=\\frac{BE}{BD}=\\frac25\\quad\\Rightarrow\\quad EF=\\frac25x",
+        "\\frac{DE}{DB}=\\frac35\\quad\\Rightarrow\\quad \\text{梯形 }CDEF\\text{ 的高}=\\frac35h",
+        "[CDEF]=\\frac12\\left(\\frac53x+\\frac25x\\right)\\left(\\frac35h\\right)=\\frac{31}{50}xh=\\frac{31}{50}(450)=279\\text{ cm}^2"
+      ]
+    },
+    "19": {
+      "answer": "C",
+      "pct": 57.1,
+      "generated": true,
+      "solution_text": "因 ∠QPR＝90°，QR 是斜邊，而 PQ、PR 是兩條互相垂直的直角邊。\n以 ∠PQR＝θ 考慮，PQ 是鄰邊，故 cos θ＝PQ/QR＝PQ/p，得 PQ＝p cos θ。\n因此三角形面積 S＝½×PQ×PR＝½pq cos θ，對應選項 C。",
+      "latex": [
+        "\\cos\\theta=\\frac{PQ}{QR}=\\frac{PQ}{p}\\quad\\Rightarrow\\quad PQ=p\\cos\\theta",
+        "S=\\frac12(PQ)(PR)=\\frac12(p\\cos\\theta)q=\\frac12pq\\cos\\theta"
+      ]
+    },
+    "20": {
+      "answer": "B",
+      "pct": 69.1,
+      "generated": true,
+      "solution_text": "ABCD 是長方形，所以 DC＝AB＝3 cm，且 DC⊥CE。在直角三角形 DCE 中，由畢氏定理，DE＝√(3²＋4²)＝5 cm。\n圖中 C、E、B 共線，D、E、F 共線，而 ∠DCE＝∠FBE＝90°，∠DEC＝∠FEB（對頂角），故 △DCE∼△FBE。\n兩三角形的對應邊比為 BE/CE＝12/4＝3，因此 EF＝3DE＝15 cm，對應選項 B。",
+      "latex": [
+        "DC=AB=3\\text{ cm},\\qquad DE=\\sqrt{DC^2+CE^2}=\\sqrt{3^2+4^2}=5\\text{ cm}",
+        "\\angle DCE=\\angle FBE=90^\\circ,\\qquad \\angle DEC=\\angle FEB\\quad\\Rightarrow\\quad\\triangle DCE\\sim\\triangle FBE",
+        "\\frac{EF}{DE}=\\frac{BE}{CE}=\\frac{12}{4}=3\\quad\\Rightarrow\\quad EF=3(5)=15\\text{ cm}"
+      ]
+    },
+    "21": {
+      "answer": "C",
+      "pct": 43.6,
+      "generated": true,
+      "solution_text": "由兩組已知的相等角，△WXY 與 △YWZ 以 AA 判定相似，對應頂點為 W↔Y、X↔W、Y↔Z。因此，WX 對應 YW，XY 對應 WZ，WY 對應 YZ。兩三角形的對應邊比為 9:40，故 WZ＝41×40÷9＝1640/9 cm，YZ＝40×40÷9＝1600/9 cm。四邊形的周界只包括 WX、XY、YZ、ZW，不包括對角線 WY；所以周界為 9＋41＋1600/9＋1640/9＝410 cm，對應選項 C。",
+      "latex": [
+        "\\angle WXY=\\angle YWZ,\\quad \\angle WYX=\\angle WZY\\quad\\Rightarrow\\quad\\triangle WXY\\sim\\triangle YWZ",
+        "\\frac{WX}{YW}=\\frac{XY}{WZ}=\\frac{WY}{YZ}=\\frac{9}{40}",
+        "WZ=41\\times\\frac{40}{9}=\\frac{1640}{9}\\text{ cm},\\qquad YZ=40\\times\\frac{40}{9}=\\frac{1600}{9}\\text{ cm}",
+        "\\text{周界}=WX+XY+YZ+ZW=9+41+\\frac{1600}{9}+\\frac{1640}{9}=410\\text{ cm}"
+      ]
+    },
+    "22": {
+      "answer": "C",
+      "pct": 71.6,
+      "generated": true,
+      "solution_text": "圖形是一個凹五邊形，左上角及左下角均為 90°。凹入頂點右方標示的 q 並非五邊形的內角；該頂點的內角是反角，大小為 360°－q。五邊形內角和為 540°，所以 90°＋p＋(360°－q)＋r＋90°＝540°。整理得 p＋r＝q，因此必然成立的是選項 C。",
+      "latex": [
+        "\\text{凹入頂點的內角}=360^\\circ-q",
+        "\\text{五邊形內角和}=(5-2)\\times180^\\circ=540^\\circ",
+        "90^\\circ+p+(360^\\circ-q)+r+90^\\circ=540^\\circ",
+        "p+r=q"
+      ]
+    },
+    "23": {
+      "answer": "D",
+      "pct": 39.3,
+      "generated": true,
+      "solution_text": "平移、旋轉及等比縮放不會改變本題的平行、相似或全等關係，因此可取正六邊形的邊長為 2，並設定 A(−1,0)、B(1,0)、C(2,√3)、D(1,2√3)、E(−1,2√3)、F(−2,√3)。AC 與 BF 的直線方程分別為 y＝√3(x＋1)/3 及 y＝√3(1－x)/3，聯立得 G(0,√3/3)。\nI：向量 BG＝(−1,√3/3)，而 CE＝(−3,√3)＝3BG，故 BG∥CE，I 正確。\nII：由座標及距離公式，AB＝2、BD＝2√3、BC＝DC＝2，並且 AG＝BG＝2/√3。因此 AB/BD＝BG/DC＝AG/BC＝1/√3，三組對應邊成比例，故 △ABG∼△BDC，II 正確。\nIII：同樣由距離公式，AG＝BG＝2/√3、GF＝GC＝4/√3，而 AF＝BC＝2。三組對應邊分別相等，故 △AGF≅△BGC（SSS），III 正確。\n所以 I、II、III 全部正確，對應選項 D。",
+      "latex": [
+        "\\begin{aligned} A&=(-1,0),& B&=(1,0),& C&=(2,\\sqrt3),\\\\ D&=(1,2\\sqrt3),& E&=(-1,2\\sqrt3),& F&=(-2,\\sqrt3). \\end{aligned}",
+        "AC:\\ y=\\frac{\\sqrt3}{3}(x+1),\\qquad BF:\\ y=\\frac{\\sqrt3}{3}(1-x)\\quad\\Rightarrow\\quad G=\\left(0,\\frac{\\sqrt3}{3}\\right)",
+        "\\overrightarrow{BG}=\\left(-1,\\frac{\\sqrt3}{3}\\right),\\qquad \\overrightarrow{CE}=(-3,\\sqrt3)=3\\overrightarrow{BG}\\quad\\Rightarrow\\quad BG\\parallel CE",
+        "AG=BG=\\sqrt{1+\\left(\\frac{\\sqrt3}{3}\\right)^2}=\\frac{2}{\\sqrt3},\\qquad GF=GC=\\sqrt{2^2+\\left(\\frac{2\\sqrt3}{3}\\right)^2}=\\frac{4}{\\sqrt3}",
+        "\\frac{AB}{BD}=\\frac{2}{2\\sqrt3}=\\frac{BG}{DC}=\\frac{2/\\sqrt3}{2}=\\frac{AG}{BC}=\\frac{1}{\\sqrt3}\\quad\\Rightarrow\\quad\\triangle ABG\\sim\\triangle BDC",
+        "AG=BG,\\qquad GF=GC,\\qquad AF=BC=2\\quad\\Rightarrow\\quad\\triangle AGF\\cong\\triangle BGC\\ \\text{（SSS）}"
+      ]
+    },
+    "24": {
+      "answer": "D",
+      "pct": 69.0,
+      "generated": true,
+      "solution_text": "向左平移 5 個單位只改變 x 坐標，所以 U＝(3－5,1)＝(−2,1)。繞原點逆時針旋轉 270°，等同順時針旋轉 90°，其坐標變換為 (x,y)→(y,−x)。因此 V＝(1,2)，所求的 y 坐標為 2，對應選項 D。",
+      "latex": [
+        "U=(3-5,1)=(-2,1)",
+        "\\text{逆時針旋轉 }270^\\circ:\\quad(x,y)\\mapsto(y,-x)",
+        "V=(1,-(-2))=(1,2)\\quad\\Rightarrow\\quad y_V=2"
+      ]
+    },
+    "25": {
+      "answer": "B",
+      "pct": 50.8,
+      "generated": true,
+      "solution_text": "由圖可見，T 位於線段 OQ 及 PR 上。因此，∠PTO 與 ∠PTQ 互為補角，得 ∠PTO＝180°−104°＝76°。在三角形 POT 中，∠OPT＝180°−82°−76°＝22°。由於 P、T、R 共線，∠OPR＝22°。\n又因 OP＝OR（同圓半徑），三角形 OPR 是等腰三角形，所以 ∠ORP＝22°，從而 ∠POR＝180°−22°−22°＝136°。\n由圖中射線的位置，OQ 位於 ∠POR 內，且 ∠POQ＝∠POT＝82°，故 ∠QOR＝136°−82°＝54°。∠QSR 是對着同一段小弧 QR 的圓周角，等於圓心角 ∠QOR 的一半，因此 ∠QSR＝27°，對應選項 B。",
+      "latex": [
+        "\\angle PTO=180^\\circ-104^\\circ=76^\\circ",
+        "\\angle OPT=180^\\circ-82^\\circ-76^\\circ=22^\\circ",
+        "OP=OR\\ \\Rightarrow\\ \\angle OPR=\\angle ORP=22^\\circ",
+        "\\angle POR=180^\\circ-2(22^\\circ)=136^\\circ",
+        "\\angle QOR=\\angle POR-\\angle POQ=136^\\circ-82^\\circ=54^\\circ",
+        "\\angle QSR=\\frac12\\angle QOR=27^\\circ"
+      ]
+    },
+    "26": {
+      "answer": "D",
+      "pct": 57.1,
+      "generated": true,
+      "solution_text": "設動點 P 的坐標為 (x,y)。利用點到直線的距離公式，P 到 L₁ 的距離為 |3x＋5y−6|／√34；P 到 L₂ 的距離為 |6x−10y−13|／(2√34)。\n兩距離相等，故 2|3x＋5y−6|＝|6x−10y−13|。去掉絕對值後須分兩種情況：\n第一種：6x＋10y−12＝6x−10y−13，化簡得 y＝−1/20。\n第二種：6x＋10y−12＝−(6x−10y−13)，化簡得 x＝25/12。\n因此，軌跡由一條水平直線和一條垂直直線組成，即一對直線；它們也是 L₁、L₂ 的兩條角平分線，故選 D。",
+      "latex": [
+        "d(P,L_1)=\\frac{|3x+5y-6|}{\\sqrt{3^2+5^2}}=\\frac{|3x+5y-6|}{\\sqrt{34}}",
+        "d(P,L_2)=\\frac{|6x-10y-13|}{\\sqrt{6^2+(-10)^2}}=\\frac{|6x-10y-13|}{2\\sqrt{34}}",
+        "d(P,L_1)=d(P,L_2)\\ \\Longleftrightarrow\\ |6x+10y-12|=|6x-10y-13|",
+        "6x+10y-12=6x-10y-13\\ \\Rightarrow\\ y=-\\frac1{20}",
+        "6x+10y-12=-(6x-10y-13)\\ \\Rightarrow\\ x=\\frac{25}{12}",
+        "\\text{軌跡：}\\quad y=-\\frac1{20}\\quad\\text{或}\\quad x=\\frac{25}{12}"
+      ]
+    },
+    "27": {
+      "answer": "A",
+      "pct": 50.0,
+      "generated": true,
+      "solution_text": "圓心的 x 坐標為 5，設圓心為 (5,k)。圓經過 (5,0) 及 (11,4)，所以這兩點到圓心的距離相等。\n比較距離的平方，得 k²＝(11−5)²＋(4−k)²＝36＋(4−k)²。展開及消去 k² 後，得 8k＝52，因此 k＝13/2。\n圓心與 (5,0) 的 x 坐標相同，故半徑為 |k|＝13/2。圓周長為 2π×13/2＝13π，對應選項 A。",
+      "latex": [
+        "\\text{設圓心為 }(5,k),\\qquad k^2=(11-5)^2+(4-k)^2",
+        "k^2=36+16-8k+k^2\\ \\Rightarrow\\ 8k=52\\ \\Rightarrow\\ k=\\frac{13}{2}",
+        "r=\\sqrt{(5-5)^2+\\left(\\frac{13}{2}-0\\right)^2}=\\frac{13}{2}",
+        "\\text{圓周長}=2\\pi r=2\\pi\\left(\\frac{13}{2}\\right)=13\\pi"
+      ]
+    },
+    "28": {
+      "answer": "C",
+      "pct": 67.3,
+      "generated": true,
+      "solution_text": "兩張寫有 2 的卡是不同的實物，記作 2₁、2₂。從五張卡中同時抽出兩張，共有 10 個等可能的組合。\n若不抽到 6，最大的和只是 3＋4＝7，不符合「大於 7」。若抽到 6，另一張可以是其餘四張中的任何一張，所得的和分別為 8、8、9、10，全部符合條件。\n因此有利組合共有 4 個，所求概率為 4／10＝2／5，對應選項 C。",
+      "latex": [
+        "N=\\binom{5}{2}=10",
+        "\\text{有利組合：}\\quad (2_1,6),\\ (2_2,6),\\ (3,6),\\ (4,6)",
+        "P(\\text{兩數之和}>7)=\\frac{4}{10}=\\frac{2}{5}"
+      ]
+    },
+    "29": {
+      "answer": "D",
+      "pct": 76.7,
+      "generated": true,
+      "solution_text": "框線圖顯示數據的最小值、下四分位數、中位數、上四分位數及最大值。\nI：框線圖沒有顯示每一個數據值，故一般不能由它求得所有數據的總和，亦不能確定平均數。\nII：框的下端（橫向框線圖則為左端）表示下四分位數，因此可以讀取。\nIII：四分位數間距等於上四分位數減去下四分位數；這兩個數值均可從框線圖讀取，因此可以求得。\n所以只有 II 和 III 正確，對應選項 D。",
+      "latex": [
+        "\\mathrm{IQR}=Q_3-Q_1",
+        "\\text{可由框線圖求得的項目：II 和 III}"
+      ]
+    },
+    "30": {
+      "answer": "B",
+      "pct": 51.2,
+      "generated": true,
+      "solution_text": "先利用平均數及分佈域找出 x、y 的所有可能值。\n十個整數的平均數為 9，所以總和為 90。已知八個整數的總和為 68，故 x＋y＝22。\n已知數據包含 4 和 13，而分佈域恰好是 9＝13－4，因此 x、y 都必須在 4 至 13 之間。配合 x＋y＝22，可知兩者均不少於 9。不計交換次序，只有三組可能：(9,13)、(10,12)、(11,11)。\n計算方差時，已知八個數據與平均數 9 的離差平方和為 62。加入 x、y 的離差平方，再除以數據個數 10，三種情況的方差依次為 7.8、7.2、7。因此 u＜7 在三種情況下都不成立，I 錯誤。\n將數據由小至大排列後，首五個數必為 4、7、7、7、8。三種情況的第六個數依次為 9、10、11，所以中位數依次為 8.5、9、9.5，全部大於 7，II 必定成立。\n當 x＝y＝11 時，11 共出現四次，而 7 只出現三次，故眾數是 11，不是 7。因此 III 並非必定成立。\n只有 II 必定正確，對應選項 B。",
+      "latex": [
+        "x+y=10(9)-\\bigl(4+7+7+7+8+11+11+13\\bigr)=90-68=22",
+        "4\\le x,y\\le13,\\quad x+y=22\\ \\Longrightarrow\\ 9\\le x,y\\le13",
+        "\\text{不計次序，}\\quad (x,y)=(9,13),\\ (10,12),\\ (11,11)",
+        "(4-9)^2+3(7-9)^2+(8-9)^2+2(11-9)^2+(13-9)^2=62",
+        "u=\\frac{62+(x-9)^2+(y-9)^2}{10}",
+        "\\begin{array}{c|c|c|c}(x,y)&u&v&w\\\\\\hline(9,13)&7.8&\\dfrac{8+9}{2}=8.5&7\\\\(10,12)&7.2&\\dfrac{8+10}{2}=9&7\\\\(11,11)&7&\\dfrac{8+11}{2}=9.5&11\\end{array}",
+        "\\text{只有 II 必定成立。}"
+      ]
+    },
+    "31": {
+      "answer": "A",
+      "pct": 72.2,
+      "generated": true,
+      "solution_text": "二進制數由右至左的位值依次為 2⁰、2¹、2²，等等。題中數字 1 所在各位的位值為 2¹⁵、2¹³、2¹¹、2³、2²及 2¹，其餘各位不產生數值。把前三項提出公因子 2¹¹，得到 (16＋4＋1)×2¹¹＝21×2¹¹；最後三項的和為 8＋4＋2＝14。因此原數等於 21×2¹¹＋14，對應選項 A。",
+      "latex": [
+        "2^{15}+2^{13}+2^{11}+2^3+2^2+2^1",
+        "=\\left(2^4+2^2+1\\right)2^{11}+(8+4+2)",
+        "=21\\times 2^{11}+14"
+      ]
+    },
+    "32": {
+      "answer": "D",
+      "pct": 73.0,
+      "generated": true,
+      "solution_text": "設第三個單項式為 xᵃyᵇzᶜ。求單項式的最大公因式時，每個變數取三個指數中的最小值；求最小公倍式時，則取最大值。\n已知首兩式為 xy³z⁶ 及 xy²z⁴。它們的 x 指數都是 1，而最小公倍式的 x 指數為 2，所以 a＝2。它們的 y 指數為 3 及 2，而最小公倍式的 y 指數為 4，所以 b＝4。它們的 z 指數為 6 及 4，而最大公因式的 z 指數為 3，所以 c＝3。\n因此第三式為 x²y⁴z³。檢查三式各變數指數的最小值為 1、2、3，最大值為 2、4、6，均符合題目，故選 D。",
+      "latex": [
+        "\\text{設第三式為 }x^a y^b z^c.",
+        "\\max(1,1,a)=2\\quad\\Rightarrow\\quad a=2",
+        "\\max(3,2,b)=4\\quad\\Rightarrow\\quad b=4",
+        "\\min(6,4,c)=3\\quad\\Rightarrow\\quad c=3",
+        "\\therefore\\ \\text{第三式}=x^2y^4z^3"
+      ]
+    },
+    "33": {
+      "answer": "C",
+      "pct": 56.0,
+      "generated": true,
+      "solution_text": "設前 n 項和為 Sₙ，第 n 項為 aₙ。首先，a₁＝S₁＝3－1＝2，而 a₂＝S₂－S₁＝(9－1)－2＝6，並非 8，所以 I 不成立。\n當 n≥2 時，aₙ＝Sₙ－Sₙ₋₁＝(3ⁿ－1)－(3ⁿ⁻¹－1)＝2×3ⁿ⁻¹。這公式在 n＝1 時亦給出 a₁＝2，因此適用於所有正整數 n。\n相鄰兩項之比恒為 3，所以數列是等比數列，II 成立。此外，每項都是 2 乘以整數 3ⁿ⁻¹，因此全部都是偶數，III 成立。只有 II 及 III 正確，故選 C。",
+      "latex": [
+        "a_1=S_1=3^1-1=2",
+        "a_2=S_2-S_1=(3^2-1)-(3^1-1)=6\\ne 8",
+        "a_n=S_n-S_{n-1}=(3^n-1)-(3^{n-1}-1)=2\\cdot3^{n-1}\\quad(n\\ge2)",
+        "a_n=2\\cdot3^{n-1}\\quad(n\\ge1),\\qquad \\frac{a_{n+1}}{a_n}=3",
+        "3^{n-1}\\in\\mathbb{Z}\\quad\\Rightarrow\\quad a_n\\text{ 為偶數}"
+      ]
+    },
+    "34": {
+      "answer": "C",
+      "pct": 56.6,
+      "generated": true,
+      "solution_text": "利用 i²＝−1，可得 i³＝−i、i⁴＝1，因此分子化簡為 −2＋2i。把分母的共軛複數 −1−βi 同乘於分子及分母，所得商的虛部為 (2β−2)/(1＋β²)。由於 β 是實數，1＋β² 必定大於零；而題設要求此商為實數，所以虛部必須等於零，即 2β−2＝0，得 β＝1。因此答案為 C。",
+      "latex": [
+        "i^4+2i^3+3i^2+4i=1-2i-3+4i=-2+2i",
+        "\\frac{-2+2i}{-1+\\beta i}=\\frac{(-2+2i)(-1-\\beta i)}{(-1+\\beta i)(-1-\\beta i)}=\\frac{2+2\\beta+(2\\beta-2)i}{1+\\beta^2}",
+        "\\frac{2\\beta-2}{1+\\beta^2}=0\\quad\\Longrightarrow\\quad\\beta=1"
+      ]
+    },
+    "35": {
+      "answer": "B",
+      "pct": 50.3,
+      "generated": true,
+      "solution_text": "函數的定義域為 x＞−4。因為對數的底數 3 大於 1，log₃(x＋4) 隨 x 增加而增加，所以 y＝2−log₃(x＋4) 反而隨 x 增加而減少，敘述 I 錯誤。求 x 軸截距時，令 y＝0，得 log₃(x＋4)＝2，即 x＋4＝9，所以 x＝5，敘述 II 正確。求 y 軸截距時，令 x＝0，得 y＝2−log₃4；因為 log₃4 不等於零，此截距不等於 2，敘述 III 錯誤。因此只有 II 正確，答案為 B。",
+      "latex": [
+        "x+4>0\\quad\\Longrightarrow\\quad x>-4",
+        "y=0\\quad\\Longrightarrow\\quad\\log_3(x+4)=2\\quad\\Longrightarrow\\quad x+4=3^2=9\\quad\\Longrightarrow\\quad x=5",
+        "x=0\\quad\\Longrightarrow\\quad y=2-\\log_3 4\\ne2"
+      ]
+    },
+    "36": {
+      "answer": "D",
+      "pct": 41.6,
+      "generated": true,
+      "solution_text": "這裏的直線圖以 x 為橫軸、log y 為縱軸。縱軸截距為 2，表示直線通過 (0,2)；橫軸截距為 1，表示直線通過 (1,0)。因此斜率為 −2，直線方程為 log y＝2−2x。另一方面，由 y＝abˣ 取常用對數，得 log y＝log a＋x log b。比較常數項可得 log a＝2，故 a＝10²＝100，對應選項 D。",
+      "latex": [
+        "m=\\frac{0-2}{1-0}=-2,\\qquad \\log y=2-2x",
+        "y=ab^x\\quad\\Longrightarrow\\quad\\log y=\\log a+x\\log b",
+        "\\log a=2\\quad\\Longrightarrow\\quad a=10^2=100"
+      ]
+    },
+    "37": {
+      "answer": "A",
+      "pct": 49.3,
+      "generated": true,
+      "solution_text": "由 6x＋13y≥25，得 x≥(25−13y)/6。代入待求式，可得 5x＋4y＋28≥(293−41y)/6。又因 y≤7，而 −41 是負數，所以 (293−41y)/6≥(293−41×7)/6＝1。\n接着檢查這個下界能否達到：取 (x,y)＝(−11,7)，則 y＝7、3x−4y＝−61≤2，以及 6x＋13y＝25，故此點確實位於區域 R 內。此時 5x＋4y＋28＝1。因此最小值為 1，對應選項 A。",
+      "latex": [
+        "6x+13y\\ge25\\quad\\Rightarrow\\quad x\\ge\\frac{25-13y}{6}",
+        "\\begin{aligned}5x+4y+28&\\ge\\frac{5(25-13y)}6+4y+28\\\\&=\\frac{293-41y}{6}\\\\&\\ge\\frac{293-41(7)}6=1\\end{aligned}",
+        "\\begin{aligned}(x,y)&=(-11,7),\\\\3x-4y&=-61\\le2,\\\\6x+13y&=25,\\\\5x+4y+28&=-55+28+28=1.\\end{aligned}"
+      ]
+    },
+    "38": {
+      "answer": "B",
+      "pct": 40.1,
+      "generated": true,
+      "solution_text": "圖中 B、E、D、T 共線，A、E、C 共線。由 AB∥TC，可得 ∠ABE＝∠CTE＝23°。由於 EB 和 ED 是方向相反的射線，∠AEB＝180°−85°＝95°。因此在三角形 ABE 中，∠BAE＝180°−95°−23°＝62°，亦即 ∠BAC＝62°。\n再由 AB∥TC，得 ∠ACT＝∠BAC＝62°。TC 是圓在 C 點的切線，根據弦切角定理，∠ABC＝∠ACT＝62°。所以三角形 ABC 中，∠ACB＝180°−62°−62°＝56°。\n∠ADB 與 ∠ACB 是同弦 AB 所對、位於同一弓形內的圓周角，故兩角相等。又 DE 與 DB 方向相同，所以 ∠ADE＝∠ADB＝56°，對應選項 B。",
+      "latex": [
+        "\\angle ABE=\\angle CTE=23^\\circ,\\qquad \\angle AEB=180^\\circ-85^\\circ=95^\\circ",
+        "\\angle BAC=\\angle BAE=180^\\circ-95^\\circ-23^\\circ=62^\\circ",
+        "\\angle ABC=\\angle ACT=\\angle BAC=62^\\circ",
+        "\\angle ACB=180^\\circ-62^\\circ-62^\\circ=56^\\circ",
+        "\\angle ADE=\\angle ADB=\\angle ACB=56^\\circ"
+      ]
+    },
+    "39": {
+      "answer": "A",
+      "pct": 24.4,
+      "generated": true,
+      "solution_text": "由 ∠TSU＝∠TVU＝90°，可知 S 和 V 均位於以 TU 為直徑的圓上，因此 T、U、V、S 共圓。在直角三角形 TUV 中，∠TUV＝180°−90°−30°＝60°。圓內接四邊形的對角互補，故 ∠TSV＝180°−60°＝120°。\n在三角形 TSV 中，利用餘弦公式，TV²＝8²＋5²−2×8×5×cos120°＝129，所以 TV＝√129。再利用餘弦公式，cos∠STV＝(8²＋129−5²)/(2×8×√129)＝21/(2√129)，得 ∠STV≈22.4°。\n∠STV 和 ∠SUV 是同弦 SV 所對、位於同一弓形內的圓周角，故 ∠SUV＝∠STV≈22.4°。取最接近的整數為 22°，對應選項 A。",
+      "latex": [
+        "\\angle TUV=180^\\circ-90^\\circ-30^\\circ=60^\\circ,\\qquad \\angle TSV=180^\\circ-60^\\circ=120^\\circ",
+        "TV^2=8^2+5^2-2(8)(5)\\cos120^\\circ=129",
+        "\\cos\\angle STV=\\frac{ST^2+TV^2-SV^2}{2(ST)(TV)}=\\frac{64+129-25}{16\\sqrt{129}}=\\frac{21}{2\\sqrt{129}}",
+        "\\angle SUV=\\angle STV=\\cos^{-1}\\!\\left(\\frac{21}{2\\sqrt{129}}\\right)\\approx22.4^\\circ\\approx22^\\circ"
+      ]
+    },
+    "40": {
+      "answer": "D",
+      "pct": 38.2,
+      "generated": true,
+      "solution_text": "設 AB＝AC＝a，則 AE＝2a。由於這是直棱柱，AE 垂直於平面 ABC。\n取 BC 的中點 H。△ABC 是以 A 為直角頂點的等腰直角三角形，所以 AH 垂直於 BC，且 BC＝a√2、AH＝a/√2。又因 AE 垂直於平面 ABC，而 BC 同時垂直於 AH 和 AE 的方向，故 BC 垂直於平面 AEH，從而 EH 也垂直於 BC。\n平面 ABC 與平面 BCE 的交線是 BC；AH 和 EH 分別在這兩個平面內並垂直於 BC，所以所求的平面夾角 θ 就是 ∠AHE。\n在直角三角形 AEH 中，EH＝√(AE²＋AH²)＝3a/√2。因此 sin θ＝AE/EH＝2√2/3，對應選項 D。",
+      "latex": [
+        "AB=AC=a,\\qquad AE=2a,\\qquad AE\\perp\\text{平面 }ABC",
+        "BC=\\sqrt{a^2+a^2}=a\\sqrt2,\\qquad AH=\\sqrt{a^2-\\left(\\frac{a\\sqrt2}{2}\\right)^2}=\\frac{a}{\\sqrt2}",
+        "AH\\perp BC,\\quad EH\\perp BC\\quad\\Longrightarrow\\quad\\theta=\\angle AHE",
+        "EH=\\sqrt{AE^2+AH^2}=\\sqrt{4a^2+\\frac{a^2}{2}}=\\frac{3a}{\\sqrt2}",
+        "\\sin\\theta=\\frac{AE}{EH}=\\frac{2a}{3a/\\sqrt2}=\\boxed{\\frac{2\\sqrt2}{3}}"
+      ]
+    },
+    "41": {
+      "answer": "C",
+      "pct": 40.4,
+      "generated": true,
+      "solution_text": "令 u＝sin²θ，原方程可因式分解為 (3u－1)(2u－1)＝0，所以 sin²θ＝1/3 或 1/2。\n先考慮 sin²θ＝1/3。設 α＝arcsin(1/√3)，則 0°＜α＜90°。在 90°≤θ≤360° 內，第二、第三及第四象限各有一個解，分別是 180°－α、180°＋α、360°－α，共 3 個；第一象限的解 α 不在指定範圍內。\n當 sin²θ＝1/2 時，指定範圍內的解為 135°、225°、315°，也有 3 個。兩組解互不重疊，而端點 90° 和 360° 均不符合方程。因此共有 3＋3＝6 個根，對應選項 C。",
+      "latex": [
+        "u=\\sin^2\\theta,\\qquad 6u^2-5u+1=(3u-1)(2u-1)=0",
+        "\\sin^2\\theta=\\frac13\\quad\\text{或}\\quad\\sin^2\\theta=\\frac12",
+        "\\alpha=\\arcsin\\frac1{\\sqrt3},\\qquad 0^\\circ<\\alpha<90^\\circ",
+        "\\sin^2\\theta=\\frac13:\\quad\\theta=180^\\circ-\\alpha,\\ 180^\\circ+\\alpha,\\ 360^\\circ-\\alpha",
+        "\\sin^2\\theta=\\frac12:\\quad\\theta=135^\\circ,\\ 225^\\circ,\\ 315^\\circ",
+        "\\text{根的總數}=3+3=\\boxed{6}"
+      ]
+    },
+    "42": {
+      "answer": "B",
+      "pct": 71.5,
+      "generated": true,
+      "solution_text": "班中共有 10 人，選出 5 人的委員會共有 C(10,5)＝252 種等可能選法。\n利用補事件計算：因為全班只有 3 名男生，「至多選出 2 名男生」的補事件就是「選出全部 3 名男生」。在此情況下，其餘 2 人須從 7 名女生中選出，因此補事件共有 C(3,3)×C(7,2)＝21 種選法。\n所求概率為 1－21/252＝11/12，對應選項 B。",
+      "latex": [
+        "\\text{全部選法數}=\\binom{10}{5}=252",
+        "\\text{選出全部三名男生的選法數}=\\binom33\\binom72=1\\times21=21",
+        "P(\\text{至多兩名男生})=1-P(\\text{三名男生})=1-\\frac{21}{252}=\\boxed{\\frac{11}{12}}"
+      ]
+    },
+    "43": {
+      "answer": "C",
+      "pct": 34.8,
+      "generated": true,
+      "solution_text": "從8名員工中選7名，只有兩種情況：選5名全職及2名兼職，或選4名全職及3名兼職。每名員工均視為不同的人。\n第一種情況：5名全職員工有5!種排列。排好後，包括隊首和隊尾，共有6個空位。為免兼職員工相鄰，須把2名兼職員工放入不同空位。選兼職員工、選空位及排列他們的方法數分別為C(3,2)、C(6,2)及2!，故共有10800種。\n第二種情況：先從5名全職員工中選4名並排列，有C(5,4)×4!種方法。排好後有5個空位，從中選3個，放入並排列全部3名兼職員工，故共有7200種。\n兩種情況互不重疊，因此總數為10800＋7200＝18000，對應選項C。",
+      "latex": [
+        "N_1=\\binom{3}{2}\\cdot5!\\cdot\\binom{6}{2}\\cdot2!=10800",
+        "N_2=\\binom{5}{4}\\cdot4!\\cdot\\binom{5}{3}\\cdot3!=7200",
+        "N=N_1+N_2=10800+7200=18000"
+      ]
+    },
+    "44": {
+      "answer": "B",
+      "pct": 63.1,
+      "generated": true,
+      "solution_text": "設測驗分數的平均值為μ，標準差為σ。標準分由z＝(x－μ)/σ計算。\n40分的標準分是0，所以μ＝40。58分的標準分是2，因此(58－40)/σ＝2，得σ＝9。\nα的標準分是−1，故α＝40－9＝31；β的標準分是3，故β＝40＋3×9＝67。\n所以β－α＝67－31＝36，對應選項B。",
+      "latex": [
+        "z=\\frac{x-\\mu}{\\sigma}",
+        "\\frac{40-\\mu}{\\sigma}=0\\quad\\Rightarrow\\quad\\mu=40",
+        "\\frac{58-40}{\\sigma}=2\\quad\\Rightarrow\\quad\\sigma=9",
+        "\\alpha=40-9=31,\\qquad\\beta=40+3(9)=67",
+        "\\beta-\\alpha=67-31=36"
+      ]
+    },
+    "45": {
+      "answer": "A",
+      "pct": 48.4,
+      "generated": true,
+      "solution_text": "原來五個數的標準差是5，所以方差是5²＝25。\n每個數都先加2，再除以5。加上相同常數不改變各數與平均值的差；除以5則使各數與平均值的差變為原來的1/5。因此，差的平方及其平均值，即方差，均變為原來的1/25。\n新方差為25÷25＝1，對應選項A。",
+      "latex": [
+        "\\operatorname{Var}(X)=5^2=25",
+        "Y=\\frac{X+2}{5},\\qquad\\bar y=\\frac{\\bar x+2}{5},\\qquad y_i-\\bar y=\\frac{x_i-\\bar x}{5}",
+        "\\operatorname{Var}(Y)=\\frac{1}{25}\\operatorname{Var}(X)=\\frac{25}{25}=1"
+      ]
+    }
   }
 }
